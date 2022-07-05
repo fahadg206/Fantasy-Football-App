@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-import sleeper from "./api/sleeper";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Apply from "./components/Apply";
@@ -10,16 +8,7 @@ import RedemptionLeague from "./components/RedemptionLeague";
 import Articles from "./components/Articles";
 import Navbar from "./components/Navbar";
 
-const getLeagueData = async () => {
-  const response = await sleeper.get("/league/845531683540303872");
-  console.log(response.data);
-};
-
 const App = () => {
-  useEffect(() => {
-    getLeagueData();
-  });
-
   return (
     <div>
       <Router>
