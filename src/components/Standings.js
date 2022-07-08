@@ -46,33 +46,37 @@ const Standings = () => {
     getStandings();
   }, [changed]);
 
-  const standings = teams.map((team) => {
+  const standings = () => {
     return (
-      <div className=" flex justify-center pt-[50px]">
-        <table className="table-fixed bg-[red]">
+      <div className=" flex justify-center pt-[100px]">
+        <table className="table-fixed">
           <thead>
             <tr>
-              <th>Team</th>
-              <th>Wins</th>
-              <th>Losses</th>
-              <th>Ties</th>
-              <th>Fantasy Points</th>
+              <th className="sm:px-[100px]">Team</th>
+              <th className="sm:px-[5px]">Wins</th>
+              <th className="sm:px-[5px]">Losses</th>
+              <th className="sm:px-[5px]">Ties</th>
+              <th className="sm:px-[5px]">Fantasy Points</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="team">{team.owner_id}</td>
-              <td className="wins">{team.settings.wins}</td>
-              <td className="losses">{team.settings.losses}</td>
-              <td className="ties">{team.settings.ties}</td>
-              <td className="fantasypoints">{team.settings.fpts}</td>
-            </tr>
+            {teams.map((team) => {
+              return (
+                <tr key={team.owner_id} className="text-center">
+                  <td className="team">{team.owner_id}</td>
+                  <td className="wins">{team.settings.wins}</td>
+                  <td className="losses">{team.settings.losses}</td>
+                  <td className="ties">{team.settings.ties}</td>
+                  <td className="fantasypoints">{team.settings.fpts}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
     );
-  });
-  return <div>{standings}</div>;
+  };
+  return <div>{standings()}</div>;
 };
 
 export default Standings;
