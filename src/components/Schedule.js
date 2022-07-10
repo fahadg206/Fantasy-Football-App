@@ -32,84 +32,67 @@ const Schedule = () => {
 
   const getSchedule = async () => {
     const response = await sleeper.get("league/845531683540303872/matchups/1");
-    console.log("matchups");
-    console.log(schedule);
+    console.log(response.data);
     setSchedule(response.data);
   };
 
   const getUsers = async () => {
     const response = await sleeper.get("league/845531683540303872/users");
-    console.log("users");
-    console.log(users);
+
     for (let i = 0; i < response.data.length; i++) {
       scheduleData.set(response.data[i].user_id, {
         avatar: response.data[i].avatar,
         name: response.data[i].display_name,
         roster_id: scheduleData.has(response.data[i].user_id)
           ? scheduleData.get(response.data[i].user_id).roster_id
-          : "0",
+          : "loading",
       });
     }
-    console.log("Roster data in users");
-    console.log(scheduleData);
 
     ready.usersReady = true;
 
     setUsers(response.data);
     setWeeklyMatchups(scheduleData);
+    console.log("users");
   };
 
   const getRoster = async () => {
     const response = await sleeper.get("/league/845531683540303872/rosters");
-    console.log("rosters");
-    console.log(rosters);
+
     for (let i = 0; i < response.data.length; i++) {
       scheduleData.set(response.data[i].owner_id, {
         avatar: scheduleData.has(response.data[i].owner_id)
           ? scheduleData.get(response.data[i].owner_id).avatar
-          : "0",
+          : "loading",
         name: scheduleData.has(response.data[i].owner_id)
-          ? scheduleData.get(response.data[i].owner_id).display_name
-          : "0",
+          ? scheduleData.get(response.data[i].owner_id).name
+          : "loading",
         roster_id: response.data[i].roster_id,
       });
       ready.rostersReady = true;
-      console.log("Roster data in rosters");
-      console.log(scheduleData);
-      setRosters(response.data);
-      setWeeklyMatchups(scheduleData);
     }
+    setRosters(response.data);
+    setWeeklyMatchups(scheduleData);
+    console.log("rosters");
   };
-
+  console.log(weeklyMatchups);
   useEffect(() => {
     getSchedule();
     getUsers();
     getRoster();
+  }, []);
 
-    if (true) {
-    }
-  }, [usersChanged, scheduleChanged, rostersChanged]);
-
-  const userInfo = users.map((user) => {
-    return (
-      <div key={user.user_id} className="bg-[red]">
-        <div>{user.avatar}</div>
-        <div>{user.display_name}</div>
-      </div>
-    );
-  });
-
-  const matchupPoints = schedule.map((player) => {
-    return (
-      <div className="bg-[blue] pt-[50px]">
-        <div>{schedule.matchup_id}</div>
-      </div>
-    );
-  });
+  // const matchupPoints = schedule.map((player) => {
+  //   return (
+  //     <div key={new Date()} className="bg-[blue] pt-[50px]">
+  //       <div>{schedule.matchup_id}</div>
+  //     </div>
+  //   );
+  // });
 
   const weeklyMatches = [...weeklyMatchups.values()].map((player) => {
     return (
-      <div className="bg-[green] text-[black]">
+      <div key={player.user_id} className="bg-[green] text-[black]">
         <div className="">{player.name}</div>
         <div>{player.avatar}</div>
         <div>{player.roster_id}</div>
@@ -118,9 +101,8 @@ const Schedule = () => {
   });
 
   return (
-    <div className="pt-[100px]">
-      {userInfo}
-      {matchupPoints}
+    <div key={new Date()} className="pt-[100px]">
+      {/* {matchupPoints} */}
       {weeklyMatches}
     </div>
   );
