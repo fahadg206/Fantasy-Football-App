@@ -3,15 +3,15 @@ import sleeper from "../api/sleeper";
 
 const Schedule = () => {
   const [schedule, setSchedule] = useState([]);
+  const [weeklyMatchups, setWeeklyMatchups] = useState(new Map());
   const [users, setUsers] = useState([]);
   const [rosters, setRosters] = useState([]);
-  const [weeklyMatchups, setWeeklyMatchups] = useState(new Map());
-  let ready = { usersReady: false, rostersReady: false };
 
   let scheduleChanged = false;
   if (schedule.length > 0) {
     scheduleChanged = true;
   }
+
   let usersChanged = false;
   if (users.length > 0) {
     usersChanged = true;
@@ -22,23 +22,16 @@ const Schedule = () => {
     rostersChanged = true;
   }
 
-  let dataReady = false;
-  if (ready.rostersReady && ready.usersReady) {
-    dataReady = true;
-  }
-
   const scheduleData = new Map();
-  const rosterData = new Map();
-
+  
   const getSchedule = async () => {
     const response = await sleeper.get("league/845531683540303872/matchups/1");
-    console.log(response.data);
     setSchedule(response.data);
   };
 
   const getUsers = async () => {
     const response = await sleeper.get("league/845531683540303872/users");
-
+    // Setting the avatar and name in this function and giving a default value to roster_id if it doesn't exist
     for (let i = 0; i < response.data.length; i++) {
       scheduleData.set(response.data[i].user_id, {
         avatar: response.data[i].avatar,
@@ -49,16 +42,17 @@ const Schedule = () => {
       });
     }
 
-    ready.usersReady = true;
-
     setUsers(response.data);
+
+
+  
     setWeeklyMatchups(scheduleData);
     console.log("users");
   };
 
   const getRoster = async () => {
     const response = await sleeper.get("/league/845531683540303872/rosters");
-
+    // Setting the roster_id in this function and giving a default value to avatar and name if they don't exist
     for (let i = 0; i < response.data.length; i++) {
       scheduleData.set(response.data[i].owner_id, {
         avatar: scheduleData.has(response.data[i].owner_id)
@@ -69,36 +63,45 @@ const Schedule = () => {
           : "loading",
         roster_id: response.data[i].roster_id,
       });
-      ready.rostersReady = true;
     }
     setRosters(response.data);
     setWeeklyMatchups(scheduleData);
-    console.log("rosters");
   };
   console.log(weeklyMatchups);
   useEffect(() => {
     getSchedule();
     getUsers();
     getRoster();
-  }, []);
-
-  // const matchupPoints = schedule.map((player) => {
-  //   return (
-  //     <div key={new Date()} className="bg-[blue] pt-[50px]">
-  //       <div>{schedule.matchup_id}</div>
-  //     </div>
-  //   );
-  // });
+    console.log("inside UE");
+    console.log(weeklyMatchups);
+  }, [usersChanged, scheduleChanged, rostersChanged]);
+  
+  
 
   const weeklyMatches = [...weeklyMatchups.values()].map((player) => {
     return (
       <div key={player.user_id} className="bg-[green] text-[black]">
-        <div className="">{player.name}</div>
-        <div>{player.avatar}</div>
-        <div>{player.roster_id}</div>
+        <div key={player.roster_id}>{(function () {
+          let matchupText = "";
+          // We loop through schedule, which is the array containing the matchup ids, roster ids and points for each team
+          for(let i = 0; i < schedule.length/2; i++){
+            if(player.roster_id === schedule[i].roster_id){
+              // Creating a smaller array containing only the information of the two teams with the same matchup id as the current element we are on (player).
+              let matchup = schedule.filter(team => team.matchup_id === schedule[i].matchup_id);
+              // In order to retrieve the remaining information for the pair of teams, we searched through the weeklyMatchups map
+              // and stored the object that's returned (which contains the name, avatar etc) into these variables
+              let team1 = [...weeklyMatchups.values()].find(team => team.roster_id === matchup[0].roster_id);
+              let team2 = [...weeklyMatchups.values()].find(team => team.roster_id === matchup[1].roster_id);
+              console.log("Matchup");
+              console.log(team1.name);
+              matchupText+= " " + team1.name + " Score: " + schedule[i].points + " Vs. " + team2.name + " Score: " + schedule[i].points;
+            }
+          }
+          return matchupText;})()}</div>
       </div>
     );
   });
+
 
   return (
     <div key={new Date()} className="pt-[100px]">
