@@ -5,49 +5,98 @@ import sleeper from "../api/sleeper";
 
 const Standings = () => {
   const [teams, setTeams] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [teamInfo, setTeamInfo] = useState(new Map());
 
   let changed = false;
   if (teams.length > 0) {
     changed = true;
   }
+  let usersChanged = false;
+  if (users.length > 0) {
+    usersChanged = true;
+  }
+
   const teamData = new Map();
+
+  const getUsers = async (id, wins, losses, ties, fantasy_points) => {
+    const response = await sleeper.get("league/845531683540303872/users");
+    setUsers(response.data);
+    for (let i = 0; i < response.data.length; i++) {
+      if (response.data[i].user_id === id) {
+        // Key = owner id, value is an object that stores wins, losses, ties and total fantasy points scored, we can add more values like divisions etc as we go along
+        // Changed the value of wins for testing since the season didn't begin yet. We'll set it equal to response.data[i].settings.wins once we have data to work with
+        teamData.set(id, {
+          wins,
+          losses,
+          ties,
+          fantasy_points,
+          avatar: `https://sleepercdn.com/avatars/thumbs/${response.data[i].avatar}`,
+          name: response.data[i].display_name,
+        });
+
+        setTeamInfo(
+          teamInfo.set(id, {
+            wins,
+            losses,
+            ties,
+            fantasy_points,
+            avatar: `https://sleepercdn.com/avatars/thumbs/${response.data[i].avatar}`,
+            name: response.data[i].display_name,
+          })
+        );
+      }
+    }
+  };
 
   const getStandings = async () => {
     const response = await sleeper.get("/league/845531683540303872/rosters");
     setTeams(response.data);
-    console.log(teams);
-    console.log(response.data);
 
     for (let i = 0; i < response.data.length; i++) {
-      // Key = owner id, value is an object that stores wins, losses, ties and total fantasy points scored, we can add more values like divisions etc as we go along
-      // Changed the value of wins for testing since the season didn't begin yet. We'll set it equal to response.data[i].settings.wins once we have data to work with
-      teamData.set(response.data[i].owner_id, {
-        wins: 1,
-        losses: response.data[i].settings.losses,
-        ties: response.data[i].settings.ties,
-        fantasy_points: 30 + i + response.data[i].settings.fpts,
-      });
+      getUsers(
+        response.data[i].owner_id,
+        response.data[i].settings.wins + 1,
+        response.data[i].settings.losses,
+        response.data[i].settings.ties,
+        response.data[i].settings.fpts + 500 + i
+      );
     }
 
-    // Sorted the Map by wins
-    const sortedTeamData = new Map(
-      [...teamData.entries()].sort(
-        (a, b) =>
-          b[1]["wins"] -
-          a[1]["wins"] +
-          (b[1]["fantasy_points"] - a[1]["fantasy_points"])
-      )
-    );
-
-    console.log(sortedTeamData);
+    setTeamInfo(teamData);
   };
 
   useEffect(() => {
     getStandings();
-  }, [changed]);
+    console.log(teamInfo);
+  }, [changed, usersChanged]);
+  let i = 0;
 
-  const standings = () => {
+  // Sorted the Map by wins
+  const sortedTeamData = new Map(
+    [...teamInfo.entries()].sort(
+      (a, b) =>
+        b[1]["wins"] -
+        a[1]["wins"] +
+        (b[1]["fantasy_points"] - a[1]["fantasy_points"])
+    )
+  );
+  const standings = [...sortedTeamData.values()].map((team) => {
     return (
+      <tr key={team.id} className="text-center">
+        <img src={team.avatar} />
+        <td className="teamname">{team.name}</td>
+        <td className="teamid">{team.id}</td>
+        <td className="wins">{team.wins}</td>
+        <td className="losses">{team.losses}</td>
+        <td className="ties">{team.ties}</td>
+        <td className="fantasypoints">{team.fantasy_points}</td>
+      </tr>
+    );
+  });
+
+  return (
+    <div>
       <div className=" flex justify-center pt-[100px]">
         <table className="table-fixed">
           <thead>
@@ -59,24 +108,11 @@ const Standings = () => {
               <th className="sm:px-[5px]">Fantasy Points</th>
             </tr>
           </thead>
-          <tbody>
-            {teams.map((team) => {
-              return (
-                <tr key={team.owner_id} className="text-center">
-                  <td className="team">{team.owner_id}</td>
-                  <td className="wins">{team.settings.wins}</td>
-                  <td className="losses">{team.settings.losses}</td>
-                  <td className="ties">{team.settings.ties}</td>
-                  <td className="fantasypoints">{team.settings.fpts}</td>
-                </tr>
-              );
-            })}
-          </tbody>
+          <tbody>{standings}</tbody>
         </table>
       </div>
-    );
-  };
-  return <div>{standings()}</div>;
+    </div>
+  );
 };
 
 export default Standings;
