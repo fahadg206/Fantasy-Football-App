@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
-import Standings from "./Standings";
 
 const Schedule = () => {
   const [schedule, setSchedule] = useState([]);
@@ -8,6 +7,8 @@ const Schedule = () => {
   const [users, setUsers] = useState([]);
 
   const [rosters, setRosters] = useState([]);
+
+  const navbarMatchup = [];
 
   let scheduleChanged = false;
   if (schedule.length > 0) {
@@ -75,7 +76,7 @@ const Schedule = () => {
 
   const weeklyMatches = [...weeklyMatchups.values()].map((player) => {
     return (
-      <div key={player.user_id} className="text-[black]">
+      <div key={player.user_id} className="text-[black] flex">
         <div key={player.roster_id}>
           {(function () {
             let matchupText;
@@ -96,32 +97,31 @@ const Schedule = () => {
                 );
 
                 matchupText = (
-                  <div className="flex justify-center content-center">
-                    <div className="team1 flex items-center mr-[7px]">
-                      <img
-                        className=" w-[30px] my-[5px] mr-[5px] rounded-[50px]"
-                        src={team1.avatar}
-                      />
-                      <p className="text-[12px] mr-[5px]">{team1.name}</p>
+                  <div>
+                    <div>
+                      <div className="team1 flex  items-center mb-[5px]">
+                        <img
+                          className=" w-[30px] my-[5px] mr-[5px] rounded-[50px]"
+                          src={team1.avatar}
+                        />
+                        <p className="text-[12px] mr-[5px]">{team1.name}</p>
+                        <p className="text-[14px]">{schedule[i].points}</p>
+                      </div>
 
-                      <p className="text-[14px]">{schedule[i].points}</p>
-                    </div>
-                    <div className="vs flex align-center mr-[7px] text-[13px] items-center">
-                      vs.
-                    </div>
-                    <div className=" team2 flex items-center">
-                      <img
-                        className="w-[30px] mr-[5px] rounded-[50px]"
-                        src={team2.avatar}
-                      ></img>
-                      <p className="text-[12px] mr-[5px]">{team2.name}</p>
-                      <p className="text-[14px]">{schedule[i].points}</p>
+                      <div className=" team2 flex items-center mb-[5px]">
+                        <img
+                          className="w-[30px] mr-[5px] rounded-[50px]"
+                          src={team2.avatar}
+                        ></img>
+                        <p className="text-[12px] mr-[5px]">{team2.name}</p>
+                        <p className="text-[14px]">{schedule[i].points}</p>
+                      </div>
                     </div>
                   </div>
                 );
+                navbarMatchup.push(matchupText);
               }
             }
-            return matchupText;
           })()}
         </div>
       </div>
@@ -129,8 +129,14 @@ const Schedule = () => {
   });
 
   return (
-    <div key={new Date()} className="pt-[100px]">
+    <div key={new Date()} className="hidden md:flex justify-center">
       {weeklyMatches}
+      <div className="mr-[60px]">{navbarMatchup[0]}</div>
+      <div className="mr-[60px]">{navbarMatchup[1]}</div>
+      <div className="mr-[60px]">{navbarMatchup[1]}</div>
+      <div className="mr-[60px]">{navbarMatchup[1]}</div>
+      <div className="mr-[60px]">{navbarMatchup[1]}</div>
+      <div className="mr-[60px]">{navbarMatchup[1]}</div>
     </div>
   );
 };

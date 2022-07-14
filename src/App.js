@@ -6,12 +6,14 @@ import Standings from "./components/Standings";
 import PowerRankings from "./components/PowerRankings";
 import RedemptionLeague from "./components/RedemptionLeague";
 import Articles from "./components/Articles";
+import ScheduleNav from "./components/ScheduleNav";
 import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <div>
       <Router>
+        <ScheduleNav />
         <Navbar />
         <Routes>
           <Route path={"/"} exact element={<Home />} />
