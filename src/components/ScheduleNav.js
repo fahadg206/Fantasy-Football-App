@@ -101,20 +101,20 @@ const Schedule = () => {
                     <div>
                       <div className="team1 flex  items-center mb-[5px]">
                         <img
-                          className=" w-[30px] my-[5px] mr-[5px] rounded-[50px]"
+                          className=" w-[25px] my-[5px] mr-[5px] rounded-[50px]"
                           src={team1.avatar}
                         />
-                        <p className="text-[12px] mr-[5px]">{team1.name}</p>
-                        <p className="text-[14px]">{schedule[i].points}</p>
+                        <p className="text-[10px] mr-[5px]">{team1.name}</p>
+                        <p className="text-[12px]">{schedule[i].points}</p>
                       </div>
 
                       <div className=" team2 flex items-center mb-[5px]">
                         <img
-                          className="w-[30px] mr-[5px] rounded-[50px]"
+                          className="w-[25px] mr-[5px] rounded-[50px]"
                           src={team2.avatar}
                         ></img>
-                        <p className="text-[12px] mr-[5px]">{team2.name}</p>
-                        <p className="text-[14px]">{schedule[i].points}</p>
+                        <p className="text-[10px] mr-[5px]">{team2.name}</p>
+                        <p className="text-[12px]">{schedule[i].points}</p>
                       </div>
                     </div>
                   </div>

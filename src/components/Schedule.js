@@ -97,25 +97,27 @@ const Schedule = () => {
 
                 matchupText = (
                   <div className="flex justify-center content-center">
-                    <div className="team1 flex items-center mr-[7px]">
+                    <div className="team1 flex items-center mr-[7px] pr-[100px]">
                       <img
                         className=" w-[30px] my-[5px] mr-[5px] rounded-[50px]"
                         src={team1.avatar}
                       />
                       <p className="text-[12px] mr-[5px]">{team1.name}</p>
 
-                      <p className="text-[14px]">{schedule[i].points}</p>
+                      <p className="text-[14px]">
+                        {schedule[i].points === 0 ? "" : schedule[i].points}
+                      </p>
                     </div>
-                    <div className="vs flex align-center mr-[7px] text-[13px] items-center">
-                      vs.
-                    </div>
-                    <div className=" team2 flex items-center">
+
+                    <div className=" team2  flex items-center pl-[80px]">
                       <img
-                        className="w-[30px] mr-[5px] rounded-[50px]"
+                        className="w-[30px] my-[5px] mr-[5px] rounded-[50px]"
                         src={team2.avatar}
                       ></img>
                       <p className="text-[12px] mr-[5px]">{team2.name}</p>
-                      <p className="text-[14px]">{schedule[i].points}</p>
+                      <p className="text-[14px]">
+                        {schedule[i].points === 0 ? "" : schedule[i].points}
+                      </p>
                     </div>
                   </div>
                 );
