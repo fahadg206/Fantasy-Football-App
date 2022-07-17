@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
+import { Link } from "react-router-dom";
 
 const Schedule = () => {
   const [schedule, setSchedule] = useState([]);
@@ -131,12 +132,36 @@ const Schedule = () => {
   return (
     <div key={new Date()} className="hidden md:flex justify-center">
       {weeklyMatches}
-      <div className="mr-[60px]">{navbarMatchup[0]}</div>
-      <div className="mr-[60px]">{navbarMatchup[1]}</div>
-      <div className="mr-[60px]">{navbarMatchup[1]}</div>
-      <div className="mr-[60px]">{navbarMatchup[1]}</div>
-      <div className="mr-[60px]">{navbarMatchup[1]}</div>
-      <div className="mr-[60px]">{navbarMatchup[1]}</div>
+      <Link to="/schedule">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+          {navbarMatchup[0]}
+        </div>
+      </Link>
+      <Link to="/schedule">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+          {navbarMatchup[1]}
+        </div>
+      </Link>
+      <Link to="/schedule">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+          {navbarMatchup[1]}
+        </div>
+      </Link>
+      <Link to="/schedule">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+          {navbarMatchup[1]}
+        </div>
+      </Link>
+      <Link to="/schedule">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+          {navbarMatchup[1]}
+        </div>
+      </Link>
+      <Link to="/schedule">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+          {navbarMatchup[1]}
+        </div>
+      </Link>
     </div>
   );
 };
