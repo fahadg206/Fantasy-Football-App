@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoIosAmericanFootball } from "react-icons/io";
 import { FaTwitter, FaDiscord } from "react-icons/fa";
+
 const Navbar = () => {
   return (
     <div className="nav fixed w-full flex justify-center items-center  pt-[20px]">

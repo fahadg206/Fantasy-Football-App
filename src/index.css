@@ -13,3 +13,15 @@ body {
   font-weight: bold
 }
 
+.fade-anim {
+  animation: fadeAnim 0.75s ease-out;
+}
+
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
