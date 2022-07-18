@@ -130,35 +130,34 @@ const Schedule = () => {
   });
 
   return (
-    <div key={new Date()} className="hidden md:flex justify-center">
-      {weeklyMatches}
+    <div key={new Date()} className="hidden md:flex flex-wrap justify-center">
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[0]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-110 duration-500 p-[10px]">
+        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>

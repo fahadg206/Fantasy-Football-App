@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: linear-gradient(#7D1031, #2F005C );
+  height: 100vh;
+  color: white;
+}
+
+.nav {
+  font-size: 17px;
+  font-weight: bold
+}
+
