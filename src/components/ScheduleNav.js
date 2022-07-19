@@ -130,34 +130,43 @@ const Schedule = () => {
   });
 
   return (
-    <div key={new Date()} className="hidden md:flex flex-wrap justify-center">
+    <div
+      key={new Date()}
+      className="hidden md:flex flex-wrap flex-grow justify-center"
+    >
+      <div className="mr-auto">
+        <img
+          className="w-[300px] h-[100px]"
+          src="https://www.pngkit.com/png/full/177-1773878_sec-logo-png.png "
+        />
+      </div>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
+        <div className="mr-[60px] shadow-md shadow-[#0046FF] hover:scale-125 hover:shadow-[#01ECF2] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[0]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
+        <div className="mr-[60px] shadow-md shadow-[#0046FF] hover:scale-125 hover:shadow-[#01ECF2] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
+        <div className="mr-[60px] shadow-md shadow-[#0046FF] hover:scale-125 hover:shadow-[#01ECF2] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
+        <div className="mr-[60px] shadow-md shadow-[#0046FF] hover:scale-125 hover:shadow-[#01ECF2] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>
       <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
+        <div className="mr-[60px] shadow-md shadow-[#0046FF] hover:scale-125 hover:shadow-[#01ECF2] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>
-      <Link to="/schedule">
-        <div className="mr-[60px] shadow-md shadow-[#1a1a1c] hover:scale-125 hover:shadow-[white] duration-500 p-[10px] rounded-[20px]">
+      <Link to="/schedule" className="mr-auto">
+        <div className="mr-[60px] shadow-md shadow-[#0046FF] hover:scale-125 hover:shadow-[#01ECF2] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>
       </Link>

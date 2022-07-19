@@ -5,31 +5,31 @@ import { FaTwitter, FaDiscord } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="nav fixed w-full flex justify-center items-center  pt-[20px]">
-      <ul className="nav hidden md:flex grow px-2 bg-[#850c10] w-[80vw] flex justify-center items-center p-[7px]">
+    <div className="nav fixed w-full flex justify-center items-center text-white pt-[20px]">
+      <ul className="nav hidden md:flex grow px-2 bg-[#0046FF] w-[80vw] flex justify-center items-center p-[7px]">
         <li>
           <IoIosAmericanFootball className="cursor-pointer mr-[20px] h-[30px] w-[30px] ml-auto hover:scale-125 duration-500" />
         </li>
-        <li className="cursor-pointer hover:border-b-2 border-[white] mr-[20px]">
+        <li className="cursor-pointer hover:border-b-2 border-[#01ECF2] mr-[20px]">
           <Link to="/">Home</Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 border-[white] mr-[20px]">
+        <li className="cursor-pointer hover:border-b-2 border-[#01ECF2] mr-[20px]">
           <Link to="/articles">Articles</Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 border-[white] mr-[20px]">
+        <li className="cursor-pointer hover:border-b-2 border-[#01ECF2] mr-[20px]">
           <Link to="/schedule">Schedule</Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 border-[white] mr-[30px]">
+        <li className="cursor-pointer hover:border-b-2 border-[#01ECF2] mr-[30px]">
           <Link to="/standings">Standings</Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 border-[white] mr-[30px]">
+        <li className="cursor-pointer hover:border-b-2 border-[#01ECF2] mr-[30px]">
           <Link to="/powerrankings">Power Rankings</Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 border-[white] mr-[20px]">
+        <li className="cursor-pointer hover:border-b-2 border-[#01ECF2] mr-[20px]">
           <Link to="/redemptionleague">Redemption League</Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 border-[white] mr-[20px] border-2 border-white bg-[white] rounded-[10px] font-bold hover:scale-110 duration-500 text-[17px] ml-auto">
-          <Link className="p-[13px]  text-[#850c10] text-center" to="/apply">
+        <li className="cursor-pointer hover:border-b-2 border-[#01ECF2] mr-[20px] bg-[white] rounded-[10px] font-bold hover:scale-110 duration-500 text-[17px] ml-auto">
+          <Link className="p-[13px]  text-[#0046FF] text-center" to="/apply">
             Apply
           </Link>
         </li>

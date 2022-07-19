@@ -13,12 +13,14 @@ const featuredArticles = [
   {
     img: "https://www.si.com/.image/t_share/MTY4MDI3MjY2NTY5MDIwNjg5/deshaun-watsonjpg.jpg",
     heading: "Fahad",
-    preview: "sdfffsdfdsfds",
+    preview:
+      "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
   },
   {
     img: "https://images2.minutemediacdn.com/image/fetch/c_fill,g_auto,f_auto,h_2133,w_3200/https://thesmokingcuban.com/wp-content/uploads/getty-images/2017/07/1209457657.jpeg",
     heading: "Kabo",
-    preview: "zzzzzzzzzzzzzzzzzzzzzzzzzzz",
+    preview:
+      "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
   },
 ];
 
@@ -39,11 +41,11 @@ const Home = () => {
   const startSlider = () => {
     setInterval(() => {
       handleOnNextClick();
-    }, 4000);
+    }, 5000);
   };
 
   const handleOnPreviousClick = () => {
-    count = (count + 1) % featuredArticles.length;
+    count = (count <= 0 ? 0 : count - 1) % featuredArticles.length;
     setArticle(count);
     slideRef.current.classList.add("fade-anim");
   };
@@ -55,10 +57,57 @@ const Home = () => {
 
   return (
     <div className=" grid grid-cols-3 justify-items-center pt-[100px]">
-      <div>Socials</div>
+      <div className="flex flex-col items-center justify-center polls text-[white] p-[20px] rounded-[40px] bg-[#1A4AAC]">
+        <h2>POLLS</h2>
+        <div className="poll1">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" />
+          <input type="radio" />
+        </div>
+        <div className="poll12">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" />
+          <input type="radio" />
+        </div>
+        <div className="poll3">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" />
+          <input type="radio" />
+        </div>
+        <div className="poll4">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" />
+          <input type="radio" />
+        </div>
+        <div className="poll4">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" />
+          <input type="radio" />
+        </div>
+        <div className="poll4">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" />
+          <input type="radio" />
+        </div>
+        <div className="poll4">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" />
+          <input type="radio" />
+        </div>
+        <div className="poll4">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" />
+          <input type="radio" />
+        </div>
+        <div className="poll4">
+          <p>1. Do you care about Hamsa?</p>
+          <input type="radio" /> YES
+          <input type="radio" /> NO
+        </div>
+      </div>
       <div
         ref={slideRef}
-        className="relative max-w-md mx-auto xl:max-w-2xl min-w-0 break-words w-full shadow-[#1a1a1c]  border-[white] text-center mb-6 shadow-lg rounded-xl mt-16 flex items-center"
+        className="relative max-w-md mx-auto xl:max-w-2xl min-w-0 break-words w-full shadow-[#1a1a1c]  border-[white] text-center mb-6 shadow-lg rounded-xl mt-16 flex items-center bg-[#1A4AAC]"
       >
         <div>
           <FaArrowLeft
@@ -82,7 +131,7 @@ const Home = () => {
               {featuredArticles[article].preview}
             </p>
             <button
-              className="button hover:scale-125 hover:duration-500 border-2 border-white rounded-[40px] p-[7px]"
+              className="button hover:scale-125 hover:duration-500 rounded-[40px] p-[7px] bg-[#01ECF2] text-[#0046FF] "
               data-ripple-light="true"
             >
               Read More
