@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
-import Standings from "./Standings";
 
 const Schedule = () => {
   const [schedule, setSchedule] = useState([]);

@@ -35,7 +35,7 @@ const Home = () => {
 
   useEffect(() => {
     slideRef.current.addEventListener("animationend", removeAnimation);
-    startSlider();
+    //startSlider();
   }, []);
 
   const startSlider = () => {
@@ -56,7 +56,7 @@ const Home = () => {
   };
 
   return (
-    <div className=" grid grid-cols-3 justify-items-center pt-[100px]">
+    <div className=" flex justify-evenly pt-[100px]">
       <div className="flex flex-col items-center justify-center polls text-[white] p-[20px] rounded-[40px] bg-[#1A4AAC]">
         <h2>POLLS</h2>
         <div className="poll1">
@@ -107,7 +107,7 @@ const Home = () => {
       </div>
       <div
         ref={slideRef}
-        className="relative max-w-md mx-auto xl:max-w-2xl min-w-0 break-words w-full shadow-[#1a1a1c]  border-[white] text-center mb-6 shadow-lg rounded-xl mt-16 flex items-center bg-[#1A4AAC]"
+        className="relative max-w-md  xl:max-w-2xl min-w-0 break-words shadow-[#1a1a1c] border-[white] text-center mb-6 shadow-lg rounded-xl mt-16 flex items-center bg-[#1A4AAC]"
       >
         <div>
           <FaArrowLeft

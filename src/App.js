@@ -8,6 +8,7 @@ import RedemptionLeague from "./components/RedemptionLeague";
 import Articles from "./components/Articles";
 import ScheduleNav from "./components/ScheduleNav";
 import Navbar from "./components/Navbar";
+import Week1 from "./components/WeeklyArticles/Week1";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path={"/powerrankings"} element={<PowerRankings />} />
           <Route path={"/redemptionleague"} element={<RedemptionLeague />} />
           <Route path={"/apply"} element={<Apply />} />
+          <Route path={"/articles/week1"} element={<Week1 />} />
         </Routes>
       </Router>
     </div>
