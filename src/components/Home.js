@@ -56,8 +56,8 @@ const Home = () => {
   };
 
   return (
-    <div className=" flex justify-evenly pt-[100px]">
-      <div className="flex flex-col items-center justify-center polls text-[white] p-[20px] rounded-[40px] bg-[#1A4AAC]">
+    <div className=" grid grid-cols-1 justify-items-center md:flex justify-evenly pt-[100px]">
+      <div className="flex md:grid grid-cols-1 items-center justify-center polls text-[white] p-[20px] rounded-[40px] bg-[#1A4AAC]">
         <h2>POLLS</h2>
         <div className="poll1">
           <p>1. Do you care about Hamsa?</p>
