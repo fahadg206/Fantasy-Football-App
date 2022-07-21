@@ -95,10 +95,10 @@ const Schedule = () => {
                 );
 
                 matchupText = (
-                  <div className="flex justify-center content-center">
+                  <div className="flex justify-center content-center bg-[yellow] w-full">
                     <div className="team1 flex items-center mr-[7px] pr-[100px]">
                       <img
-                        className=" w-[30px] my-[5px] mr-[5px] rounded-[50px]"
+                        className=" w-[30px] my-[5px] mr-[5px] rounded-[50px] bg-[green]"
                         src={team1.avatar}
                       />
                       <p className="text-[12px] mr-[5px]">{team1.name}</p>
@@ -107,13 +107,13 @@ const Schedule = () => {
                         {schedule[i].points === 0 ? "" : schedule[i].points}
                       </p>
                     </div>
-
+                    <div className="flex justify-right bg-[green]">Vs.</div>
                     <div className=" team2  flex items-center pl-[80px]">
                       <img
                         className="w-[30px] my-[5px] mr-[5px] rounded-[50px]"
                         src={team2.avatar}
                       ></img>
-                      <p className="text-[12px] mr-[5px]">{team2.name}</p>
+                      <p className="text-[12px] mr-[100px]">{team2.name}</p>
                       <p className="text-[14px]">
                         {schedule[i].points === 0 ? "" : schedule[i].points}
                       </p>
@@ -130,8 +130,16 @@ const Schedule = () => {
   });
 
   return (
-    <div key={new Date()} className="pt-[100px]">
-      {weeklyMatches}
+    <div key={new Date()} className=" flex justify-center pt-[100px]">
+      <table>
+        <tr>
+          <th className="flex justify-left">Matchup</th>
+          <th>Favorite</th>
+        </tr>
+        <tr>
+          <tbody>{weeklyMatches}</tbody>
+        </tr>
+      </table>
     </div>
   );
 };
