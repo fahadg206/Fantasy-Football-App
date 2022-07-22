@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(#0F172A, #192F51 ); 
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.nav {
+  font-size: 17px;
+  font-weight: bold
+}
+
+.fade-anim {
+  animation: fadeAnim 0.75s ease-out;
+}
+
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
