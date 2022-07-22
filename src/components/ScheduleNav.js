@@ -132,7 +132,7 @@ const Schedule = () => {
   return (
     <div
       key={new Date()}
-      className="hidden md:flex flex-wrap flex-grow justify-center"
+      className="hidden md:flex flex-wrap flex-grow justify-center items-center"
     >
       <div className="mr-auto">
         <img
@@ -165,7 +165,7 @@ const Schedule = () => {
           {navbarMatchup[1]}
         </div>
       </Link>
-      <Link to="/schedule" className="mr-auto">
+      <Link to="/schedule" className="mr-[200px]">
         <div className="mr-[60px] shadow-md shadow-[#0046FF] hover:scale-125 hover:shadow-[#01ECF2] duration-500 p-[10px] rounded-[20px]">
           {navbarMatchup[1]}
         </div>

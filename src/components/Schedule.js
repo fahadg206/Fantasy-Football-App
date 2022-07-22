@@ -95,8 +95,8 @@ const Schedule = () => {
                 );
 
                 matchupText = (
-                  <div className="flex justify-center content-center bg-[yellow] w-full">
-                    <div className="team1 flex items-center mr-[7px] pr-[100px]">
+                  <div className="flex items-center content-center text-center mb-[30px] p-8 w-[100vw] text-white border-2 border-[#01ECF2] rounded-[15px] bg-[#1A4AAC]">
+                    <div className="team1 flex items-center">
                       <img
                         className=" w-[30px] my-[5px] mr-[5px] rounded-[50px] bg-[green]"
                         src={team1.avatar}
@@ -107,17 +107,20 @@ const Schedule = () => {
                         {schedule[i].points === 0 ? "" : schedule[i].points}
                       </p>
                     </div>
-                    <div className="flex justify-right bg-[green]">Vs.</div>
-                    <div className=" team2  flex items-center pl-[80px]">
+                    <div className="flex justify-right text-[15px] p-[7px]">
+                      vs.
+                    </div>
+                    <div className="team2 flex items-center">
                       <img
                         className="w-[30px] my-[5px] mr-[5px] rounded-[50px]"
                         src={team2.avatar}
                       ></img>
-                      <p className="text-[12px] mr-[100px]">{team2.name}</p>
+                      <p className="text-[12px]">{team2.name}</p>
                       <p className="text-[14px]">
                         {schedule[i].points === 0 ? "" : schedule[i].points}
                       </p>
                     </div>
+                    <div className="ml-auto">Polls</div>
                   </div>
                 );
               }
@@ -130,13 +133,17 @@ const Schedule = () => {
   });
 
   return (
-    <div key={new Date()} className=" flex justify-center pt-[100px]">
+    <div
+      key={new Date()}
+      className=" flex flex-col justify-center pt-[100px] content-center w-full"
+    >
+      <p className="text-center text-2xl mb-[10px] font-bold">Week 1</p>
       <table>
-        <tr>
-          <th className="flex justify-left">Matchup</th>
-          <th>Favorite</th>
+        <tr className="flex justify-evenly content-center gap-[20px] text-center p-[7px] border-2 border-[#01ECF2] mb-[10px] rounded-[15px] bg-[#1A4AAC]">
+          <th className="mr-auto pl-[30px]">Matchup</th>
+          <th className="mr-[30px]">Favorite</th>
         </tr>
-        <tr>
+        <tr className="flex justify-evenly gap-[20px]">
           <tbody>{weeklyMatches}</tbody>
         </tr>
       </table>

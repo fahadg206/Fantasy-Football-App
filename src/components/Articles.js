@@ -63,7 +63,7 @@ const Articles = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center fixed sm:hidden">
+      <div className="flex flex-col items-center fixed w-full sm:hidden">
         <p className="text-2xl">Weekly Articles</p>
         {showNav ? (
           <FaArrowUp
@@ -72,7 +72,7 @@ const Articles = () => {
           />
         ) : (
           <FaArrowDown
-            className="text-2xl"
+            className="text-2xl animate-bounce"
             onClick={() => setShowNav(!showNav)}
           />
         )}
