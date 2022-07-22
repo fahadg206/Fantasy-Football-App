@@ -8,7 +8,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
   return (
     <div>
-      <div className="nav hidden md:fixed w-full flex justify-center items-center text-white pt-[20px]">
+      <div className="hidden nav md:fixed w-full md:flex justify-center items-center text-white pt-[20px] ">
         <ul className="nav md:flex grow px-2 bg-[#0046FF] w-[80vw] flex justify-center items-center p-[7px]">
           <li>
             <IoIosAmericanFootball className="cursor-pointer mr-[20px] h-[30px] w-[30px] ml-auto hover:scale-125 duration-500" />
@@ -55,12 +55,12 @@ const Navbar = () => {
 
       {/* {Mobile Menu} */}
 
-      <div>
+      <div className="w-full h-full">
         <ul
           className={
             !nav
               ? "hidden"
-              : "w-full h-screen flex flex-col justify-center items-center text-gray-300 gap-[30px] text-[35px]"
+              : "fixed z-90 w-full h-full flex flex-col justify-center items-center bg-gray-900 opacity-90 duration-700" // : "w-full h-screen flex flex-col justify-center items-center text-[blue] gap-[30px] text-[35px]"
           }
         >
           <li>

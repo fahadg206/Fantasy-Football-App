@@ -4,7 +4,8 @@
 
 body {
   background: linear-gradient(#0F172A, #192F51 ); 
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   color: white;
 }
 

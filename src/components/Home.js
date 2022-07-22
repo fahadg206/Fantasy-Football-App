@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Carousel from "./Carousel";
 
 let count = 0;
 
@@ -34,7 +35,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    slideRef.current.addEventListener("animationend", removeAnimation);
+    // slideRef.current.addEventListener("animationend", removeAnimation);
     //startSlider();
   }, []);
 
@@ -58,7 +59,6 @@ const Home = () => {
   return (
     <div className=" grid grid-cols-1 justify-items-center md:flex justify-evenly pt-[100px]">
       <div className="flex md:grid grid-cols-1 items-center justify-center polls text-[white] p-[20px] rounded-[40px] bg-[#1A4AAC]">
-        <h2>POLLS</h2>
         <div className="poll1">
           <p>1. Do you care about Hamsa?</p>
           <input type="radio" />
@@ -76,74 +76,12 @@ const Home = () => {
         </div>
         <div className="poll4">
           <p>1. Do you care about Hamsa?</p>
-          <input type="radio" />
-          <input type="radio" />
-        </div>
-        <div className="poll4">
-          <p>1. Do you care about Hamsa?</p>
-          <input type="radio" />
-          <input type="radio" />
-        </div>
-        <div className="poll4">
-          <p>1. Do you care about Hamsa?</p>
-          <input type="radio" />
-          <input type="radio" />
-        </div>
-        <div className="poll4">
-          <p>1. Do you care about Hamsa?</p>
-          <input type="radio" />
-          <input type="radio" />
-        </div>
-        <div className="poll4">
-          <p>1. Do you care about Hamsa?</p>
-          <input type="radio" />
-          <input type="radio" />
-        </div>
-        <div className="poll4">
-          <p>1. Do you care about Hamsa?</p>
           <input type="radio" /> YES
           <input type="radio" /> NO
         </div>
       </div>
-      <div
-        ref={slideRef}
-        className="relative max-w-md  xl:max-w-2xl min-w-0 break-words shadow-[#1a1a1c] border-[white] text-center mb-6 shadow-lg rounded-xl mt-16 flex items-center bg-[#1A4AAC]"
-      >
-        <div>
-          <FaArrowLeft
-            onClick={handleOnPreviousClick}
-            className="w-[25px] h-[25px] hover:scale-150 hover:duration-500 ml-[10px]"
-          />
-        </div>
-        <div className=" flex flex-col card p-[10px] border-[white]">
-          <div className="card-header mx-4 -mt-6">
-            <img
-              className="w-auto rounded-lg"
-              src={featuredArticles[article].img}
-              alt="tailwind-card-image"
-            />
-          </div>
-          <div className="card-body">
-            <h4 className="font-semibold">
-              {featuredArticles[article].heading}
-            </h4>
-            <p className="opcacity-60 mb-4">
-              {featuredArticles[article].preview}
-            </p>
-            <button
-              className="button hover:scale-125 hover:duration-500 rounded-[40px] p-[7px] bg-[#01ECF2] text-[#0046FF] "
-              data-ripple-light="true"
-            >
-              Read More
-            </button>
-          </div>
-        </div>
-        <div>
-          <FaArrowRight
-            onClick={handleOnNextClick}
-            className="w-[25px] h-[25px] hover:scale-150 hover:duration-500 mr-[10px]"
-          />
-        </div>
+      <div>
+        <Carousel />
       </div>
       <div>Headlines</div>
     </div>
