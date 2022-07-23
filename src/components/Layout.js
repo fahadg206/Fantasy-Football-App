@@ -133,8 +133,16 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <div className="hidden sm:flex">
-        <ScheduleNav navbarMatchup={navbarMatchup} />
+      <div className=" flex justify-center lg:flex">
+        <div className="lg:mr-auto ml-5 my-2 ">
+          <img
+            className="w-[300px] h-[100px]"
+            src="https://www.pngkit.com/png/full/177-1773878_sec-logo-png.png "
+          />
+        </div>
+        <div className="hidden lg:flex">
+          <ScheduleNav navbarMatchup={navbarMatchup} />
+        </div>
       </div>
 
       <Navbar navbarMatchup={navbarMatchup} />
