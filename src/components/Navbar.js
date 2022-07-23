@@ -27,7 +27,7 @@ export default function Navbar({ fixed, navbarMatchup }) {
                 setScoreNavbarOpen(false);
               }}
             >
-              <IoIosAmericanFootball className="cursor-pointer mr-[20px] h-[30px] w-[30px] ml-auto hover:scale-125 duration-500" />
+              <FaBars className="cursor-pointer mr-[20px] h-[30px] w-[30px] ml-auto hover:scale-125 duration-500" />
             </button>
             <button
               className="text-gray-300 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"

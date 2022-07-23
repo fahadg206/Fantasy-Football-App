@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import ScheduleNav from "./ScheduleNav";
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
-import { Link } from "react-router-dom";
+import { FaCloudRain } from "react-icons/fa";
 
 const Layout = ({ children }) => {
   const [schedule, setSchedule] = useState([]);
@@ -134,12 +134,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <div className=" flex justify-center lg:flex">
-        <div className="lg:mr-auto ml-5 my-2 ">
-          <img
-            className="w-[300px] h-[100px]"
-            src="https://www.pngkit.com/png/full/177-1773878_sec-logo-png.png "
-          />
-        </div>
+        <FaCloudRain className="lg:mr-auto ml-5 my-2 w-[300px] h-[100px]" />
         <div className="hidden lg:flex">
           <ScheduleNav navbarMatchup={navbarMatchup} />
         </div>
