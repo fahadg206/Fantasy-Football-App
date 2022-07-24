@@ -1,65 +1,37 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const PollModel = require("./models/Polls");
 
-const uri =
-  "mongodb+srv://FF:rcff2022@fantasy.2dzgtvk.mongodb.net/?retryWrites=true&w=majority";
+app.use(express.json());
 
-async function connect() {
-  try {
-    await mongoose.connect(uri);
-    console.log("Conected To MongoDB");
-  } catch (error) {
-    console.error(error);
+mongoose.connect(
+  "mongodb+srv://FF:rcff2022@fantasy.2dzgtvk.mongodb.net/?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
   }
-}
-
-connect();
-
-app.listen(8000, () => {
-  console.log("server started on port 8000");
-});
-
-mongoose.connection.on("connected", () => {
-  console.log("mongoose is connected");
-});
-
-//Schema
-const Schema = mongoose.Schema;
-const PollSchema = new Schema({
-  week: Number,
-  question: String,
-  answers: [{ option: String, voteCount: Number }],
-});
-
-//Model
-const Poll = mongoose.model("Poll", PollSchema);
+);
 
 const data = {
-  week: 1,
-  question: "Who do you think will be the highest scorer this week?",
+  week: 2,
+  question: "Who wins this matchup?",
   answers: [
-    { option: "Kabo", voteCount: 5 },
-    { option: "Fahad", voteCount: 4 },
+    { option: "Sal", voteCount: 5 },
+    { option: "Jefe", voteCount: 4 },
   ],
 };
 
-const homePoll = new Poll(data);
+app.get("/", async (req, res) => {
+  const homePoll = new PollModel(data);
 
-//save data
+  try {
+    await homePoll.save();
+    res.send("kabo was right");
+  } catch (err) {
+    console.log(err);
+  }
+});
 
-// homePoll.save((error) => {
-//   if (error) {
-//     console.log("Theres an Error");
-//   } else {
-//     console.log("Data has been saved!");
-//   }
-// });
-
-Poll.find({})
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+app.listen(3001, () => {
+  console.log("server started on port 3001");
+});
