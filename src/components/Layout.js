@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import ScheduleNav from "./ScheduleNav";
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
+import { Link } from "react-router-dom";
 import { FaCloudRain } from "react-icons/fa";
 
 const Layout = ({ children }) => {

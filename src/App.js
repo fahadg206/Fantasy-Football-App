@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { Component } from "react";
 import Home from "./components/Home";
 import Apply from "./components/Apply";
 import Schedule from "./components/Schedule";
