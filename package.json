@@ -49,17 +49,5 @@
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "postcss.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fahadg206/Fantasy-Football-App.git"
-  },
-  "author": "fahad",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fahadg206/Fantasy-Football-App/issues"
-  },
-  "homepage": "https://github.com/fahadg206/Fantasy-Football-App#readme"
+  }
 }
