@@ -17,22 +17,24 @@ mongoose.connect(
 app.post("/update", async (req, res) => {
   const pollAnswer = req.body.answers[0].option;
   const pollVoteCount = req.body.answers[0].voteCount;
-  const pollQuestion = req.body.question;
+
   const data = {
-    week: 3,
-    question: pollQuestion,
+    week: 2,
+    question: "Whats the better Framework?????",
     answers: [{ option: pollAnswer, voteCount: pollVoteCount }],
   };
   console.log(data);
   const homePoll = new PollModel(data);
 
   try {
-    await homePoll.save();
-    res.send("HI");
+    await PollModel.update({ week: 2 }, { $set: { week: 55 } });
+    res.send(req.body.answers[0].option);
   } catch (err) {
     res.send("didn't work");
   }
 });
+
+app.get("/get", async (req, res) => {});
 
 app.listen(3001, () => {
   console.log("server started on port 3001");

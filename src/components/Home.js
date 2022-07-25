@@ -5,29 +5,38 @@ import axios from "axios";
 
 const Home = () => {
   const [pollAnswers, setPollAnswers] = useState([
-    { option: "React", votes: 0 },
-    { option: "Vue", votes: 0 },
+    { option: "Kabo", votes: 0 },
+    { option: "Fahad", votes: 0 },
   ]);
 
   const handleVote = (voteAnswer) => {
     const newPollAnswers = pollAnswers.map((answer) => {
       if (answer.option === voteAnswer) {
         answer.votes++;
+        axios.post("http://localhost:3001/update", {
+          week: 1,
+          question: "What's the best Framework?",
+          answers: [
+            {
+              option: voteAnswer,
+              voteCount: answer.votes,
+            },
+          ],
+        });
       }
+
       return answer;
     });
     setPollAnswers(newPollAnswers);
-    axios.post("http://localhost:3001/update", {
-      week: 1,
-      question: "did it work?",
-      answers: [
-        {
-          option: "React",
-          voteCount: 23,
-        },
-      ],
-    });
+    //What data gets sent to the MongoDB
   };
+
+  const getVotes = () => {
+    axios.get("");
+  };
+
+  useEffect(() => {}, []);
+  console.log(pollAnswers);
 
   return (
     <div className="min-h-screen">
@@ -38,6 +47,11 @@ const Home = () => {
             answers={pollAnswers}
             onVote={handleVote}
             noStorage={true}
+            customSytles={{
+              theme: "cyan",
+              questionColor: "#1A4AAC",
+              questionBold: true,
+            }}
           />
         </div>
         <div className="mx-auto w-3/4">
