@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import ScheduleNav from "./ScheduleNav";
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
+import { Link } from "react-router-dom";
 import { FaCloudRain } from "react-icons/fa";
 
 const Layout = ({ children }) => {
@@ -83,7 +84,7 @@ const Layout = ({ children }) => {
         <div key={player.roster_id}>
           {(function () {
             let matchupText;
-            // We loop through schedule, which is the array containing the matchup ids, roster ids and points for each team
+            // We loop through schedule, which is the array containing the matchup ids, roster ids and points for each team.
             for (let i = 0; i < schedule.length / 2; i++) {
               if (player.roster_id === schedule[i].roster_id) {
                 // Creating a smaller array containing only the information of the two teams with the same matchup id as the current element we are on (player).
@@ -91,7 +92,7 @@ const Layout = ({ children }) => {
                   (team) => team.matchup_id === schedule[i].matchup_id
                 );
                 // In order to retrieve the remaining information for the pair of teams, we searched through the weeklyMatchups map
-                // and stored the object that's returned (which contains the name, avatar etc) into these variables
+                // and stored the object that's returned (which contains the name, avatar etc) into these variables.
                 let team1 = [...weeklyMatchups.values()].find(
                   (team) => team.roster_id === matchup[0].roster_id
                 );
