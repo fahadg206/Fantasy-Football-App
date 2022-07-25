@@ -1,22 +1,54 @@
-import React, { useState, useEffect, useRef } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 import Carousel from "./Carousel";
 import Poll from "react-polls";
-
-// let count = 0;
+import axios from "axios";
 
 const Home = () => {
+  const [pollAnswers, setPollAnswers] = useState([
+    { option: "React", votes: 0 },
+    { option: "Vue", votes: 0 },
+  ]);
+
+  axios.post("https://http://localhost:3001/update", {
+    week: 1,
+    question: "What's the best Framework?",
+    answers: [
+      {
+        option: "React",
+        voteCount: 23,
+      },
+    ],
+  });
+
+  const handleVote = (voteAnswer) => {
+    const newPollAnswers = pollAnswers.map((answer) => {
+      if (answer.option === voteAnswer) {
+        answer.votes++;
+      }
+      return answer;
+    });
+    setPollAnswers(newPollAnswers);
+    axios.post("https://http://localhost:3001/update", {
+      week: 1,
+      question: "What's the best Framework?",
+      answers: [
+        {
+          option: "React",
+          voteCount: 23,
+        },
+      ],
+    });
+  };
+
   return (
     <div className="min-h-screen">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
         <div className="w-1/2 flex mx-auto">
           <Poll
             question={"What's the best framework?"}
-            answers={[
-              { option: "React", votes: 23 },
-              { option: "Vue", votes: 2 },
-            ]}
-            onVote={(answer) => <p>{answer}</p>}
+            answers={pollAnswers}
+            onVote={handleVote}
+            noStorage={true}
           />
         </div>
         <div className="mx-auto w-3/4">
