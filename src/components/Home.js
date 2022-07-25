@@ -9,17 +9,6 @@ const Home = () => {
     { option: "Vue", votes: 0 },
   ]);
 
-  axios.post("https://http://localhost:3001/update", {
-    week: 1,
-    question: "What's the best Framework?",
-    answers: [
-      {
-        option: "React",
-        voteCount: 23,
-      },
-    ],
-  });
-
   const handleVote = (voteAnswer) => {
     const newPollAnswers = pollAnswers.map((answer) => {
       if (answer.option === voteAnswer) {
@@ -28,9 +17,9 @@ const Home = () => {
       return answer;
     });
     setPollAnswers(newPollAnswers);
-    axios.post("https://http://localhost:3001/update", {
+    axios.post("http://localhost:3001/update", {
       week: 1,
-      question: "What's the best Framework?",
+      question: "did it work?",
       answers: [
         {
           option: "React",

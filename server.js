@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const PollModel = require("./models/Polls");
 const cors = require("cors");
+const PollModel = require("./models/Polls");
 
 app.use(express.json());
 app.use(cors());
@@ -17,18 +17,20 @@ mongoose.connect(
 app.post("/update", async (req, res) => {
   const pollAnswer = req.body.answers[0].option;
   const pollVoteCount = req.body.answers[0].voteCount;
+  const pollQuestion = req.body.question;
   const data = {
-    week: 2,
-    question: "Who wins this matchup?",
+    week: 3,
+    question: pollQuestion,
     answers: [{ option: pollAnswer, voteCount: pollVoteCount }],
   };
+  console.log(data);
   const homePoll = new PollModel(data);
 
   try {
     await homePoll.save();
-    res.send("kabo was right");
+    res.send("HI");
   } catch (err) {
-    console.log(err);
+    res.send("didn't work");
   }
 });
 
