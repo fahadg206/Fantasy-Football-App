@@ -13,29 +13,26 @@ const Home = () => {
     const newPollAnswers = pollAnswers.map((answer) => {
       if (answer.option === voteAnswer) {
         answer.votes++;
-        axios.post("http://localhost:3001/update", {
-          week: 1,
-          question: "What's the best Framework?",
-          answers: [
-            {
-              option: voteAnswer,
-              voteCount: answer.votes,
-            },
-          ],
-        });
       }
 
       return answer;
     });
+    axios.post("http://localhost:3001/update", {
+      week: 1,
+      question: "What's the best Framework?",
+      answers: newPollAnswers,
+    });
     setPollAnswers(newPollAnswers);
+    console.log("Here", pollAnswers);
     //What data gets sent to the MongoDB
   };
 
-  const getVotes = () => {
-    axios.get("");
-  };
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/get")
+      .then((response) => console.log("Front end", response.data));
+  }, []);
 
-  useEffect(() => {}, []);
   console.log(pollAnswers);
 
   return (

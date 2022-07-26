@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const PollSchema = new Schema({
   week: Number,
   question: String,
-  answers: [{ option: String, voteCount: Number }],
+  answers: [{ option: String, votes: Number }],
 });
 
 //Model
