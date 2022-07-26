@@ -35,14 +35,11 @@ const Home = () => {
     getVotes();
   }, []);
 
-  console.log(totalVotes);
   let voteCount = totalVotes[1].votes + totalVotes[0].votes;
-  console.log(voteCount);
-
   return (
     <div className="min-h-screen">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
-        <div className="w-1/2 flex mx-auto">
+        <div className="w-1/2 flex flex-col items-center mx-auto">
           <Poll
             question={"What's the best framework?"}
             answers={pollAnswers}
