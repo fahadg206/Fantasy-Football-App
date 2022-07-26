@@ -18,9 +18,9 @@ app.post("/update", async (req, res) => {
   const pollWeek = req.body.week;
   let pollAnswer = [];
   pollAnswer = req.body.answers;
-  const pollVoteCount = req.body.answers[0].voteCount;
   const pollQuestion = req.body.question;
 
+  //following Schema format
   const data = {
     week: pollWeek,
     question: pollQuestion,

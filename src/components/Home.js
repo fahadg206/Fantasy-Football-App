@@ -4,6 +4,7 @@ import Poll from "react-polls";
 import axios from "axios";
 
 const Home = () => {
+  const [totalVotes, setTotalVotes] = useState([]);
   const [pollAnswers, setPollAnswers] = useState([
     { option: "Kabo", votes: 0 },
     { option: "Fahad", votes: 0 },
@@ -24,16 +25,19 @@ const Home = () => {
     });
     setPollAnswers(newPollAnswers);
     console.log("Here", pollAnswers);
-    //What data gets sent to the MongoDB
   };
 
+  const getVotes = async () => {
+    const response = await axios.get("http://localhost:3001/get");
+    setTotalVotes(response.data.answers);
+  };
   useEffect(() => {
-    axios
-      .get("http://localhost:3001/get")
-      .then((response) => console.log("Front end", response.data));
+    getVotes();
   }, []);
 
-  console.log(pollAnswers);
+  console.log(totalVotes);
+  let voteCount = totalVotes[1].votes + totalVotes[0].votes;
+  console.log(voteCount);
 
   return (
     <div className="min-h-screen">
@@ -50,6 +54,7 @@ const Home = () => {
               questionBold: true,
             }}
           />
+          {voteCount}
         </div>
         <div className="mx-auto w-3/4">
           <Carousel />
