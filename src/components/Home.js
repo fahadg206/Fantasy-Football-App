@@ -41,7 +41,7 @@ const Home = () => {
 
   const pollStyles1 = {
     questionBold: true,
-    questionColor: "red",
+    questionColor: "blue",
     theme: "purple",
   };
 
@@ -53,6 +53,7 @@ const Home = () => {
             question={"What's the best framework?"}
             answers={pollAnswers}
             onVote={handleVote}
+            customStyles={pollStyles1}
           />
           {totalVotes}
         </div>
