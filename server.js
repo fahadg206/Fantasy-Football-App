@@ -26,10 +26,7 @@ app.post("/update", async (req, res) => {
     question: pollQuestion,
     answers: pollAnswer,
   };
-  const testPoll = [data, data];
-  console.log(data.answers);
-  const homePoll = new PollModel(data);
-
+  console.log("getting called");
   try {
     console.log("These are the poll answers", data.answers);
     await PollModel.updateOne(
@@ -45,7 +42,7 @@ app.post("/update", async (req, res) => {
 
 app.get("/get", async (req, res) => {
   console.log("Get called");
-  const result = PollModel.findOne({ week: 21 }).exec(function (err, result) {
+  PollModel.findOne({ week: 21 }).exec(function (err, result) {
     if (err) {
       res.send(err);
     } else {

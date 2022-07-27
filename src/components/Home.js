@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import Carousel from "./Carousel";
 import Poll from "react-polls";
 import axios from "axios";
+import Polls from "./Polls";
 
 const Home = () => {
-  const [totalVotes, setTotalVotes] = useState([]);
+  const [totalVotes, setTotalVotes] = useState(0);
   const [pollAnswers, setPollAnswers] = useState([
     { option: "Kabo", votes: 0 },
     { option: "Fahad", votes: 0 },
@@ -24,18 +25,26 @@ const Home = () => {
       answers: newPollAnswers,
     });
     setPollAnswers(newPollAnswers);
-    console.log("Here", pollAnswers);
   };
 
   const getVotes = async () => {
     const response = await axios.get("http://localhost:3001/get");
-    setTotalVotes(response.data.answers);
+    setTotalVotes(
+      response.data.answers[1].votes + response.data.answers[0].votes
+    );
+    setPollAnswers(response.data.answers);
   };
+
   useEffect(() => {
     getVotes();
   }, []);
 
-  let voteCount = totalVotes[1].votes + totalVotes[0].votes;
+  const pollStyles1 = {
+    questionBold: true,
+    questionColor: "red",
+    theme: "purple",
+  };
+
   return (
     <div className="min-h-screen">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
@@ -44,14 +53,8 @@ const Home = () => {
             question={"What's the best framework?"}
             answers={pollAnswers}
             onVote={handleVote}
-            noStorage={true}
-            customSytles={{
-              theme: "cyan",
-              questionColor: "#1A4AAC",
-              questionBold: true,
-            }}
           />
-          {voteCount}
+          {totalVotes}
         </div>
         <div className="mx-auto w-3/4">
           <Carousel />
