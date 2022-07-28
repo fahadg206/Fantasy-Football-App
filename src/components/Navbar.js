@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { IoIosAmericanFootball } from "react-icons/io";
-import { FaTwitter, FaDiscord, FaBars, FaTimes } from "react-icons/fa";
+import { FaTwitter, FaDiscord, FaBars } from "react-icons/fa";
 import ScheduleNav from "./ScheduleNav";
 
 export default function Navbar({ fixed, navbarMatchup }) {
@@ -11,23 +10,23 @@ export default function Navbar({ fixed, navbarMatchup }) {
     <>
       <nav className="relative flex flex-wrap mt-3 items-center justify-between px-2 py-2 bg-black mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <div className="w-full relative flex justify-between text-center lg:w-auto lg:static lg:block lg:justify-start">
             <a
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white"
               href="#pablo"
             >
-              FB
+              Raincity Fantasy
             </a>
 
             <button
-              className="text-gray-300 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className=" text-gray-300 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => {
                 setNavbarOpen(!navbarOpen);
                 setScoreNavbarOpen(false);
               }}
             >
-              <FaBars className="cursor-pointer mr-[20px] h-[30px] w-[30px] ml-auto hover:scale-125 duration-500" />
+              <FaBars className="justify-center cursor-pointer mr-[20px] h-[30px] w-[30px] ml-auto hover:scale-125 duration-500" />
             </button>
             <button
               className="text-gray-300 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"

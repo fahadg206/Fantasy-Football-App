@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Carousel from "./Carousel";
 import Poll from "react-polls";
 import axios from "axios";
-import Polls from "./Polls";
+import Headlines from "./Headlines";
 
 const Home = () => {
   const [totalVotes, setTotalVotes] = useState(0);
@@ -41,28 +41,34 @@ const Home = () => {
 
   const pollStyles1 = {
     questionBold: true,
-    questionColor: "blue",
-    theme: "purple",
+    questionColor: "purple",
+    theme: "blue",
+    questionSeparator: false,
+    questionSeparatorWidth: "polls",
+    align: "center",
   };
 
   return (
     <div className="min-h-screen">
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
+      <div className="flex flex-col lg:grid grid-cols-3 justify-items-center gap-y-[30px]">
         <div className="w-1/2 flex flex-col items-center mx-auto">
           <Poll
             question={"What's the best framework?"}
             answers={pollAnswers}
             onVote={handleVote}
             customStyles={pollStyles1}
+            noStorage={false}
           />
           {totalVotes}
         </div>
         <div className="mx-auto w-3/4">
           <Carousel />
         </div>
-      </div>
 
-      <div>Headlines</div>
+        <div className="mx-auto w-3/4">
+          <Headlines />
+        </div>
+      </div>
     </div>
   );
 };

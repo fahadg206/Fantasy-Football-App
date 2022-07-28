@@ -33,7 +33,7 @@ const CarouselView = () => {
     >
       {featuredArticles.map((article, index) => (
         <div key={index}>
-          <img className="h-48 w-48" src={article.img} />
+          <img className="rounded-[20px]" src={article.img} />
           <div className="card-body">
             <h4 className="font-semibold">{article.heading}</h4>
             <p className="opcacity-60 mb-4">{article.preview}</p>

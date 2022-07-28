@@ -1,12 +1,36 @@
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
+import Poll from "react-polls";
+import axios from "axios";
 
 const Schedule = () => {
+  const [pollAnswers, setPollAnswers] = useState([
+    { option: "Kabo", votes: 0 },
+    { option: "Fahad", votes: 0 },
+  ]);
   const [schedule, setSchedule] = useState([]);
   const [weeklyMatchups, setWeeklyMatchups] = useState(new Map());
   const [users, setUsers] = useState([]);
 
   const [rosters, setRosters] = useState([]);
+
+  const pollStyles1 = {
+    questionBold: true,
+    questionColor: "green",
+    theme: "red",
+
+    align: "center",
+  };
+
+  const handleVote = (voteAnswer) => {
+    const newPollAnswers = pollAnswers.map((answer) => {
+      if (answer.option === voteAnswer) {
+        answer.votes++;
+      }
+
+      return answer;
+    });
+  };
 
   let scheduleChanged = false;
   if (schedule.length > 0) {
@@ -100,32 +124,43 @@ const Schedule = () => {
 
                 postedMatchups.set(matchup[0].matchup_id, team1);
                 matchupText = (
-                  <div className="flex items-center content-center text-center mb-[30px] p-8 w-[100vw] text-white border-2 border-[#01ECF2] rounded-[15px] bg-[#1A4AAC]">
-                    <div className="team1 flex items-center">
-                      <img
-                        className=" w-[30px] my-[5px] mr-[5px] rounded-[50px] bg-[green]"
-                        src={team1.avatar}
-                      />
-                      <p className="text-[12px] mr-[5px]">{team1.name}</p>
+                  <div className="grid grid-cols-1 sm:flex items-center content-center text-center mb-[30px] p-8 w-[100vw] text-white border-2 border-[#01ECF2] rounded-[15px] bg-[#1A4AAC]">
+                    <div className="flex justify-center">
+                      <div className="team1 flex items-center">
+                        <img
+                          className=" w-[30px] my-[5px] mr-[5px] rounded-[50px] bg-[green]"
+                          src={team1.avatar}
+                        />
+                        <p className="text-[12px] mr-[5px]">{team1.name}</p>
 
-                      <p className="text-[14px]">
-                        {schedule[i].points === 0 ? "" : schedule[i].points}
-                      </p>
+                        <p className="text-[14px]">
+                          {schedule[i].points === 0 ? "" : schedule[i].points}
+                        </p>
+                      </div>
+                      <div className="flex justify-right text-[15px] p-[7px]">
+                        vs.
+                      </div>
+                      <div className="team2 flex items-center">
+                        <img
+                          className="w-[30px] my-[5px] mr-[5px] rounded-[50px]"
+                          src={team2.avatar}
+                        ></img>
+                        <p className="text-[12px]">{team2.name}</p>
+                        <p className="text-[14px]">
+                          {schedule[i].points === 0 ? "" : schedule[i].points}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex justify-right text-[15px] p-[7px]">
-                      vs.
+
+                    <div className="flex justify-center sm:ml-auto">
+                      <Poll
+                        question={"What's the best framework?"}
+                        answers={pollAnswers}
+                        onVote={handleVote}
+                        customStyles={pollStyles1}
+                        noStorage={false}
+                      />
                     </div>
-                    <div className="team2 flex items-center">
-                      <img
-                        className="w-[30px] my-[5px] mr-[5px] rounded-[50px]"
-                        src={team2.avatar}
-                      ></img>
-                      <p className="text-[12px]">{team2.name}</p>
-                      <p className="text-[14px]">
-                        {schedule[i].points === 0 ? "" : schedule[i].points}
-                      </p>
-                    </div>
-                    <div className="ml-auto">Polls</div>
                   </div>
                 );
               }
@@ -140,11 +175,11 @@ const Schedule = () => {
   return (
     <div
       key={new Date()}
-      className=" flex flex-col justify-center pt-[100px] content-center w-full"
+      className=" flex flex-col justify-center content-center w-full"
     >
       <p className="text-center text-2xl mb-[10px] font-bold">Week 1</p>
       <table>
-        <tr className="flex justify-evenly content-center gap-[20px] text-center p-[7px] border-2 border-[#01ECF2] mb-[10px] rounded-[15px] bg-[#1A4AAC]">
+        <tr className="hidden sm:flex justify-evenly content-center gap-[20px] text-center p-[7px] border-2 border-[#01ECF2] mb-[10px] rounded-[15px] bg-[#1A4AAC]">
           <th className="mr-auto pl-[30px]">Matchup</th>
           <th className="mr-[30px]">Favorite</th>
         </tr>

@@ -101,7 +101,7 @@ const Standings = () => {
 
   return (
     <div>
-      <div className=" flex justify-center pt-[100px]">
+      <div className=" flex justify-center">
         <table className="table-fixed">
           <thead>
             <tr className="">
