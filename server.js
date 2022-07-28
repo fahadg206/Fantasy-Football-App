@@ -20,15 +20,13 @@ app.post("/update", async (req, res) => {
   pollAnswer = req.body.answers;
   const pollQuestion = req.body.question;
 
-  //following Schema format
   const data = {
     week: pollWeek,
     question: pollQuestion,
     answers: pollAnswer,
   };
-  console.log("getting called");
+
   try {
-    console.log("These are the poll answers", data.answers);
     await PollModel.updateOne(
       { week: 21 },
       { $set: { question: pollQuestion, answers: pollAnswer } },
@@ -38,6 +36,26 @@ app.post("/update", async (req, res) => {
   } catch (err) {
     res.send("didn't work");
   }
+
+  const matchupData = {
+    matchupId: 1,
+    question: "Who wins this week?",
+    answers: [
+      { option: "BGN", votes: 2 },
+      { option: "Sleepy", votes: 6 },
+    ],
+  };
+
+  const matchupPoll = new PollModel(matchupData);
+
+  matchupPoll
+    .save()
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 app.get("/get", async (req, res) => {
