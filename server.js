@@ -66,6 +66,7 @@ app.get("/get", async (req, res) => {
 });
 
 app.get("/getMatchupVotes", async (req, res) => {
+  // find returns array
   PollModel.find({ matchupId: { $exists: true } }).exec(function (err, result) {
     if (err) {
       res.send(err);

@@ -51,11 +51,13 @@ const Schedule = () => {
   const scheduleData = new Map();
   const postedMatchups = new Map();
   const getSchedule = async () => {
+    //returns roster id & matchup id
     const response = await sleeper.get("league/845531683540303872/matchups/4");
     setSchedule(response.data);
   };
 
   const getUsers = async () => {
+    // returns user id, name, avatar
     const response = await sleeper.get("league/845531683540303872/users");
     // Setting the avatar and name in this function and giving a default value to roster_id if it doesn't exist
     for (let i = 0; i < response.data.length; i++) {
@@ -74,6 +76,7 @@ const Schedule = () => {
   };
 
   const getRoster = async () => {
+    // returns user id, roster id
     const response = await sleeper.get("/league/845531683540303872/rosters");
     // Setting the roster_id in this function and giving a default value to avatar and name if they don't exist
     for (let i = 0; i < response.data.length; i++) {
@@ -133,6 +136,18 @@ const Schedule = () => {
 
                 postedMatchups.set(matchup[0].matchup_id, team1);
 
+                // if (
+                //   !matchupPolls.has(matchup[0].matchup_id) ||
+                //   team1.name !== "loading"
+                // ) {
+                //   matchupPolls.set(matchup[0].matchup_id, [
+                //     { option: team1.name, votes: 0 },
+                //     { option: team2.name, votes: 0 },
+                //   ]);
+                // }
+
+                console.log(team1.name !== "loading");
+
                 matchupText = (
                   <div className="grid grid-cols-1 sm:flex items-center content-center text-center mb-[30px] p-8 w-[100vw] text-white border-2 border-[#01ECF2] rounded-[15px] bg-[#1A4AAC]">
                     <div className="flex justify-center">
@@ -167,28 +182,27 @@ const Schedule = () => {
                         question={"Who will win this week?"}
                         answers={matchupPolls.get(matchup[0].matchup_id)}
                         onVote={(voteAnswer) => {
-                          const newPollAnswers = [
-                            ...matchupPolls.get(matchup[0].matchup_id),
-                          ].map((answer) => {
-                            if (answer.option === voteAnswer) {
-                              answer.votes++;
-                            }
+                          const newPollAnswers = matchupPolls
+                            .get(matchup[0].matchup_id)
+                            .map((answer) => {
+                              if (answer.option === voteAnswer) {
+                                answer.votes++;
+                              }
 
-                            return answer;
-                          });
-
-                          setMatchupPolls(
-                            matchupPolls.set(
-                              matchup[0].matchup_id,
-                              newPollAnswers
-                            )
+                              return answer;
+                            });
+                          matchupPolls.set(
+                            matchup[0].matchup_id,
+                            newPollAnswers
                           );
+                          setMatchupPolls(matchupPolls);
+
                           axios.post(
                             "http://localhost:3001/updateMatchupPolls",
                             {
                               matchupId: matchup[0].matchup_id,
                               question: "Who will win this week?",
-                              answers: matchupPolls.get(matchup[0].matchup_id),
+                              answers: newPollAnswers,
                             }
                           );
                         }}
