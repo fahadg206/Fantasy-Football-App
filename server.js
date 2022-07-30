@@ -36,6 +36,19 @@ app.post("/update", async (req, res) => {
   } catch (err) {
     res.send("didn't work");
   }
+});
+
+app.post("/updateMatchupPolls", async (req, res) => {
+  // try {
+  //   await PollModel.updateOne(
+  //     { week: 21 },
+  //     { $set: { question: pollQuestion, answers: pollAnswer } },
+  //     { upsert: true }
+  //   );
+  //   res.send(req.body.answers[0].option);
+  // } catch (err) {
+  //   res.send("didn't work");
+  // }
 
   const matchupData = {
     matchupId: 1,
