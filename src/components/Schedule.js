@@ -14,7 +14,7 @@ const Schedule = () => {
 
   const [rosters, setRosters] = useState([]);
 
-  const matchupPolls = new Map();
+  const [matchupPolls, setMatchupPolls] = useState(new Map());
   const pollStyles1 = {
     questionBold: true,
     questionColor: "green",
@@ -91,10 +91,18 @@ const Schedule = () => {
     setWeeklyMatchups(scheduleData);
   };
 
+  const getMatchupVotes = async () => {
+    const response = await axios.get("http://localhost:3001/getMatchupVotes");
+    for (let i = 0; i < response.data.length; i++) {
+      matchupPolls.set(response.data[i].matchupId, response.data[i].answers);
+    }
+    setMatchupPolls(matchupPolls);
+  };
   useEffect(() => {
     getSchedule();
     getUsers();
     getRoster();
+    getMatchupVotes();
   }, [usersChanged, scheduleChanged, rostersChanged]);
 
   const weeklyMatches = [...weeklyMatchups.values()].map((player) => {
@@ -124,15 +132,6 @@ const Schedule = () => {
                 );
 
                 postedMatchups.set(matchup[0].matchup_id, team1);
-                matchupPolls.has(matchup[0].matchup_id)
-                  ? matchupPolls.set(
-                      matchup[0].matchup_id,
-                      matchupPolls.get(matchup[0].matchup_id)
-                    )
-                  : matchupPolls.set(matchup[0].matchup_id, [
-                      { option: team1.name, votes: 0 },
-                      { option: team2.name, votes: 0 },
-                    ]);
 
                 matchupText = (
                   <div className="grid grid-cols-1 sm:flex items-center content-center text-center mb-[30px] p-8 w-[100vw] text-white border-2 border-[#01ECF2] rounded-[15px] bg-[#1A4AAC]">
@@ -177,13 +176,20 @@ const Schedule = () => {
 
                             return answer;
                           });
-                          matchupPolls.set(
-                            matchup[0].matchup_id,
-                            newPollAnswers
+
+                          setMatchupPolls(
+                            matchupPolls.set(
+                              matchup[0].matchup_id,
+                              newPollAnswers
+                            )
                           );
                           axios.post(
                             "http://localhost:3001/updateMatchupPolls",
-                            {}
+                            {
+                              matchupId: matchup[0].matchup_id,
+                              question: "Who will win this week?",
+                              answers: matchupPolls.get(matchup[0].matchup_id),
+                            }
                           );
                         }}
                         customStyles={pollStyles1}

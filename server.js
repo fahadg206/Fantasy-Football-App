@@ -39,45 +39,39 @@ app.post("/update", async (req, res) => {
 });
 
 app.post("/updateMatchupPolls", async (req, res) => {
-  // try {
-  //   await PollModel.updateOne(
-  //     { week: 21 },
-  //     { $set: { question: pollQuestion, answers: pollAnswer } },
-  //     { upsert: true }
-  //   );
-  //   res.send(req.body.answers[0].option);
-  // } catch (err) {
-  //   res.send("didn't work");
-  // }
+  const pollMatchupId = req.body.matchupId;
+  const pollQuestion = req.body.question;
+  const pollAnswer = req.body.answers;
 
-  const matchupData = {
-    matchupId: 1,
-    question: "Who wins this week?",
-    answers: [
-      { option: "BGN", votes: 2 },
-      { option: "Sleepy", votes: 6 },
-    ],
-  };
-
-  const matchupPoll = new PollModel(matchupData);
-
-  matchupPoll
-    .save()
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  try {
+    await PollModel.updateOne(
+      { matchupId: pollMatchupId },
+      { $set: { question: pollQuestion, answers: pollAnswer } },
+      { upsert: true }
+    );
+    res.send(req.body.answers[0].option);
+  } catch (err) {
+    res.send("didn't work");
+  }
 });
 
 app.get("/get", async (req, res) => {
-  console.log("Get called");
   PollModel.findOne({ week: 21 }).exec(function (err, result) {
     if (err) {
       res.send(err);
     } else {
       res.send(result);
+    }
+  });
+});
+
+app.get("/getMatchupVotes", async (req, res) => {
+  PollModel.find({ matchupId: { $exists: true } }).exec(function (err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+      console.log(result);
     }
   });
 });
