@@ -3,6 +3,8 @@ import Carousel from "./Carousel";
 import Poll from "react-polls";
 import axios from "axios";
 import Headlines from "./Headlines";
+import HighestScorer from "./HighestScorer";
+import VideoDisplay from "./VideosSection/VideoDisplay";
 
 const Home = () => {
   const [totalVotes, setTotalVotes] = useState(0);
@@ -67,6 +69,14 @@ const Home = () => {
 
         <div className="mx-auto w-3/4">
           <Headlines />
+        </div>
+        <div className="flex justify-center">PlaceHolder1</div>
+        <div className="">
+          <HighestScorer />
+        </div>
+        <div className="flex justify-center">PlaceHolder2</div>
+        <div className="col-span-3">
+          <VideoDisplay />
         </div>
       </div>
     </div>
