@@ -75,7 +75,7 @@ const Home = () => {
         <div className="flex justify-center">
           <TrendingAdds />
         </div>
-        <div className="">
+        <div className="flex justify-center">
           <HighestScorer />
         </div>
         <div className="flex justify-center">

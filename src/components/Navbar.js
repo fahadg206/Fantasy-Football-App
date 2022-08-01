@@ -8,7 +8,7 @@ export default function Navbar({ fixed, navbarMatchup }) {
   const [scoreNavbarOpen, setScoreNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap mt-3 items-center justify-between px-2 py-2 bg-black mb-3">
+      <nav className="relative flex flex-wrap mt-3 items-center justify-between px-2 py-2 bg-[#0b1a47e0] mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between text-center lg:w-auto lg:static lg:block lg:justify-start">
             <a

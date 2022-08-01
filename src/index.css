@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(#0F172A, #192F51 ); 
+  background: #eaecee; 
   height: 100%;
   width: 100%;
-  color: white;
+  color: black;
 }
 
 .nav {

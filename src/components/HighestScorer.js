@@ -90,8 +90,8 @@ const HighestScorer = () => {
   });
 
   return (
-    <div>
-      <div className="flex flex-col items-center">
+    <div className="bg-white rounded-[20px] h-min p-10">
+      <div className="flex flex-col items-center justify-center">
         <div className="text-2xl border-b border-[#01ECF2] mb-4">
           Top Scorers This Week
         </div>

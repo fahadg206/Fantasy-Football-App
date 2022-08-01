@@ -37,14 +37,12 @@ const TrendingAdds = () => {
   }, []);
   return (
     <div>
-      Trending{" "}
       <iframe
-        className="bg-black"
         src="https://sleeper.app/embed/players/nfl/trending/add?lookback_hours=24&limit=20"
         width="350"
         height="500"
         allowtransparency="true"
-        frameborder="0"
+        frameBorder="0"
       ></iframe>
     </div>
   );

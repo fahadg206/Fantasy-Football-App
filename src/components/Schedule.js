@@ -149,11 +149,11 @@ const Schedule = () => {
                 console.log(team1.name !== "loading");
 
                 matchupText = (
-                  <div className="grid grid-cols-1 sm:flex items-center content-center text-center mb-[30px] p-8 w-[100vw] text-white border-2 border-[#01ECF2] rounded-[15px] bg-[#1A4AAC]">
+                  <div className="grid grid-cols-1 sm:flex items-center content-center text-center mb-[30px] p-8 w-[100vw] text-black rounded-[15px] bg-white">
                     <div className="flex justify-center">
                       <div className="team1 flex items-center">
                         <img
-                          className=" w-[30px] my-[5px] mr-[5px] rounded-[50px] bg-[green]"
+                          className=" w-[30px] my-[5px] mr-[5px] rounded-[50px]"
                           src={team1.avatar}
                         />
                         <p className="text-[12px] mr-[5px]">{team1.name}</p>
@@ -228,7 +228,7 @@ const Schedule = () => {
     >
       <p className="text-center text-2xl mb-[10px] font-bold">Week 1</p>
       <table>
-        <tr className="hidden sm:flex justify-evenly content-center gap-[20px] text-center p-[7px] border-2 border-[#01ECF2] mb-[10px] rounded-[15px] bg-[#1A4AAC]">
+        <tr className="hidden sm:flex justify-evenly content-center gap-[20px] text-center p-[7px] border-2 mb-[10px] rounded-[15px] bg-white">
           <th className="mr-auto pl-[30px]">Matchup</th>
           <th className="mr-[30px]">Favorite</th>
         </tr>
