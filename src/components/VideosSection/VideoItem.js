@@ -10,7 +10,7 @@ const VideoItem = ({ video, onVideoSelect }) => {
         src={video.snippet.thumbnails.medium.url}
       />
       <div className="content">
-        <div className="header">{video.snippet.title}</div>
+        <div className="">{video.snippet.title}</div>
       </div>
     </div>
   );

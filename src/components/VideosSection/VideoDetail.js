@@ -13,9 +13,11 @@ const VideoDetail = ({ video }) => {
       <div className="ui embed">
         <iframe title="video-player" src={videoSrc}></iframe>
       </div>
-      <div className="ui segment">
-        <h4 className="ui header">{video.snippet.title}</h4>
-        <p>{video.snippet.description}</p>
+      <div className="border-2 border-[#01ECF2] rounded-[20px] p-4 text-center">
+        <h4 className="mb-2 text-[17px] text-">{video.snippet.title}</h4>
+        <p className="italic text-[14px] text-[#b6b9b9]">
+          {video.snippet.description}
+        </p>
       </div>
     </div>
   );

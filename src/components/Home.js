@@ -5,6 +5,7 @@ import axios from "axios";
 import Headlines from "./Headlines";
 import HighestScorer from "./HighestScorer";
 import VideoDisplay from "./VideosSection/VideoDisplay";
+import Trending from "./Trending";
 
 const Home = () => {
   const [totalVotes, setTotalVotes] = useState(0);
@@ -70,7 +71,9 @@ const Home = () => {
         <div className="mx-auto w-3/4">
           <Headlines />
         </div>
-        <div className="flex justify-center">PlaceHolder1</div>
+        <div className="flex justify-center">
+          <Trending />
+        </div>
         <div className="">
           <HighestScorer />
         </div>
