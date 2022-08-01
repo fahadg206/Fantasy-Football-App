@@ -25,3 +25,5 @@ const Trending = () => {
 };
 
 export default Trending;
+
+// player image url https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3122840.png
