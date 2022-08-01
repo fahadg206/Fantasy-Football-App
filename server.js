@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
 const PollModel = require("./models/Polls");
+const Player = require("./models/PlayerBase");
 
 app.use(express.json());
 app.use(cors());
@@ -33,6 +34,19 @@ app.post("/update", async (req, res) => {
       { upsert: true }
     );
     res.send(req.body.answers[0].option);
+  } catch (err) {
+    res.send("didn't work");
+  }
+});
+
+app.post("/updatePlayers", async (req, res) => {
+  try {
+    await Player.updateOne(
+      { playerId: req.body.playerId },
+      { $set: { data: req.body.data } },
+      { upsert: true }
+    );
+    res.send("Yeah");
   } catch (err) {
     res.send("didn't work");
   }

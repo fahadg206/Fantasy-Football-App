@@ -66,7 +66,6 @@ const HighestScorer = () => {
 
   useEffect(() => {
     getStandings();
-    console.log(teamInfo);
   }, [changed, usersChanged]);
   let i = 0;
 
