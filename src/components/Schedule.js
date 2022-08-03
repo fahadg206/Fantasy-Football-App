@@ -224,7 +224,7 @@ const Schedule = () => {
   return (
     <div
       key={new Date()}
-      className=" flex flex-col justify-center content-center w-full"
+      className=" flex flex-col justify-center content-center w-full "
     >
       <p className="text-center text-2xl mb-[10px] font-bold">Week 1</p>
       <table>

@@ -53,7 +53,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <div className="flex flex-col lg:grid grid-cols-3 justify-items-center gap-y-[30px]">
         <div className="w-1/2 flex flex-col items-center mx-auto">
           <Poll
