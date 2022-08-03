@@ -140,7 +140,7 @@ const Layout = ({ children }) => {
           <ScheduleNav navbarMatchup={navbarMatchup} />
         </div>
       </div>
-      <div className="sticky top-0">
+      <div>
         <Navbar navbarMatchup={navbarMatchup} />
         {children}
       </div>

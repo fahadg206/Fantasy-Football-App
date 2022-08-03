@@ -32,11 +32,11 @@ const CarouselView = () => {
       infiniteLoop={true}
     >
       {featuredArticles.map((article, index) => (
-        <div key={index}>
+        <div key={index} className="">
           <img className="rounded-[20px]" src={article.img} />
           <div className="card-body">
             <h4 className="font-semibold">{article.heading}</h4>
-            <p className="opcacity-60 mb-4">{article.preview}</p>
+            <p className="opcacity-60 mb-4 ">{article.preview}</p>
             <button
               className="mb-10 button hover:scale-125 hover:duration-500 rounded-[40px] p-[7px] bg-[#01ECF2] text-[#0046FF] "
               data-ripple-light="true"

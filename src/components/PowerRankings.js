@@ -2,19 +2,11 @@ import React from "react";
 
 const PowerRankings = () => {
   return (
-    <div>
-      <div className="flex items-center justify-center font-bold w-full h-screen text-6xl">
-        PowerRankings
-      </div>
-      <div className="flex items-center justify-center font-bold w-full h-screen text-6xl">
-        Number 10
-      </div>
-      <div className="flex items-center justify-center font-bold w-full h-screen text-6xl">
-        Number 9
-      </div>
-      <div className="flex items-center justify-center font-bold w-full h-screen text-6xl">
-        Number 8
-      </div>
+    <div className="grid grid-cols-1 items-center justify-items-center font-bold text-6xl">
+      <div className="h-screen">PowerRankings</div>
+      <div className="h-screen">Number 10</div>
+      <div className="h-screen">Number 9</div>
+      <div className="h-screen">Number 8</div>
     </div>
   );
 };

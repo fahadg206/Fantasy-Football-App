@@ -9,10 +9,9 @@ import TrendingAdds from "./TrendingAdds";
 import TrendingDrops from "./TrendingDrops";
 
 const Home = () => {
-  const [totalVotes, setTotalVotes] = useState(0);
   const [pollAnswers, setPollAnswers] = useState([
-    { option: "Kabo", votes: 0 },
-    { option: "Fahad", votes: 0 },
+    { option: "Kabo", votes: 1 },
+    { option: "Fahad", votes: 1 },
   ]);
 
   const handleVote = (voteAnswer) => {
@@ -33,9 +32,7 @@ const Home = () => {
 
   const getVotes = async () => {
     const response = await axios.get("http://localhost:3001/get");
-    setTotalVotes(
-      response.data.answers[1].votes + response.data.answers[0].votes
-    );
+
     setPollAnswers(response.data.answers);
   };
 
@@ -48,14 +45,14 @@ const Home = () => {
     questionColor: "purple",
     theme: "blue",
     questionSeparator: false,
-    questionSeparatorWidth: "polls",
+    questionSeparatorWidth: "question",
     align: "center",
   };
 
   return (
-    <div className="min-h-screen ">
-      <div className="flex flex-col lg:grid grid-cols-3 justify-items-center gap-y-[30px]">
-        <div className="w-1/2 flex flex-col items-center mx-auto">
+    <div className="min-h-screen bg-[url('file:///C:/Users/fahad/OneDrive/Desktop/portfolio/src/images/wesbite%20background.png')]">
+      <div className="flex flex-col lg:grid grid-cols-5 justify-items-center gap-y-[30px] grid-rows-2">
+        <div className="flex flex-col items-center justify-evevnly rounded-[10px] mx-auto bg-white w-[90%] col-start-2">
           <Poll
             question={"What's the best framework?"}
             answers={pollAnswers}
@@ -63,25 +60,24 @@ const Home = () => {
             customStyles={pollStyles1}
             noStorage={false}
           />
-          {totalVotes}
         </div>
-        <div className="mx-auto w-3/4">
+        <div className="w-[90%] mx-auto bg-white lg:w-full rounded-[10px]">
           <Carousel />
         </div>
 
-        <div className="mx-auto w-3/4">
+        <div className="mx-auto w-[90%] col-end-5 h-full">
           <Headlines />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center col-start-2 w-[90%]">
           <TrendingAdds />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center w-[90%] h-[87%] mx-20">
           <HighestScorer />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center w-[90%] ">
           <TrendingDrops />
         </div>
-        <div className="col-span-3">
+        <div className="col-start-2 col-end-5">
           <VideoDisplay />
         </div>
       </div>

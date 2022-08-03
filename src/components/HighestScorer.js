@@ -79,18 +79,18 @@ const HighestScorer = () => {
       <tr key={team.id} className=" items-center text-center">
         <td className="teamname flex items-center ">
           <img
-            className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
+            className=" w-[50px] my-[5px] mr-[5px] rounded-[50px]"
             src={team.avatar}
           />
-          <p className="text-[14px]">{team.name}</p>
+          <p className="text-[18px]">{team.name}</p>
         </td>
-        <td className="fantasypoints ">{team.fantasy_points}</td>
+        <td className="fantasypoints text-[18px] ">{team.fantasy_points}</td>
       </tr>
     );
   });
 
   return (
-    <div className="bg-white rounded-[20px] h-min p-10">
+    <div className="bg-[red] rounded-[10px] p-10">
       <div className="flex flex-col items-center justify-center">
         <div className="text-2xl border-b border-[#01ECF2] mb-4">
           Top Scorers This Week
