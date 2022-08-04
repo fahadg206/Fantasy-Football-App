@@ -2,7 +2,7 @@ import React from "react";
 
 const Headlines = () => {
   return (
-    <div className="flex flex-col items-center lg:border-2 border-[#01ECF2] border-opacity-30 rounded-[10px] bg-white p-10">
+    <div className="flex flex-col items-center lg:border-2 border-[#01ECF2] border-opacity-30 rounded-[10px] bg-white p-10 h-full">
       <p className="text-[20px] mb-[10px] self-start border-b border-[#01ECF2] w-full border-opacity-30 lg:flex justify-center">
         Top Headlines
       </p>
@@ -14,6 +14,7 @@ const Headlines = () => {
         <p>Headline 5 </p>
         <p>Headline 6 </p>
         <p>Headline 7 </p>
+        <p>Headline 8 </p>
         <p>Headline 8 </p>
       </div>
     </div>

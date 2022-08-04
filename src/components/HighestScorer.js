@@ -74,23 +74,27 @@ const HighestScorer = () => {
       (a, b) => b[1]["fantasy_points"] - a[1]["fantasy_points"]
     )
   );
+  let count = 0;
   const standings = [...sortedTeamData.values()].map((team) => {
-    return (
-      <tr key={team.id} className=" items-center text-center">
-        <td className="teamname flex items-center ">
-          <img
-            className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
-            src={team.avatar}
-          />
-          <p className="text-[16px]">{team.name}</p>
-        </td>
-        <td className="fantasypoints text-[16px] ">{team.fantasy_points}</td>
-      </tr>
-    );
+    if (count < 3) {
+      count++;
+      return (
+        <tr key={team.id} className=" items-center text-center">
+          <td className="teamname flex items-center ">
+            <img
+              className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
+              src={team.avatar}
+            />
+            <p className="text-[16px]">{team.name}</p>
+          </td>
+          <td className="fantasypoints text-[16px] ">{team.fantasy_points}</td>
+        </tr>
+      );
+    }
   });
 
   return (
-    <div className="flex justify-center content-center lg:bg-[white] rounded-[10px] p-10 text-center">
+    <div className="w-[70vw] flex justify-center content-center lg:w-full h-full rounded-[10px] p-10 text-center">
       <div className="flex flex-col items-center justify-center">
         <div className="text-2xl border-b border-[#01ECF2] mb-4">
           Top Scorers This Week
@@ -102,7 +106,9 @@ const HighestScorer = () => {
               <th className="sm:px-[5px]">Fantasy Points</th>
             </tr>
           </thead>
-          <tbody>{standings}</tbody>
+          <tbody>
+            {standings} {standings} {standings}
+          </tbody>
         </table>
       </div>
     </div>

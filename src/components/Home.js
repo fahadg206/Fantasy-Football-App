@@ -51,8 +51,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-[url('file:///C:/Users/fahad/OneDrive/Desktop/portfolio/src/images/wesbite%20background.png')]">
-      <div className="flex flex-col lg:grid grid-cols-5 justify-items-center gap-y-[30px] grid-rows-2">
-        <div className="flex flex-col items-center justify-evevnly rounded-[10px] mx-auto bg-white w-[90%] col-start-2">
+      <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2">
+        <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-white col-span-2">
+          <div className="w-[60%]">
+            <img src="https://blacksportsonline.com/wp-content/uploads/2016/12/LeBron-Block.jpg" />
+          </div>
           <Poll
             question={"What's the best framework?"}
             answers={pollAnswers}
@@ -61,23 +64,23 @@ const Home = () => {
             noStorage={false}
           />
         </div>
-        <div className="w-[90%] mx-auto bg-white lg:w-full rounded-[10px]">
+        <div className="w-[90%] col-span-2 mx-auto bg-white lg:w-full rounded-[10px]">
           <Carousel />
         </div>
 
-        <div className="mx-auto w-[90%] col-end-5 h-full">
+        <div className="mx-auto w-3/4 col-span-2 h-full">
           <Headlines />
         </div>
-        <div className="flex justify-center w-[90%] ml-5 col-start-2 self-center">
+        <div className="flex justify-center w-[90%] ml-5 col-span-2 self-center">
           <TrendingAdds />
         </div>
-        <div className="bg-white rounded-[10px] w-[30%] self-center lg:w-[90%] lg:mx-auto col-start-3 h-full">
+        <div className="col-span-2 bg-white rounded-[10px] self-center lg:w-[90%] lg:mx-auto col-start-3 h-full">
           <HighestScorer />
         </div>
-        <div className="col-start-4 flex justify-center w-[90%] self-center">
+        <div className="col-span-2 flex justify-center w-[90%] self-center">
           <TrendingDrops />
         </div>
-        <div className="col-start-2 col-end-5">
+        <div className="col-start-2 col-end-6">
           <VideoDisplay />
         </div>
       </div>
