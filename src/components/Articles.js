@@ -32,7 +32,7 @@ const Articles = () => {
     );
   };
   return (
-    <div className="min-h-screen bg-[url('/src/images/bgpng.png')]">
+    <div className="min-h-screen bg-[url('images/bgpng.png')] ">
       <div className="flex flex-col md:grid grid-cols-4 justify-items-center">
         <div className="hidden md:flex flex-col items-center justify-center text-center polls text-[black] rounded-[10px] bg-[#eaecee] h-[400px] p-[10px] shadow-md shadow-black sticky top-0">
           <h2 className="mb-[15px] text-2xl">Weekly Articles</h2>

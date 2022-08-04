@@ -50,18 +50,12 @@ const Home = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-[url('file:///C:/Users/fahad/OneDrive/Desktop/portfolio/src/images/wesbite%20background.png')]">
+    <div className="min-h-screen bg-[url('images/bgpng.png')]">
       <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2">
         <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-white col-span-2">
           <div className="w-[60%]">
             <img src="https://blacksportsonline.com/wp-content/uploads/2016/12/LeBron-Block.jpg" />
           </div>
-=======
-    <div className="min-h-screen bg-[url('/src/images/Jewels bounty.png')]">
-      <div className="flex flex-col lg:grid grid-cols-5 justify-items-center gap-y-[30px] grid-rows-2">
-        <div className="flex flex-col items-center justify-evevnly rounded-[10px] mx-auto bg-white w-[90%] col-start-2">
->>>>>>> c06129a (Added images plus power rankings)
           <Poll
             question={"What's the best framework?"}
             answers={pollAnswers}

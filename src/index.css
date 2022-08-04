@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: #eaecee; 
+  background: #eaecee;
   /* background-image: url("file:///C:/Users/fahad/OneDrive/Desktop/portfolio/src/images/website%20background.png");
   background-size:auto; */
   height: 100%;
@@ -13,13 +13,12 @@ body {
 
 .nav {
   font-size: 17px;
-  font-weight: bold
+  font-weight: bold;
 }
 
 .fade-anim {
   animation: fadeAnim 0.75s ease-out;
 }
-
 
 @keyframes fadeAnim {
   from {
