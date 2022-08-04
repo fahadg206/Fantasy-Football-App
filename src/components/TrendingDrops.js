@@ -36,10 +36,10 @@ const TrendingDrops = () => {
     //getPlayers();
   }, []);
   return (
-    <div>
+    <div className="flex justify-center">
       <iframe
+        className="lg:w-[100%] 2xl:w-full rounded-[10px]"
         src="https://sleeper.app/embed/players/nfl/trending/drop?lookback_hours=24&limit=20"
-        width="350"
         height="500"
         allowtransparency="true"
         frameBorder="0"

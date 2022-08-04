@@ -36,11 +36,10 @@ const TrendingAdds = () => {
     //getPlayers();
   }, []);
   return (
-    <div className="">
+    <div className="flex justify-center">
       <iframe
-        className="rounded-[10px] "
+        className="lg:w-[100%] 2xl:w-full rounded-[10px]"
         src="https://sleeper.app/embed/players/nfl/trending/add?lookback_hours=24&limit=20"
-        width="350"
         height="500"
         allowtransparency="true"
         frameBorder="0"

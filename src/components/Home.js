@@ -68,13 +68,13 @@ const Home = () => {
         <div className="mx-auto w-[90%] col-end-5 h-full">
           <Headlines />
         </div>
-        <div className="flex justify-center col-start-2 w-[90%]">
+        <div className="flex justify-center w-[90%] ml-5 col-start-2 self-center">
           <TrendingAdds />
         </div>
-        <div className="flex justify-center w-[90%] h-[87%] mx-20">
+        <div className="bg-white rounded-[10px] w-[30%] self-center lg:w-[90%] lg:mx-auto col-start-3 h-full">
           <HighestScorer />
         </div>
-        <div className="flex justify-center w-[90%] ">
+        <div className="col-start-4 flex justify-center w-[90%] self-center">
           <TrendingDrops />
         </div>
         <div className="col-start-2 col-end-5">
