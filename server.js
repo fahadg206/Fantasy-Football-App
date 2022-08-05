@@ -8,8 +8,10 @@ const Player = require("./models/PlayerBase");
 app.use(express.json());
 app.use(cors());
 
+const { REACT_APP_MONGO_PASSWORD } = process.env;
+
 mongoose.connect(
-  "mongodb+srv://FF:rcff2022@fantasy.2dzgtvk.mongodb.net/?retryWrites=true&w=majority",
+  `mongodb+srv://FF:${REACT_APP_MONGO_PASSWORD}@fantasy.2dzgtvk.mongodb.net/?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
   }
