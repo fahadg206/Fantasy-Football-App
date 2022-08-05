@@ -4,6 +4,7 @@ const app = express();
 const cors = require("cors");
 const PollModel = require("./models/Polls");
 const Player = require("./models/PlayerBase");
+require("dotenv").config();
 
 app.use(express.json());
 app.use(cors());
