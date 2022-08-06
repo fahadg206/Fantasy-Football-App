@@ -2,7 +2,6 @@ import Navbar from "./Navbar";
 import ScheduleNav from "./ScheduleNav";
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
-import { Link } from "react-router-dom";
 import { FaCloudRain } from "react-icons/fa";
 
 const Layout = ({ children }) => {
@@ -134,9 +133,9 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <div className=" flex justify-center lg:flex">
-        <FaCloudRain className="lg:mr-auto ml-5 my-2 w-[300px] h-[100px]" />
-        <div className="hidden lg:flex">
+      <div className="flex justify-center lg:flex">
+        <FaCloudRain className="hidden lg:mr-auto ml-5 my-2 w-[300px] h-[100px]" />
+        <div className="hidden lg:flex ">
           <ScheduleNav navbarMatchup={navbarMatchup} />
         </div>
       </div>

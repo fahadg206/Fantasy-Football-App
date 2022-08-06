@@ -149,14 +149,14 @@ const Schedule = () => {
                 console.log(team1.name !== "loading");
 
                 matchupText = (
-                  <div className="grid grid-cols-1 sm:flex items-center content-center text-center mb-[30px] p-8 w-[100vw] text-black rounded-[15px] bg-white">
-                    <div className="flex justify-center">
+                  <div className="grid grid-cols-1 sm:flex items-center content-center text-center mb-[30px] p-8 w-[80vw] text-black rounded-[15px] bg-white">
+                    <div className="flex justify-center items-center">
                       <div className="team1 flex items-center">
                         <img
-                          className=" w-[30px] my-[5px] mr-[5px] rounded-[50px]"
+                          className="w-[50px] my-[5px] mr-[5px] rounded-full"
                           src={team1.avatar}
                         />
-                        <p className="text-[12px] mr-[5px]">{team1.name}</p>
+                        <p className="text-[16px] mr-[5px]">{team1.name}</p>
 
                         <p className="text-[14px]">
                           {schedule[i].points === 0 ? "" : schedule[i].points}
@@ -167,10 +167,10 @@ const Schedule = () => {
                       </div>
                       <div className="team2 flex items-center">
                         <img
-                          className="w-[30px] my-[5px] mr-[5px] rounded-[50px]"
+                          className="w-[50px] my-[5px] mr-[5px] rounded-full"
                           src={team2.avatar}
                         ></img>
-                        <p className="text-[12px]">{team2.name}</p>
+                        <p className="text-[16px]">{team2.name}</p>
                         <p className="text-[14px]">
                           {schedule[i].points === 0 ? "" : schedule[i].points}
                         </p>
@@ -227,10 +227,10 @@ const Schedule = () => {
       className=" flex flex-col justify-center content-center w-full "
     >
       <p className="text-center text-2xl mb-[10px] font-bold">Week 1</p>
-      <table>
-        <tr className="hidden sm:flex justify-evenly content-center gap-[20px] text-center p-[7px] border-2 mb-[10px] rounded-[15px] bg-white">
-          <th className="mr-auto pl-[30px]">Matchup</th>
-          <th className="mr-[30px]">Favorite</th>
+      <table className="flex flex-col items-center">
+        <tr className="hidden sm:flex justify-between content-center gap-[20px] text-center p-[7px] border-2 mb-[10px] rounded-[15px] w-[80vw] bg-white">
+          <th className=" ml-[50px]">Matchup</th>
+          <th className="mr-[50px]">Favorite</th>
         </tr>
         <tr className="flex justify-evenly gap-[20px]">
           <tbody>{weeklyMatches}</tbody>

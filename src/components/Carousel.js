@@ -30,6 +30,7 @@ const CarouselView = () => {
       autoPlay={true}
       showArrows={false}
       infiniteLoop={true}
+      swipeable={true}
     >
       {featuredArticles.map((article, index) => (
         <div key={index} className="">

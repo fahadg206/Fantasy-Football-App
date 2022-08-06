@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import React, { Component } from "react";
+import React from "react";
 import Home from "./components/Home";
 import Apply from "./components/Apply";
 import Schedule from "./components/Schedule";
@@ -9,12 +9,18 @@ import RedemptionLeague from "./components/RedemptionLeague";
 import Articles from "./components/Articles";
 import Week1 from "./components/WeeklyArticles/Week1";
 import Layout from "./components/Layout";
+import { FaCloudRain } from "react-icons/fa";
 
 const App = () => {
   return (
     <div>
       <Router>
-        <Layout />
+        <div>
+          <FaCloudRain className="w-screen h-[100px] lg:hidden" />
+        </div>
+        <div className="sticky top-0 lg:static z-50">
+          <Layout />
+        </div>
         <Routes>
           <Route path={"/"} exact element={<Home />} />
           <Route path={"/articles"} element={<Articles />} />

@@ -60,7 +60,8 @@ const Articles = () => {
         <div className="col-span-2 justify-self-start">
           <Week2 />
         </div>
-        <div className="flex flex-col items-center justify-center text-center polls text-[black] rounded-[10px] bg-[#eaecee] h-[400px] p-[10px] shadow-md shadow-black sticky top-0">
+        {/* Use React Smooth Scroll for Headlines */}
+        <div className="hidden lg:flex flex-col items-center justify-center text-center polls text-[black] rounded-[10px] bg-[#eaecee] h-[400px] p-[10px] shadow-md shadow-black sticky top-0">
           <h2 className="mb-[15px] text-2xl">Headlines</h2>
           <ul className="text-[17px]">
             <li className="p-[5px]">

@@ -3,7 +3,7 @@ import React from "react";
 const Week2 = () => {
   return (
     <div className="flex flex-col items-center sm:grid md:grid grid-cols-2 gap-x-24 bg-white rounded-[10px] p-[25px] text-center">
-      <div className="sm:sticky top-0 self-start">
+      <div className="sm:sticky top-20 self-start">
         <img
           className="rounded-[10px]"
           src="https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2022/08/364/607/08.01.22_GoodellWatson_Vertical.jpg?ve=1&tl=1"

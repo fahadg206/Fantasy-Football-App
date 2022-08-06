@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaTwitter, FaDiscord, FaBars } from "react-icons/fa";
+import { FaTwitter, FaDiscord, FaBars, FaFootballBall } from "react-icons/fa";
 import ScheduleNav from "./ScheduleNav";
 
 export default function Navbar({ fixed, navbarMatchup }) {
@@ -8,15 +8,15 @@ export default function Navbar({ fixed, navbarMatchup }) {
   const [scoreNavbarOpen, setScoreNavbarOpen] = React.useState(false);
   return (
     <>
-      <nav className="relative flex flex-wrap mt-3 items-center justify-between px-2 py-2 bg-[#0b1a47e0] mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-2 bg-[#0b1a47f1] mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between text-center lg:w-auto lg:static lg:block lg:justify-start">
-            <a
+            <Link
               className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white"
-              href="#pablo"
+              to="/"
             >
               Raincity Fantasy
-            </a>
+            </Link>
 
             <button
               className=" text-gray-300 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -36,7 +36,7 @@ export default function Navbar({ fixed, navbarMatchup }) {
                 setNavbarOpen(false);
               }}
             >
-              Scores
+              <FaFootballBall className="text-3xl" />
             </button>
           </div>
 
@@ -50,58 +50,60 @@ export default function Navbar({ fixed, navbarMatchup }) {
             >
               <ul className="flex flex-col lg:flex-row list-none items-center lg:ml-auto">
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
+                    to="/"
                   >
-                    <Link to="/">Home</Link>
-                  </a>
+                    Home
+                  </Link>
                 </li>
 
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
+                    to="/articles"
                   >
-                    <Link to="/articles">Articles</Link>
-                  </a>
+                    Articles
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
+                    to="/schedule"
                   >
-                    <Link to="/schedule">Schedule</Link>
-                  </a>
+                    Schedule
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
+                    to="/standings"
                   >
-                    <Link to="/standings">Standings</Link>
-                  </a>
+                    Standings
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
+                    to="/powerrankings"
                   >
-                    <Link to="/powerrankings">Power Rankings</Link>
-                  </a>
+                    Power Rankings
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
+                    to="/redemptionleague"
                   >
-                    <Link to="/redemptionleague">Redemption League</Link>
-                  </a>
+                    Redemption League
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <button className="px-4 py-1 mr-2 bg-blue-600 text-white text-lg rounded-lg">
-                    Apply
-                  </button>
+                  <Link to="/apply">
+                    <button className="px-4 py-1 mr-2 bg-blue-600 text-white text-lg rounded-lg">
+                      Apply
+                    </button>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a href="https://twitter.com/fahadg_dev" target="_blank">
