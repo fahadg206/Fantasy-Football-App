@@ -64,7 +64,7 @@ const Home = () => {
             noStorage={false}
           />
         </div>
-        <div className="w-[90%] col-span-2 mx-auto bg-white lg:w-full rounded-[10px]">
+        <div className="w-[70vw] col-span-2 mx-auto bg-white lg:w-full rounded-[10px]">
           <Carousel />
         </div>
 
@@ -74,7 +74,7 @@ const Home = () => {
         <div className="flex justify-center w-[90%] ml-5 col-span-2 self-center">
           <TrendingAdds />
         </div>
-        <div className="col-span-2 bg-white rounded-[10px] self-center lg:w-[90%] lg:mx-auto col-start-3 h-full">
+        <div className="col-span-2 bg-white rounded-[10px] self-center lg: lg:mx-auto col-start-3 h-full">
           <HighestScorer />
         </div>
         <div className="col-span-2 flex justify-center w-[90%] self-center">

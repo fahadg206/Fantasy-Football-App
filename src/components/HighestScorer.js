@@ -79,7 +79,7 @@ const HighestScorer = () => {
     if (count < 3) {
       count++;
       return (
-        <tr key={team.id} className=" items-center text-center">
+        <tr key={team.id} className="flex justify-between">
           <td className="teamname flex items-center ">
             <img
               className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
@@ -87,21 +87,23 @@ const HighestScorer = () => {
             />
             <p className="text-[16px]">{team.name}</p>
           </td>
-          <td className="fantasypoints text-[16px] ">{team.fantasy_points}</td>
+          <td className="fantasypoints text-[16px] mr-[30px] ">
+            {team.fantasy_points}
+          </td>
         </tr>
       );
     }
   });
 
   return (
-    <div className="w-[70vw] flex justify-center content-center lg:w-full h-full rounded-[10px] p-10 text-center">
-      <div className="flex flex-col items-center justify-center">
-        <div className="text-2xl border-b border-[#01ECF2] mb-4">
+    <div className="w-[70vw] flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-white">
+      <div className="flex flex-col items-between justify-center w-full">
+        <div className="text-2xl border-b border-[#01ECF2] mb-4 lg:w-[25vw]">
           Top Scorers This Week
         </div>
         <table className="table-fixed">
           <thead>
-            <tr className="">
+            <tr className="flex justify-between w-full">
               <th className="sm:px-[50px]">Team</th>
               <th className="sm:px-[5px]">Fantasy Points</th>
             </tr>
