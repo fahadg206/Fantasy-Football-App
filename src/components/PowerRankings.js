@@ -67,30 +67,35 @@ const PowerRankings = () => {
   );
 
   return (
-    <div id="roots">
-      {
-        // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
-        props.map(({ x, y, rot, scale }, i) => (
-          <animated.div
-            key={i}
-            style={{
-              transform: interpolate(
-                [x, y],
-                (x, y) => `translate3d(${x}px,${y}px,0)`
-              ),
-            }}
-          >
-            {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
+    <div className="min-h-screen bg-[url('https://media.istockphoto.com/photos/old-burnt-parchment-posted-to-a-wood-background-picture-id1162588922?k=20&m=1162588922&s=612x612&w=0&h=ozQPoxi3QYmFCgjn6xzUbYRQ0T__uo2STmRe2MYpGhQ=')] bg-no-repeat bg-cover">
+      <div className="text-5xl top-0 w-screen flex justify-center">
+        POWER RANKINGS
+      </div>
+      <div id="roots">
+        {
+          // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
+          props.map(({ x, y, rot, scale }, i) => (
             <animated.div
-              {...bind(i)}
+              key={i}
               style={{
-                transform: interpolate([rot, scale], trans),
-                backgroundImage: `url(${cards[i]})`,
+                transform: interpolate(
+                  [x, y],
+                  (x, y) => `translate3d(${x}px,${y}px,0)`
+                ),
               }}
-            />
-          </animated.div>
-        ))
-      }
+            >
+              {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
+              <animated.div
+                {...bind(i)}
+                style={{
+                  transform: interpolate([rot, scale], trans),
+                  backgroundImage: `url(${cards[i]})`,
+                }}
+              />
+            </animated.div>
+          ))
+        }
+      </div>
     </div>
   );
 };

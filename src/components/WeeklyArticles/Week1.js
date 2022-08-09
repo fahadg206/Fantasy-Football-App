@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa";
 
 const Week1 = () => {
   return (
-    <div className="pt-[100px]">
+    <div className="">
       <div>
         <Link to="/articles" className="flex  items-center">
           <FaArrowLeft /> Back To Articles
