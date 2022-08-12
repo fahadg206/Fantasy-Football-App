@@ -106,7 +106,7 @@ const Schedule = () => {
     getUsers();
     getRoster();
     getMatchupVotes();
-  }, [usersChanged, scheduleChanged, rostersChanged]);
+  }, []);
 
   const weeklyMatches = [...weeklyMatchups.values()].map((player) => {
     return (

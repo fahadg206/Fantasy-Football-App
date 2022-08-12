@@ -66,7 +66,7 @@ const HighestScorer = () => {
 
   useEffect(() => {
     getStandings();
-  }, [changed, usersChanged]);
+  }, [changed]);
   let i = 0;
 
   const sortedTeamData = new Map(

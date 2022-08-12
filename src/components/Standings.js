@@ -69,7 +69,7 @@ const Standings = () => {
   useEffect(() => {
     getStandings();
     console.log(teamInfo);
-  }, [changed, usersChanged]);
+  }, [changed]);
   let i = 0;
 
   // Sorted the Map by wins

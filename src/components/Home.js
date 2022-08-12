@@ -10,8 +10,8 @@ import TrendingDrops from "./TrendingDrops";
 
 const Home = () => {
   const [pollAnswers, setPollAnswers] = useState([
-    { option: "Kabo", votes: 1 },
-    { option: "Fahad", votes: 1 },
+    { option: "Kabo", votes: 0 },
+    { option: "Fahad", votes: 0 },
   ]);
 
   const handleVote = (voteAnswer) => {
@@ -35,7 +35,7 @@ const Home = () => {
 
     setPollAnswers(response.data.answers);
   };
-
+  getVotes();
   useEffect(() => {
     getVotes();
   }, []);
@@ -61,7 +61,7 @@ const Home = () => {
             answers={pollAnswers}
             onVote={handleVote}
             customStyles={pollStyles1}
-            noStorage={false}
+            noStorage={true}
           />
         </div>
         <div className="w-[70vw] col-span-2 mx-auto bg-white lg:w-full rounded-[10px]">

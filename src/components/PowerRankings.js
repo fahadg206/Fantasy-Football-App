@@ -67,8 +67,8 @@ const PowerRankings = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[url('https://media.istockphoto.com/photos/old-burnt-parchment-posted-to-a-wood-background-picture-id1162588922?k=20&m=1162588922&s=612x612&w=0&h=ozQPoxi3QYmFCgjn6xzUbYRQ0T__uo2STmRe2MYpGhQ=')] bg-no-repeat bg-cover">
-      <div className="text-5xl top-0 w-screen flex justify-center">
+    <div className="min-h-[150vh] bg-[url('https://wallpapers-hub.art/wallpaper-images/96064.jpg')] bg-no-repeat bg-cover">
+      <div className="text-5xl text-white top-0 w-screen flex justify-center">
         POWER RANKINGS
       </div>
       <div id="roots">
