@@ -101,7 +101,7 @@ const Layout = ({ children }) => {
 
                 matchupText = (
                   <div>
-                    <div>
+                    <div className="text-black">
                       <div className="team1 flex items-center mb-[5px]">
                         <img
                           className=" w-[25px] my-[5px] mr-[5px] rounded-[50px]"

@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  background: #eaecee;
-  /* background-image: url("file:///C:/Users/fahad/OneDrive/Desktop/portfolio/src/images/website%20background.png");
-  background-size:auto; */
+  background: #EDEEF0;
+   background-image: url('images/bgpng.png');
+  background-size:auto; 
   height: 100%;
   width: 100%;
   color: black;

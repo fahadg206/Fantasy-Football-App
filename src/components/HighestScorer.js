@@ -98,7 +98,7 @@ const HighestScorer = () => {
   return (
     <div className="w-[70vw] flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-white">
       <div className="flex flex-col items-between justify-center w-full">
-        <div className="text-2xl border-b border-[#01ECF2] mb-4 lg:w-[25vw]">
+        <div className="text-2xl border-b border-black mb-4 lg:w-[25vw]">
           Top Scorers This Week
         </div>
         <table className="table-fixed">

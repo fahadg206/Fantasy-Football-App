@@ -16,7 +16,7 @@ const VideoDisplay = () => {
   }, [videos]);
 
   return (
-    <div className="grid grid-cols-1 gap-x-10 items-center lg:flex justify-around bg-white p-[10px] rounded-[10px] shadow-md shadow-black">
+    <div className="grid grid-cols-1 gap-x-10 items-center lg:flex justify-around bg-white p-[10px] rounded-[10px] shadow-lg shadow-black">
       <div className="mb-6 mr-2 w-full">
         <VideoDetail video={selectedVideo} />
       </div>

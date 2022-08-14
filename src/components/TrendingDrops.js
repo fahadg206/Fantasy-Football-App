@@ -38,7 +38,7 @@ const TrendingDrops = () => {
   return (
     <div className="flex justify-center">
       <iframe
-        className="w-[70vw] lg:w-[300px] 2xl:w-[500px] rounded-[10px]"
+        className="w-[70vw] lg:w-[300px] 2xl:w-[500px] rounded-[10px] shadow-lg shadow-black"
         src="https://sleeper.app/embed/players/nfl/trending/drop?lookback_hours=24&limit=20"
         height="500"
         allowtransparency="true"

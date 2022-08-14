@@ -35,34 +35,8 @@ const Articles = () => {
   return (
     <div className="min-h-screen bg-[url('images/bgpng.png')] ">
       <div className="flex flex-col md:grid grid-cols-4 justify-items-center">
-        <div className="hidden md:flex flex-col items-center justify-center text-center polls text-[black] rounded-[10px] bg-[#eaecee] h-[400px] p-[10px] shadow-md shadow-black sticky top-20 lg:top-5">
-          <h2 className="mb-[15px] text-2xl">Weekly Articles</h2>
-          <ul className="text-[17px]">
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-2 justify-self-start">
-          <Week2 />
-        </div>
         {/* Use React Smooth Scroll for Headlines */}
-        <div className="hidden lg:flex flex-col items-center justify-center text-center polls text-[black] rounded-[10px] bg-[#eaecee] h-[400px] p-[10px] shadow-md shadow-black sticky top-5 w-2/4">
+        <div className="hidden md:flex flex-col items-center justify-center text-center polls text-[black] rounded-[10px] bg-[#eaecee] h-[400px] p-[10px] shadow-md shadow-black sticky top-5 w-3/4">
           <h2 className="mb-[15px] text-2xl">Headlines</h2>
           <ul className="text-[17px]">
             <li className="p-[5px]">
@@ -86,6 +60,32 @@ const Articles = () => {
               >
                 Rodgers Seeking 3rd Straight MVP
               </SmoothLink>
+            </li>
+          </ul>
+        </div>
+        <div className="col-span-2 justify-self-start">
+          <Week2 />
+        </div>
+        <div className="hidden lg:flex flex-col items-center justify-center text-center polls text-[black] rounded-[10px] bg-[#eaecee] h-[400px] p-[10px] shadow-md shadow-black sticky top-20 lg:top-5">
+          <h2 className="mb-[15px] text-2xl">Weekly Articles</h2>
+          <ul className="text-[17px]">
+            <li className="p-[5px]">
+              <Link to="/articles/week1">Week1</Link>
+            </li>
+            <li className="p-[5px]">
+              <Link to="/articles/week1">Week1</Link>
+            </li>
+            <li className="p-[5px]">
+              <Link to="/articles/week1">Week1</Link>
+            </li>
+            <li className="p-[5px]">
+              <Link to="/articles/week1">Week1</Link>
+            </li>
+            <li className="p-[5px]">
+              <Link to="/articles/week1">Week1</Link>
+            </li>
+            <li className="p-[5px]">
+              <Link to="/articles/week1">Week1</Link>
             </li>
           </ul>
         </div>

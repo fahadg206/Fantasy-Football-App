@@ -156,7 +156,9 @@ const Schedule = () => {
                           className="w-[50px] my-[5px] mr-[5px] rounded-full"
                           src={team1.avatar}
                         />
-                        <p className="text-[16px] mr-[5px]">{team1.name}</p>
+                        <p className="text-[12px] sm:text-[16px] mr-[5px]">
+                          {team1.name}
+                        </p>
 
                         <p className="text-[14px]">
                           {schedule[i].points === 0 ? "" : schedule[i].points}
@@ -170,7 +172,9 @@ const Schedule = () => {
                           className="w-[50px] my-[5px] mr-[5px] rounded-full"
                           src={team2.avatar}
                         ></img>
-                        <p className="text-[16px]">{team2.name}</p>
+                        <p className="text-[12px] sm:text-[16px]">
+                          {team2.name}
+                        </p>
                         <p className="text-[14px]">
                           {schedule[i].points === 0 ? "" : schedule[i].points}
                         </p>
@@ -228,7 +232,7 @@ const Schedule = () => {
     >
       <p className="text-center text-2xl mb-[10px] font-bold">Week 1</p>
       <table className="flex flex-col items-center">
-        <tr className="hidden sm:flex justify-between content-center gap-[20px] text-center p-[7px] border-2 mb-[10px] rounded-[15px] w-[80vw] bg-white">
+        <tr className="hidden sm:flex justify-between content-center gap-[20px] text-center p-[7px] border-2 mb-[10px] rounded-[15px] w-[80vw] bg-[#0a090afa] text-white">
           <th className=" ml-[50px]">Matchup</th>
           <th className="mr-[50px]">Favorite</th>
         </tr>

@@ -10,13 +10,14 @@ import Articles from "./components/Articles";
 import Week1 from "./components/WeeklyArticles/Week1";
 import Layout from "./components/Layout";
 import { FaCloudRain } from "react-icons/fa";
+import RCL from "./images/rcl_final.png";
 
 const App = () => {
   return (
     <div>
       <Router>
-        <div>
-          <FaCloudRain className="w-screen h-[100px] lg:hidden" />
+        <div className="flex justify-center p-2">
+          <img src={RCL} className="w-[150px] h-[100px] lg:hidden" />
         </div>
         <div className="sticky top-0 lg:static z-50">
           <Layout />

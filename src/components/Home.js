@@ -42,17 +42,17 @@ const Home = () => {
 
   const pollStyles1 = {
     questionBold: true,
-    questionColor: "purple",
-    theme: "blue",
+    questionColor: "black",
+    theme: "black",
     questionSeparator: false,
     questionSeparatorWidth: "question",
     align: "center",
   };
 
   return (
-    <div className="min-h-screen bg-[url('images/bgpng.png')]">
-      <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2">
-        <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-white col-span-2">
+    <div className="min-h-screen">
+      <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8">
+        <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
           <div className="w-[60%]">
             <img src="https://blacksportsonline.com/wp-content/uploads/2016/12/LeBron-Block.jpg" />
           </div>
@@ -64,20 +64,20 @@ const Home = () => {
             noStorage={true}
           />
         </div>
-        <div className="w-[70vw] col-span-2 mx-auto bg-white lg:w-full rounded-[10px]">
+        <div className="w-[70vw] col-span-2 mx-auto bg-[#F9F9FB] lg:w-full rounded-[10px] shadow-lg shadow-black">
           <Carousel />
         </div>
 
-        <div className="mx-auto w-3/4 col-span-2 h-full">
+        <div className="mx-auto w-3/4 col-span-2 bg-[#F9F9FB] p-10 h-full shadow-lg shadow-black rounded-[10px]">
           <Headlines />
         </div>
         <div className="flex justify-center w-[90%] ml-5 col-span-2 self-center">
           <TrendingAdds />
         </div>
-        <div className="col-span-2 bg-white rounded-[10px] self-center lg: lg:mx-auto col-start-3 h-full">
+        <div className="col-span-2 bg-[#F9F9FB] rounded-[10px] self-center lg: lg:mx-auto col-start-3 h-full shadow-lg shadow-black">
           <HighestScorer />
         </div>
-        <div className="col-span-2 flex justify-center w-[90%] self-center">
+        <div className="col-span-2 flex justify-center w-[90%] self-">
           <TrendingDrops />
         </div>
         <div className="col-start-2 col-end-6">
