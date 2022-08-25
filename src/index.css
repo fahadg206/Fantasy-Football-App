@@ -20,6 +20,76 @@ body {
   animation: fadeAnim 0.75s ease-out;
 }
 
+.skew {
+  border-bottom: 80px solid #1a1a1c;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 150px;
+}
+.skew2 {
+  border-bottom: 80px solid #1a1a1c;
+  border-left: 50px solid transparent;
+  height: 0;
+  width: 150px;
+}
+
+@media only screen and (max-width: 690px) {
+  .skew {
+    border-bottom: 80px solid #1a1a1c;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 100px;
+  }
+  .skew2 {
+    border-bottom: 80px solid #1a1a1c;
+    border-left: 50px solid transparent;
+    height: 0;
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .skew {
+    border-bottom: 80px solid #0a090afa;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 70px;
+  }
+  .skew2 {
+    border-bottom: 80px solid #0a090afa;
+    border-left: 50px solid transparent;
+    height: 0;
+    width: 70px;
+  }
+
+  .names {
+    display: hidden;
+  }
+}
+
+@media only screen and (width: 414px) {
+  .points {
+    padding: 5px;
+  }
+}
+@media only screen and (width: 320px) {
+  .points {
+    padding: 5px;
+  }
+
+  .skew {
+    border-bottom: 80px solid #1a1a1c;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 50px;
+  }
+  .skew2 {
+    border-bottom: 80px solid #1a1a1c;
+    border-left: 50px solid transparent;
+    height: 0;
+    width: 50px;
+  }
+}
+
 @keyframes fadeAnim {
   from {
     opacity: 0;

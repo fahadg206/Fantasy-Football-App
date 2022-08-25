@@ -1,4 +1,3 @@
-import { render } from "react-dom";
 import React, { useState } from "react";
 import { useSprings, animated, interpolate } from "react-spring";
 import { useGesture } from "react-use-gesture";
@@ -17,7 +16,7 @@ const cards = [
 const to = (i) => ({
   x: 0,
   y: i * -4,
-  scale: 1,
+  scale: 0.8,
   rot: -10 + Math.random() * 20,
   delay: i * 100,
 });
@@ -68,7 +67,7 @@ const PowerRankings = () => {
 
   return (
     <div className="min-h-[150vh] bg-[url('https://wallpapers-hub.art/wallpaper-images/96064.jpg')] bg-no-repeat bg-cover">
-      <div className="text-5xl text-white top-0 w-screen flex justify-center">
+      <div className="text-[70px] font-['Bradley_Hand_ITC'] font-bold text-[#e0d5c2] top-0 w-70vw flex justify-center text-center">
         POWER RANKINGS
       </div>
       <div id="roots">

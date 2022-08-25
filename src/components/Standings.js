@@ -84,12 +84,12 @@ const Standings = () => {
   const standings = [...sortedTeamData.values()].map((team) => {
     return (
       <tr key={team.id} className=" items-center text-center">
-        <td className="teamname flex items-center ">
+        <td className="teamname flex items-center">
           <img
-            className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
+            className="w-[40px] my-[5px] mr-[5px] rounded-[50px]"
             src={team.avatar}
           />
-          <p className="text-[14px]">{team.name}</p>
+          <p className="hidden sm:block text-[14px]">{team.name}</p>
         </td>
         <td className="wins ">{team.wins}</td>
         <td className="losses ">{team.losses}</td>
@@ -101,10 +101,10 @@ const Standings = () => {
 
   return (
     <div>
-      <div className=" flex justify-center">
-        <table className="table-fixed">
-          <thead>
-            <tr className="">
+      <div className="flex justify-center">
+        <table className="table-fixed w-[70vw] bg-[white]">
+          <thead className="">
+            <tr>
               <th className="sm:px-[50px]">Team</th>
               <th className="sm:px-[5px]">Wins</th>
               <th className="sm:px-[5px]">Losses</th>

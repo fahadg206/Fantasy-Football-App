@@ -149,39 +149,53 @@ const Schedule = () => {
                 console.log(team1.name !== "loading");
 
                 matchupText = (
-                  <div className="grid grid-cols-1 sm:flex items-center content-center text-center mb-[30px] p-8 w-[80vw] text-black rounded-[15px] bg-white">
-                    <div className="flex justify-center items-center">
+                  <div className="grid grid-cols-1  lg:flex items-center content-center text-center mb-[30px] p-8 w-[80vw] text-black rounded-[15px] bg-white">
+                    <div className="flex justify-between items-center w-[70vw]">
                       <div className="team1 flex items-center">
+                        <div className="skew">
+                          <p className="hidden sm:block text-2xl mr-[5px] text-white names pt-7">
+                            {team1.name}
+                          </p>
+                          <img
+                            className="w-[30px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 ml-3 sm:hidden"
+                            src={team1.avatar}
+                          />
+                        </div>
                         <img
-                          className="w-[50px] my-[5px] mr-[5px] rounded-full"
+                          className="hidden sm:block w-[30px] md:w-[50px] my-[5px] mr-[5px] rounded-full"
                           src={team1.avatar}
                         />
-                        <p className="text-[12px] sm:text-[16px] mr-[5px]">
-                          {team1.name}
+                        <p className="text-[20px] sm:text-2xl points">
+                          {schedule[i].points === 0
+                            ? "100"
+                            : schedule[i].points}
+                        </p>
+                      </div>
+
+                      <div className="team2 flex items-center">
+                        <p className="text-[20px] sm:text-2xl points mr-3">
+                          {schedule[i].points === 0
+                            ? "100"
+                            : schedule[i].points}
                         </p>
 
-                        <p className="text-[14px]">
-                          {schedule[i].points === 0 ? "" : schedule[i].points}
-                        </p>
-                      </div>
-                      <div className="flex justify-right text-[15px] p-[7px]">
-                        vs.
-                      </div>
-                      <div className="team2 flex items-center">
                         <img
-                          className="w-[50px] my-[5px] mr-[5px] rounded-full"
+                          className="hidden sm:block w-[30px] md:w-[50px] my-[5px] rounded-full"
                           src={team2.avatar}
                         ></img>
-                        <p className="text-[12px] sm:text-[16px]">
-                          {team2.name}
-                        </p>
-                        <p className="text-[14px]">
-                          {schedule[i].points === 0 ? "" : schedule[i].points}
-                        </p>
+                        <div className="skew2 mr-4">
+                          <p className="hidden sm:block text-2xl text-white names pt-7 mr-3">
+                            {team2.name}
+                          </p>
+                          <img
+                            className="w-[30px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 sm:hidden"
+                            src={team2.avatar}
+                          />
+                        </div>
                       </div>
                     </div>
 
-                    <div className="flex justify-center sm:ml-auto">
+                    <div className="flex justify-center lg:ml-auto">
                       <Poll
                         question={"Who will win this week?"}
                         answers={matchupPolls.get(matchup[0].matchup_id)}
