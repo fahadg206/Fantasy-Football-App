@@ -47,7 +47,7 @@ body {
     width: 100px;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 389px) {
   .skew {
     border-bottom: 80px solid #0a090afa;
     border-right: 50px solid transparent;
@@ -59,6 +59,7 @@ body {
     border-left: 50px solid transparent;
     height: 0;
     width: 70px;
+    
   }
 
   .names {
@@ -66,27 +67,33 @@ body {
   }
 }
 
-@media only screen and (width: 414px) {
-  .points {
-    padding: 5px;
+@media only screen and (max-width: 390) {
+  .skew {
+    border-bottom: 80px solid #0a090afa;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 40px;
+  }
+  .skew2 {
+    border-bottom: 80px solid #0a090afa;
+    border-left: 50px solid transparent;
+    height: 0;
+    width: 40px;
   }
 }
-@media only screen and (width: 320px) {
-  .points {
-    padding: 5px;
-  }
-
+@media only screen and (width: 390px) {
+ 
   .skew {
     border-bottom: 80px solid #1a1a1c;
     border-right: 50px solid transparent;
     height: 0;
-    width: 50px;
+    width: 90px;
   }
   .skew2 {
     border-bottom: 80px solid #1a1a1c;
     border-left: 50px solid transparent;
     height: 0;
-    width: 50px;
+    width: 90px;
   }
 }
 

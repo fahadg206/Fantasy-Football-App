@@ -17,20 +17,10 @@ const Schedule = () => {
   const [matchupPolls, setMatchupPolls] = useState(new Map());
   const pollStyles1 = {
     questionBold: true,
-    questionColor: "green",
-    theme: "red",
+    questionColor: "black",
+    theme: "black",
 
     align: "center",
-  };
-
-  const handleVote = (voteAnswer) => {
-    const newPollAnswers = pollAnswers.map((answer) => {
-      if (answer.option === voteAnswer) {
-        answer.votes++;
-      }
-
-      return answer;
-    });
   };
 
   let scheduleChanged = false;
@@ -149,7 +139,7 @@ const Schedule = () => {
                 console.log(team1.name !== "loading");
 
                 matchupText = (
-                  <div className="grid grid-cols-1  lg:flex items-center content-center text-center mb-[30px] p-8 w-[80vw] text-black rounded-[15px] bg-white">
+                  <div className="grid grid-cols-1  lg:flex items-center content-center text-center mb-[30px] p-8 w-[80vw] text-black rounded-[15px] bg-white shadow-lg shadow-black">
                     <div className="flex justify-between items-center w-[70vw]">
                       <div className="team1 flex items-center">
                         <div className="skew">
@@ -157,7 +147,7 @@ const Schedule = () => {
                             {team1.name}
                           </p>
                           <img
-                            className="w-[30px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 ml-3 sm:hidden"
+                            className="w-[50px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 ml-3 sm:hidden"
                             src={team1.avatar}
                           />
                         </div>
@@ -171,7 +161,8 @@ const Schedule = () => {
                             : schedule[i].points}
                         </p>
                       </div>
-
+                      <div className="hidden lg:block text-3xl">VS</div>
+                      <div className="text-2xl block sm:hidden">-</div>
                       <div className="team2 flex items-center">
                         <p className="text-[20px] sm:text-2xl points mr-3">
                           {schedule[i].points === 0
@@ -188,7 +179,7 @@ const Schedule = () => {
                             {team2.name}
                           </p>
                           <img
-                            className="w-[30px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 sm:hidden"
+                            className="w-[50px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 sm:hidden"
                             src={team2.avatar}
                           />
                         </div>

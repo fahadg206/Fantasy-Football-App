@@ -86,7 +86,7 @@ const Standings = () => {
       <tr key={team.id} className=" items-center text-center">
         <td className="teamname flex items-center">
           <img
-            className="w-[40px] my-[5px] mr-[5px] rounded-[50px]"
+            className="w-[40px] my-[5px] mr-[5px] rounded-full"
             src={team.avatar}
           />
           <p className="hidden sm:block text-[14px]">{team.name}</p>
@@ -102,7 +102,7 @@ const Standings = () => {
   return (
     <div>
       <div className="flex justify-center">
-        <table className="table-fixed w-[70vw] bg-[white]">
+        <table className="table-fixed w-[70vw] bg-[white] shadow-lg shadow-black mt-5 rounded-[10px]">
           <thead className="">
             <tr>
               <th className="sm:px-[50px]">Team</th>
