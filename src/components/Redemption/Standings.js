@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import sleeper from "../api/sleeper";
+import sleeper from "../../api/sleeper";
 
-const HighestScorer = () => {
+// Using a Map instead of an Array to help us look up the team owners information faster
+
+const Standings = () => {
   const [teams, setTeams] = useState([]);
   const [users, setUsers] = useState([]);
   const [teamInfo, setTeamInfo] = useState(new Map());
@@ -16,10 +18,9 @@ const HighestScorer = () => {
   }
 
   const teamData = new Map();
-  const { REACT_APP_LEAGUE_ID } = process.env;
 
   const getUsers = async (id, wins, losses, ties, fantasy_points) => {
-    const response = await sleeper.get(`league/${REACT_APP_LEAGUE_ID}/users`);
+    const response = await sleeper.get("league/845531683540303872/users");
     setUsers(response.data);
     for (let i = 0; i < response.data.length; i++) {
       if (response.data[i].user_id === id) {
@@ -49,9 +50,7 @@ const HighestScorer = () => {
   };
 
   const getStandings = async () => {
-    const response = await sleeper.get(
-      `/league/${REACT_APP_LEAGUE_ID}/rosters`
-    );
+    const response = await sleeper.get("/league/845531683540303872/rosters");
     setTeams(response.data);
 
     for (let i = 0; i < response.data.length; i++) {
@@ -69,45 +68,47 @@ const HighestScorer = () => {
 
   useEffect(() => {
     getStandings();
+    console.log(teamInfo);
   }, [changed]);
   let i = 0;
 
+  // Sorted the Map by wins
   const sortedTeamData = new Map(
     [...teamInfo.entries()].sort(
-      (a, b) => b[1]["fantasy_points"] - a[1]["fantasy_points"]
+      (a, b) =>
+        b[1]["wins"] -
+        a[1]["wins"] +
+        (b[1]["fantasy_points"] - a[1]["fantasy_points"])
     )
   );
-  let count = 0;
   const standings = [...sortedTeamData.values()].map((team) => {
-    if (count < 8) {
-      count++;
-      return (
-        <tr key={team.id} className="flex justify-between">
-          <td className="teamname flex items-center ">
-            <img
-              className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
-              src={team.avatar}
-            />
-            <p className="text-[16px]">{team.name}</p>
-          </td>
-          <td className="fantasypoints text-[16px] mr-[30px] ">
-            {team.fantasy_points}
-          </td>
-        </tr>
-      );
-    }
+    return (
+      <tr key={team.id} className=" items-center text-center">
+        <td className="teamname flex items-center">
+          <img
+            className="w-[40px] my-[5px] mr-[5px] rounded-full"
+            src={team.avatar}
+          />
+          <p className="hidden sm:block text-[14px]">{team.name}</p>
+        </td>
+        <td className="wins ">{team.wins}</td>
+        <td className="losses ">{team.losses}</td>
+        <td className="ties ">{team.ties}</td>
+        <td className="fantasypoints ">{team.fantasy_points}</td>
+      </tr>
+    );
   });
 
   return (
-    <div className="w-[70vw] flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-white">
-      <div className="flex flex-col items-between justify-center w-full">
-        <div className="text-2xl border-b border-black mb-4 lg:w-[25vw]">
-          Top Scorers This Week
-        </div>
-        <table className="table-fixed">
-          <thead>
-            <tr className="flex justify-between w-full">
+    <div>
+      <div className="flex justify-center">
+        <table className="table-fixed w-[70vw] bg-[white] shadow-lg shadow-black mt-5 rounded-[10px]">
+          <thead className="">
+            <tr>
               <th className="sm:px-[50px]">Team</th>
+              <th className="sm:px-[5px]">Wins</th>
+              <th className="sm:px-[5px]">Losses</th>
+              <th className="sm:px-[5px]">Ties</th>
               <th className="sm:px-[5px]">Fantasy Points</th>
             </tr>
           </thead>
@@ -118,4 +119,4 @@ const HighestScorer = () => {
   );
 };
 
-export default HighestScorer;
+export default Standings;

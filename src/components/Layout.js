@@ -29,14 +29,17 @@ const Layout = ({ children }) => {
   }
 
   const scheduleData = new Map();
+  const { REACT_APP_LEAGUE_ID } = process.env;
 
   const getSchedule = async () => {
-    const response = await sleeper.get("league/845531683540303872/matchups/1");
+    const response = await sleeper.get(
+      `league/${REACT_APP_LEAGUE_ID}/matchups/1`
+    );
     setSchedule(response.data);
   };
 
   const getUsers = async () => {
-    const response = await sleeper.get("league/845531683540303872/users");
+    const response = await sleeper.get(`league/${REACT_APP_LEAGUE_ID}/users`);
     // Setting the avatar and name in this function and giving a default value to roster_id if it doesn't exist
     for (let i = 0; i < response.data.length; i++) {
       scheduleData.set(response.data[i].user_id, {
@@ -54,7 +57,9 @@ const Layout = ({ children }) => {
   };
 
   const getRoster = async () => {
-    const response = await sleeper.get("/league/845531683540303872/rosters");
+    const response = await sleeper.get(
+      `/league/${REACT_APP_LEAGUE_ID}/rosters`
+    );
     // Setting the roster_id in this function and giving a default value to avatar and name if they don't exist
     for (let i = 0; i < response.data.length; i++) {
       scheduleData.set(response.data[i].owner_id, {

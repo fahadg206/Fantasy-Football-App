@@ -18,9 +18,10 @@ const Standings = () => {
   }
 
   const teamData = new Map();
+  const { REACT_APP_LEAGUE_ID } = process.env;
 
   const getUsers = async (id, wins, losses, ties, fantasy_points) => {
-    const response = await sleeper.get("league/845531683540303872/users");
+    const response = await sleeper.get(`league/${REACT_APP_LEAGUE_ID}/users`);
     setUsers(response.data);
     for (let i = 0; i < response.data.length; i++) {
       if (response.data[i].user_id === id) {
@@ -50,7 +51,9 @@ const Standings = () => {
   };
 
   const getStandings = async () => {
-    const response = await sleeper.get("/league/845531683540303872/rosters");
+    const response = await sleeper.get(
+      `/league/${REACT_APP_LEAGUE_ID}/rosters`
+    );
     setTeams(response.data);
 
     for (let i = 0; i < response.data.length; i++) {
