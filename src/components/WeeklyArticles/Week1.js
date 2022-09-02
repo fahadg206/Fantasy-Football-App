@@ -6,8 +6,8 @@ const Week1 = () => {
   return (
     <div className="">
       <div>
-        <Link to="/articles" className="flex  items-center">
-          <FaArrowLeft /> Back To Articles
+        <Link to="/articles" className="flex  items-center text-2xl">
+          <FaArrowLeft className="mr-5" /> Back To Articles
         </Link>
       </div>
       klsdnfdlwknfsdlknfslknsdbkjdsbfdskjfbdskjfbsdkj

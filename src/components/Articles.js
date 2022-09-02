@@ -67,23 +67,8 @@ const Articles = () => {
           <Week2 />
         </div>
         <div className="hidden lg:flex flex-col items-center justify-center text-center polls text-[black] rounded-[10px] bg-[#eaecee] h-[400px] p-[10px] shadow-md shadow-black sticky top-20 lg:top-5 mt-5">
-          <h2 className="mb-[15px] text-2xl">Weekly Articles</h2>
+          <h2 className="mb-[15px] text-2xl">Previous Articles</h2>
           <ul className="text-[17px]">
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
-            <li className="p-[5px]">
-              <Link to="/articles/week1">Week1</Link>
-            </li>
             <li className="p-[5px]">
               <Link to="/articles/week1">Week1</Link>
             </li>

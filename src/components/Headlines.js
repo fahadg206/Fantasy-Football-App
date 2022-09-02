@@ -13,9 +13,6 @@ const Headlines = () => {
         <p>Headline 4 </p>
         <p>Headline 5 </p>
         <p>Headline 6 </p>
-        <p>Headline 7 </p>
-        <p>Headline 8 </p>
-        <p>Headline 8 </p>
       </div>
     </div>
   );

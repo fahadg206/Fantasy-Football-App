@@ -113,7 +113,7 @@ export default function Navbar({ fixed, navbarMatchup }) {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="https://twitter.com/fahadg_dev" target="_blank">
+                  <a href="https://twitter.com/raincityleague" target="_blank">
                     <FaTwitter className="h-[24px] mx-2 w-[24px] hover:scale-150 duration-500 text-[#D1D5DB] mt-2" />
                   </a>
                 </li>
