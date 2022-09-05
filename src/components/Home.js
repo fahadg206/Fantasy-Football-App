@@ -57,7 +57,9 @@ const Home = () => {
             <img src="https://blacksportsonline.com/wp-content/uploads/2016/12/LeBron-Block.jpg" />
           </div>
           <Poll
-            question={"What's the best framework?"}
+            question={
+              "After narrowly escaping relegation last season, is this the end of the road for Kabo's Champions League run?"
+            }
             answers={pollAnswers}
             onVote={handleVote}
             customStyles={pollStyles1}
