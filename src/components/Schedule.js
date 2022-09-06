@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
 import Poll from "react-polls";
 import axios from "axios";
+import jefe from "../images/jefe.png";
 
 const Schedule = () => {
   const [pollAnswers, setPollAnswers] = useState([
@@ -20,24 +21,23 @@ const Schedule = () => {
     questionBold: true,
     questionColor: "black",
     theme: "black",
-
     align: "center",
   };
 
-  let scheduleChanged = false;
-  if (schedule.length > 0) {
-    scheduleChanged = true;
-  }
+  // let scheduleChanged = false;
+  // if (schedule.length > 0) {
+  //   scheduleChanged = true;
+  // }
 
-  let usersChanged = false;
-  if (users.length > 0) {
-    usersChanged = true;
-  }
+  // let usersChanged = false;
+  // if (users.length > 0) {
+  //   usersChanged = true;
+  // }
 
-  let rostersChanged = false;
-  if (rosters.length > 0) {
-    rostersChanged = true;
-  }
+  // let rostersChanged = false;
+  // if (rosters.length > 0) {
+  //   rostersChanged = true;
+  // }
 
   const scheduleData = new Map();
   const postedMatchups = new Map();
@@ -88,7 +88,7 @@ const Schedule = () => {
     setRosters(response.data);
     setWeeklyMatchups(scheduleData);
   };
-
+  console.log(weeklyMatchups);
   const getMatchupVotes = async () => {
     const response = await axios.get("http://localhost:3001/getMatchupVotes");
     for (let i = 0; i < response.data.length; i++) {
@@ -142,16 +142,27 @@ const Schedule = () => {
                         { option: team2.name, votes: 0 },
                       ]
                 );
-
-                console.log(team1.name !== "loading");
+                const abv = new Map();
+                abv.set(5, "Ganay");
+                abv.set(6, "FG😁");
+                abv.set(1, "Kabo👟");
+                abv.set(7, "Jefe");
+                abv.set(8, `Sleepy🔑`);
+                abv.set(2, "Sal");
+                abv.set(4, "YSL");
+                abv.set(3, "Lock👨‍👦");
+                abv.set(10, "Edo");
+                abv.set(12, "King🐍");
+                abv.set(9, "6'3");
+                abv.set(11, "Gojo💤");
 
                 matchupText = (
                   <div className="grid grid-cols-1  lg:flex items-center content-center text-center mb-[30px] p-8 w-[80vw] text-black rounded-[15px] bg-white shadow-lg shadow-black">
                     <div className="flex justify-between items-center w-[70vw]">
                       <div className="team1 flex items-center">
                         <div className="skew">
-                          <p className="hidden sm:block text-2xl mr-[5px] text-white names pt-7">
-                            {team1.name}
+                          <p className="hidden sm:block text-2xl font-bold mr-[5px] text-white names pt-7">
+                            {abv.get(team1.roster_id)}
                           </p>
                           <img
                             className="w-[50px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 ml-3 sm:hidden"
@@ -179,7 +190,7 @@ const Schedule = () => {
                         ></img>
                         <div className="skew2 mr-4">
                           <p className="hidden sm:block text-2xl text-white names pt-7 mr-3">
-                            {team2.name}
+                            {abv.get(team2.roster_id)}
                           </p>
                           <img
                             className="w-[50px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 sm:hidden"

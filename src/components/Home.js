@@ -7,6 +7,7 @@ import HighestScorer from "./HighestScorer";
 import VideoDisplay from "./VideosSection/VideoDisplay";
 import TrendingAdds from "./TrendingAdds";
 import TrendingDrops from "./TrendingDrops";
+import KaboArticle from "../images/kaboarticle.png";
 
 const Home = () => {
   const [pollAnswers, setPollAnswers] = useState([
@@ -54,7 +55,7 @@ const Home = () => {
       <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8">
         <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
           <div className="w-[60%]">
-            <img src="https://blacksportsonline.com/wp-content/uploads/2016/12/LeBron-Block.jpg" />
+            <img className="rounded-[10px] mt-3" src={KaboArticle} />
           </div>
           <Poll
             question={

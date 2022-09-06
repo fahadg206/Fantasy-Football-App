@@ -66,8 +66,8 @@ const PowerRankings = () => {
   );
 
   return (
-    <div className="min-h-[150vh] bg-[url('https://wallpapers-hub.art/wallpaper-images/96064.jpg')] bg-no-repeat bg-cover">
-      <div className="text-[70px] font-['Bradley_Hand_ITC'] font-bold text-[#e0d5c2] top-0 w-70vw flex justify-center text-center">
+    <div className="min-h-[150vh] ">
+      <div className="text-[70px] font-['Bradley_Hand_ITC'] font-bold text-[black] bg-[#ffffff75] w-70vw flex justify-center text-center">
         POWER RANKINGS
       </div>
       <div id="roots">

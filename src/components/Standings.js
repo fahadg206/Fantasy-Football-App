@@ -86,7 +86,10 @@ const Standings = () => {
   );
   const standings = [...sortedTeamData.values()].map((team) => {
     return (
-      <tr key={team.id} className=" items-center text-center">
+      <tr
+        key={team.id}
+        className=" items-center text-center border-b-2 border-black border-opacity-10"
+      >
         <td className="teamname flex items-center">
           <img
             className="w-[40px] my-[5px] mr-[5px] rounded-full"
