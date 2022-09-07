@@ -77,7 +77,7 @@ const Home = () => {
         <div className="flex justify-center w-[90%] ml-5 col-span-2 self-center">
           <TrendingAdds />
         </div>
-        <div className="col-span-2 bg-[#F9F9FB] rounded-[10px] self-center lg: lg:mx-auto col-start-3 h-full shadow-lg shadow-black">
+        <div className="col-span-2 rounded-[10px] self-center lg: lg:mx-auto col-start-3  shadow-lg shadow-black">
           <HighestScorer />
         </div>
         <div className="col-span-2 flex justify-center w-[90%] self-center">

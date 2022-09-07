@@ -3,10 +3,10 @@ import Sal from "../images/scary_imran.jpg";
 import Kabo from "../images/kabo_headshot.jpg";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
-const Article1 = () => {
+const Article4 = () => {
   return (
     <div
-      name="article1"
+      name="article4"
       className="flex flex-col items-center sm:grid grid-cols-2"
     >
       <div className="grid grid-cols-1 justify-items-center w-full sm:sticky top-20 self-start lg:top-5">
@@ -22,11 +22,11 @@ const Article1 = () => {
               src={Kabo}
             />
             <div className="flex flex-col">
-              <p>Mahad Fahiye</p>
-              <p className="text-[10px] font-bold">RCL Staff Writer</p>
+              <p>Fahad Guled</p>
+              <p className="text-[10px] font-bold">RCL Senior Writer</p>
             </div>
           </div>
-          <p className="text-[12px]">Sep 5, 2022</p>
+          <p className="text-[12px]">Sep 7, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
           The face that scares a lot of people in this league...
@@ -79,4 +79,4 @@ const Article1 = () => {
   );
 };
 
-export default Article1;
+export default Article4;

@@ -2,21 +2,20 @@ import React, { useEffect, useState } from "react";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import useVideos from "./useVideos";
-import PerfectScrollbar from "react-perfect-scrollbar";
 import { Carousel } from "react-responsive-carousel";
 
 const VideoDisplay = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  const [videos] = useVideos("fantasy football");
-  const [videostwo] = useVideos("nfl highlights");
+  const [videos] = useVideos("Fantasy Football Advice");
+  const [videostwo] = useVideos("Fantasy Flock Network");
 
   useEffect(() => {
     setSelectedVideo(videos[0]);
   }, [videos]);
 
   return (
-    <div className="grid grid-cols-1 gap-x-10 items-center lg:flex justify-around bg-white p-[10px] rounded-[10px] shadow-lg shadow-black">
+    <div className="grid grid-cols-1 gap-x-10 items-center lg:flex justify-around bg-[#F9F9FB] p-[10px] rounded-[10px] shadow-lg shadow-black">
       <div className="mb-6 mr-2 w-full">
         <VideoDetail video={selectedVideo} />
       </div>

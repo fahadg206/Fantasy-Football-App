@@ -28,6 +28,8 @@ const Layout = ({ children }) => {
     rostersChanged = true;
   }
 
+  const postedMatchups = new Map();
+
   const scheduleData = new Map();
   const { REACT_APP_LEAGUE_ID } = process.env;
 
@@ -89,8 +91,11 @@ const Layout = ({ children }) => {
           {(function () {
             let matchupText;
             // We loop through schedule, which is the array containing the matchup ids, roster ids and points for each team.
-            for (let i = 0; i < schedule.length / 2; i++) {
-              if (player.roster_id === schedule[i].roster_id) {
+            for (let i = 0; i < schedule.length; i++) {
+              if (
+                player.roster_id === schedule[i].roster_id &&
+                !postedMatchups.has(schedule[i].matchup_id)
+              ) {
                 // Creating a smaller array containing only the information of the two teams with the same matchup id as the current element we are on (player).
                 let matchup = schedule.filter(
                   (team) => team.matchup_id === schedule[i].matchup_id
@@ -103,7 +108,7 @@ const Layout = ({ children }) => {
                 let team2 = [...weeklyMatchups.values()].find(
                   (team) => team.roster_id === matchup[1].roster_id
                 );
-
+                postedMatchups.set(matchup[0].matchup_id, team1);
                 matchupText = (
                   <div>
                     <div className="text-black">
