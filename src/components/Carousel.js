@@ -1,16 +1,17 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Headline1 from "../images/Imran_title.png";
 
 const featuredArticles = [
   {
-    img: "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    heading: "Material Design",
+    img: Headline1,
+    heading: "Imran's Historic Title Run",
     preview:
-      "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
+      "From roads to riches, Imran has found a way to win when it matters most putting together one of the most tantalizing title runs in Champions League History!",
   },
   {
-    img: "https://www.si.com/.image/t_share/MTY4MDI3MjY2NTY5MDIwNjg5/deshaun-watsonjpg.jpg",
+    img: "https://www.si.com/.image/t_share/MTg4MDgyNjAwNzgxMjkzMzU0/deshaun-watson-2.jpg",
     heading: "Fahad",
     preview:
       "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
@@ -36,8 +37,8 @@ const CarouselView = () => {
         <div key={index} className="">
           <img className="rounded-[20px] p-5" src={article.img} />
           <div className="card-body">
-            <h4 className="font-semibold">{article.heading}</h4>
-            <p className="opcacity-60 mb-4 p-3">{article.preview}</p>
+            <h4 className="font-semibold text-2xl">{article.heading}</h4>
+            <p className="opcacity-60 mb-4 p-3 text-lg">{article.preview}</p>
             <button
               className="mb-10 button hover:scale-125 hover:duration-500 rounded-[40px] p-[7px] bg-[#D1D5DB] text-[black] shadow-md shadow-black hover:bg-black hover:text-white"
               data-ripple-light="true"

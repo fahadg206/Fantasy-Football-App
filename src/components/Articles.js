@@ -49,7 +49,7 @@ const Articles = () => {
                 duration={500}
                 delay={200}
               >
-                Watson Suspension Appealed fsffsdfsdfsdfsdfsd
+                THE MAN BEHIND THE MASK
               </SmoothLink>
             </li>
             <li className="p-[5px]">
@@ -60,7 +60,7 @@ const Articles = () => {
                 duration={500}
                 delay={200}
               >
-                Rodgers Seeking 3rd Straight MVP
+                RCL SEASON OUTLOOK: ECW DIVISION
               </SmoothLink>
             </li>
             <li className="p-[5px]">

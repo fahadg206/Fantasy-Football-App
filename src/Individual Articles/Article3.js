@@ -4,7 +4,7 @@ import Kabo from "../images/kabo_headshot.jpg";
 import { Tweet } from "react-twitter-widgets";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
-const Article1 = () => {
+const Article3 = () => {
   return (
     <div
       name="article1"
@@ -80,4 +80,4 @@ const Article1 = () => {
   );
 };
 
-export default Article1;
+export default Article3;
