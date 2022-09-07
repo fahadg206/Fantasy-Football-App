@@ -1,5 +1,5 @@
 import React from "react";
-import Sal from "../images/scary_imran.jpg";
+import Faces from "../images/cl_new_faces.jpg";
 import Kabo from "../images/kabo_headshot.jpg";
 import { Tweet } from "react-twitter-widgets";
 import { TwitterTweetEmbed } from "react-twitter-embed";
@@ -7,15 +7,17 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 const Article3 = () => {
   return (
     <div
-      name="article1"
+      name="article3"
       className="flex flex-col items-center sm:grid grid-cols-2"
     >
       <div className="grid grid-cols-1 justify-items-center w-full sm:sticky top-20 self-start lg:top-5">
         {/** Make sure image dimensions are 364 x 607 */}
-        <img className="rounded-[10px]" src={Sal} />
+        <img className="rounded-[20px]" src={Faces} />
       </div>
       <div className="grid grid-cols-1 gap-y-3 justify-items-center mt-10 ml-5 ">
-        <p className="text-5xl font-bold">THE MAN BEHIND THE MASK</p>
+        <p className="text-5xl font-bold">
+          THE NEW FACES OF THE CHAMPIONS LEAGUE
+        </p>
         <div className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-10">
           <div className="flex items-center">
             <img
@@ -30,51 +32,44 @@ const Article3 = () => {
           <p className="text-[12px]">Sep 5, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
-          The face that scares a lot of people in this league...
+          As we kickoff the new fantasy season, let's take a look at this years
+          newcomers <br />
+          <br />
+          On one side you, you got Edo and Khader bouncing back after being
+          relegated a couple of seasons ago. They make their Champions League
+          return after they clinched the #1 and #2 seeds respectively. A great
+          man once said “You can’t win unless you learn how to lose” and both
+          these managers have that experience under their belt now.
           <br />
           <br />
-          The Sunday night thriller that was bound to cause NIGHTMARES for weeks
-          if not months to come. A man wearing a mask was seen fleeing the scene
-          leaving behind a deflated FG in the second round of the playoffs.
+          With a second chance at glory Edo and Khader are eager to make noise
+          in the Champions League this season and now that their losing days are
+          behind them, the league better be weary... <br />
+          <br />
+          On the other side you got two hopefull managers that will be looking
+          to make a splash in their Champions League Debut.
           <br />
           <br />
-          Imran narrowly creeped by FG by a margin of .02 points (!!!) led by a
-          garbage time surge from Scarry Terry. How did that happen one might
-          wonder? In order to answer that we must go back a couple of weeks to
-          see how it all began. <br />
-          <br />
-          "We weren't supposed to be here..." <br />
-          <br />
-          Imran said in an interview with our RCL reporters, "We literally got
-          into the playoffs with a loss", reffering to his 7-7 regular season
-          finish to secure the final spot in the Champions League playoffs.
-          Every matchup he went into, he was the underdog. Every start he made,
-          was met with criticism and mockery. No one believed he would win a
-          game, yet alone multiple.
+          Former Redemption League veteran YSL, who denounced the title of the
+          longest tenured Redemption League member* after finally clinching that
+          elusive ticket to the Champions League that he sought after for so
+          long. And Reiging Redemption League Champion King K0bra who stormed
+          through the competition during his dominant post season performance to
+          cement his place in the big leagues.
           <br />
           <br />
-          <div className=" md:hidden xl:block w-[23vw] twitter">
-            <TwitterTweetEmbed tweetId={"1566171882109693952"} />
-          </div>
-          However, calling Imran's historic title run a miracle would be a
-          detriment to his gutsy plays and coaching decisions he's made
-          throughout the playoffs. From starting Rex Burkhead to feeding the
-          hothand in Rashaad Penny Imran galvanized his team and said all the
-          right things in the lockerroom to give his team the morale boost they
-          needed to keep going. <br />
           <br />
-          In a run that included defeating multiple powerhouses and previous
-          champions, Imran will look to continue that momentum in what is sure
-          to be a monsterous title defense. Although he might not have his guys
-          from last year with him, Imran has shown time and time again that he's
-          able to find the diamonds in the rough and has already proven that he
-          could win with a chip on his shoulder, now let's see if he can win
-          with the chip in his hands. <br />
+          Sharpened by the harsh conditions in the Redemption League, both YSL
+          and King K0bra will look to claw their way to the top of the league
+          and establish themselves as a force to be reckoned with <br />
+          <br />
+          <br />
+          <p className="text-[12px]">
+            *The title now belongs to Unc, as it'll be his 5th year in the
+            Redemption League if he doesn't qualify this season, breaking YSL's
+            previous league record of 4 years.
+          </p>
         </p>
-        <img
-          className="rounded-[10px] w-[200px]"
-          src="https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2022/08/364/607/07.6.22_Is-Aaron-Rodgers-to-blame-for-Packers-lack-of-WR-depth.jpg?ve=1&tl=1"
-        />
       </div>
     </div>
   );

@@ -66,18 +66,18 @@ const Articles = () => {
             <li className="p-[5px]">
               <SmoothLink
                 className="cursor-pointer"
-                to="article2"
+                to="article3"
                 smooth={true}
                 duration={500}
                 delay={200}
               >
-                Rodgers Seeking 3rd Straight MVP
+                THE NEW FACES OF THE CHAMPIONS LEAGUE
               </SmoothLink>
             </li>
             <li className="p-[5px]">
               <SmoothLink
                 className="cursor-pointer"
-                to="article2"
+                to="article3"
                 smooth={true}
                 duration={500}
                 delay={200}
