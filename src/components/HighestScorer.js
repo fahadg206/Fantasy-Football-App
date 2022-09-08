@@ -57,10 +57,10 @@ const HighestScorer = () => {
     for (let i = 0; i < response.data.length; i++) {
       getUsers(
         response.data[i].owner_id,
-        response.data[i].settings.wins + 1,
+        response.data[i].settings.wins,
         response.data[i].settings.losses,
         response.data[i].settings.ties,
-        response.data[i].settings.fpts + 500 + i
+        response.data[i].settings.fpts
       );
     }
 

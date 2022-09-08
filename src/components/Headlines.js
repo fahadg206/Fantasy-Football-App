@@ -18,7 +18,8 @@ const Headlines = () => {
             ordered.
           </li>
           <li className="mb-2">
-            After narrowly escaping relegation last season, is this the end of
+            King Kobra steamed-rolled his way through the redemption league. Can
+            he do the same with the big dogs?
           </li>
           <li className="mb-2">
             After narrowly escaping relegation last season, is this the end of

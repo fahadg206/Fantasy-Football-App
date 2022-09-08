@@ -21,9 +21,9 @@ const featuredArticles = [
   },
   {
     img: Headline3,
-    heading: "Kabo",
+    heading: "A New Era",
     preview:
-      "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
+      "Taking fantasy football to a whole new level! We welcome you to the most interactive fantasy football experience one could ever hope for. The RainCity League.",
   },
 ];
 

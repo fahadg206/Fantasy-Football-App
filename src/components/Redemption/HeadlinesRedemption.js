@@ -16,7 +16,8 @@ const HeadlinesRedemption = () => {
             Unc is now the longest tenured member of the redemption league. Does
           </li>
           <li>
-            HeadAfter narrowly escaping relegation last season, is this the end
+            The 4 newest members by the names of OddJobs, 6Ghost, abdilahi253, &
+            piratecrew17 look to make their mark on the RL.
           </li>
           <li>
             HeadAfter narrowly escaping relegation last season, is this the end

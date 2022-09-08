@@ -29,11 +29,11 @@ const Article4 = () => {
           <p className="text-[12px]">Sep 7, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
-          Taking fantasy football to a whole new level!
           <br />
           <br />
-          We welcome you to the most interactive fantasy football experience one
-          could ever hope for. The RainCity League.
+          Taking fantasy football to a whole new level! We welcome you to the
+          most interactive fantasy football experience one could ever hope for.
+          The RainCity League.
           <br />
           <br />
           With the help of Sleeper, we offer cool

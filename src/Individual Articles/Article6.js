@@ -2,6 +2,8 @@ import React from "react";
 import Sal from "../images/scary_imran.jpg";
 import Kabo from "../images/kabo_headshot.jpg";
 import { TwitterTweetEmbed } from "react-twitter-embed";
+import Score1 from "../images/score1.png";
+import Score2 from "../images/score2.png";
 
 const Article1 = () => {
   return (
@@ -37,6 +39,12 @@ const Article1 = () => {
           leaving behind a deflated FG in the second round of the playoffs.
           <br />
           <br />
+          <div className=" rounded-[10px] flex flex-col items-center">
+            <img className="rounded-[10px] w-[300px]" src={Score1} />
+            <img className="rounded-[10px] w-[300px]" src={Score2} />
+          </div>
+          <br />
+          <br />
           Imran narrowly creeped by FG by a margin of .02 points (!!!) led by a
           garbage time surge from Scarry Terry. How did that happen one might
           wonder? In order to answer that we must go back a couple of weeks to
@@ -52,9 +60,6 @@ const Article1 = () => {
           game, yet alone multiple.
           <br />
           <br />
-          <div className=" md:hidden xl:block w-[23vw] twitter">
-            <TwitterTweetEmbed tweetId={"1566171882109693952"} />
-          </div>
           However, calling Imran's historic title run a miracle would be a
           detriment to his gutsy plays and coaching decisions he's made
           throughout the playoffs. From starting Rex Burkhead to feeding the
@@ -70,10 +75,6 @@ const Article1 = () => {
           could win with a chip on his shoulder, now let's see if he can win
           with the chip in his hands. <br />
         </p>
-        <img
-          className="rounded-[10px] w-[200px]"
-          src="https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2022/08/364/607/07.6.22_Is-Aaron-Rodgers-to-blame-for-Packers-lack-of-WR-depth.jpg?ve=1&tl=1"
-        />
       </div>
     </div>
   );
