@@ -1,5 +1,5 @@
 import React from "react";
-import Sal from "../images/scary_imran.jpg";
+import RCL from "../images/RCL_article.jpg";
 import Kabo from "../images/kabo_headshot.jpg";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
@@ -11,10 +11,10 @@ const Article1 = () => {
     >
       <div className="grid grid-cols-1 justify-items-center w-full sm:sticky top-20 self-start lg:top-5">
         {/** Make sure image dimensions are 364 x 607 */}
-        <img className="rounded-[10px]" src={Sal} />
+        <img className="rounded-[10px]" src={RCL} />
       </div>
       <div className="grid grid-cols-1 gap-y-3 justify-items-center mt-10 ml-5 ">
-        <p className="text-5xl font-bold">THE MAN BEHIND THE MASK</p>
+        <p className="text-5xl font-bold">MESSAGE FROM THE RCL TEAM</p>
         <div className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-10">
           <div className="flex items-center">
             <img
@@ -22,53 +22,42 @@ const Article1 = () => {
               src={Kabo}
             />
             <div className="flex flex-col">
-              <p>Mahad Fahiye</p>
-              <p className="text-[10px] font-bold">RCL Staff Writer</p>
+              <p>Fahad Guled</p>
+              <p className="text-[10px] font-bold">RCL Senior Writer</p>
             </div>
           </div>
-          <p className="text-[12px]">Sep 5, 2022</p>
+          <p className="text-[12px]">Sep 7, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
-          The face that scares a lot of people in this league...
+          Football is back and we want to kick off the new fantasy season with a
+          bang!
           <br />
           <br />
-          The Sunday night thriller that was bound to cause NIGHTMARES for weeks
-          if not months to come. A man wearing a mask was seen fleeing the scene
-          leaving behind a deflated FG in the second round of the playoffs.
+          Introducing RCL Website! Your one stop destination for all the latest
+          news and headlines across both Champions League and Redemption League.
+          Be sure to stop by throughout the season as we'll be constanly
+          updating with content with plenty of new features on the way too!
           <br />
           <br />
-          Imran narrowly creeped by FG by a margin of .02 points (!!!) led by a
-          garbage time surge from Scarry Terry. How did that happen one might
-          wonder? In order to answer that we must go back a couple of weeks to
-          see how it all began. <br />
+          Furthermore, there have been many other changes that we made this
+          offseason as well, most notably changing to the Sleeper platform,
+          which we understand and acknowledge that it might take some time
+          getting used to. <br />
           <br />
-          "We weren't supposed to be here..." <br />
+          However, we whole heartidly believe that Sleeper is a more modern and
+          innovative fantasy football platform, and it will let our league grow
+          and become more immersive than ever! By utilizing the Sleeper API, we
+          were able to smoothly integrate the league onto the website and make
+          the league even more interactive! <br />
           <br />
-          Imran said in an interview with our RCL reporters, "We literally got
-          into the playoffs with a loss", reffering to his 7-7 regular season
-          finish to secure the final spot in the Champions League playoffs.
-          Every matchup he went into, he was the underdog. Every start he made,
-          was met with criticism and mockery. No one believed he would win a
-          game, yet alone multiple.
+          I’d like to thank everyone that has helped along the way, it really
+          was a team effort and we sincerely appreciate everyones hard work and
+          feedback as we strive to make this league better than ever.
           <br />
           <br />
-          <div className=" md:hidden xl:block w-[23vw] twitter">
-            <TwitterTweetEmbed tweetId={"1566171882109693952"} />
-          </div>
-          However, calling Imran's historic title run a miracle would be a
-          detriment to his gutsy plays and coaching decisions he's made
-          throughout the playoffs. From starting Rex Burkhead to feeding the
-          hothand in Rashaad Penny Imran galvanized his team and said all the
-          right things in the lockerroom to give his team the morale boost they
-          needed to keep going. <br />
+          Thank you everyone, Truly.
           <br />
-          In a run that included defeating multiple powerhouses and previous
-          champions, Imran will look to continue that momentum in what is sure
-          to be a monsterous title defense. Although he might not have his guys
-          from last year with him, Imran has shown time and time again that he's
-          able to find the diamonds in the rough and has already proven that he
-          could win with a chip on his shoulder, now let's see if he can win
-          with the chip in his hands. <br />
+          <br />
         </p>
         <img
           className="rounded-[10px] w-[200px]"

@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Headline1 from "../images/Imran_title.png";
 import Headline2 from "../images/faces_of_cl.jpg";
+import Headline3 from "../images/RCL_article_homepage.jpg";
 
 const featuredArticles = [
   {
@@ -18,7 +19,7 @@ const featuredArticles = [
       "Meet the 4 new fantasy managers will be joining the Champions League for the 2022-2023 fantasy season",
   },
   {
-    img: "https://images2.minutemediacdn.com/image/fetch/c_fill,g_auto,f_auto,h_2133,w_3200/https://thesmokingcuban.com/wp-content/uploads/getty-images/2017/07/1209457657.jpeg",
+    img: Headline3,
     heading: "Kabo",
     preview:
       "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
