@@ -18,13 +18,16 @@ const Headlines = () => {
             ordered.
           </li>
           <li className="mb-2">
-            After narrowly escaping relegation last season, is this the end of
+            Experts rank ECW division as "The toughest division in football
+            right now"
           </li>
           <li className="mb-2">
-            After narrowly escaping relegation last season, is this the end of
+            Unfinished business for JewelsWinterhood as he eye's his 3rd
+            consecutive finals appearance
           </li>
           <li className="mb-2">
-            HeadAfter narrowly escaping relegation last season, is this the end
+            Having never missed the playoffs in his career, is Sal the dark
+            horse to win it all this season?
           </li>
         </ul>
       </div>

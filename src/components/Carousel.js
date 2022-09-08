@@ -1,29 +1,30 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import Headline1 from "../images/Imran_title.png";
-import Headline2 from "../images/faces_of_cl.jpg";
-import Headline3 from "../images/RCL_article_homepage.jpg";
+import Headline1 from "../images/RCL_article_homepage.jpg";
+import Headline2 from "../images/Imran_title.png";
+import Headline3 from "../images/faces_of_cl.jpg";
+
 import { Link } from "react-router-dom";
 
 const featuredArticles = [
   {
     img: Headline1,
+    heading: "Taking fantasy football to a whole new level!",
+    preview:
+      "An interactive experience like never before! Join us as we soar to even greater heights this season",
+  },
+  {
+    img: Headline2,
     heading: "Imran's Historic Title Run",
     preview:
       "From roads to riches, Imran has found a way to win when it matters most putting together one of the most tantalizing title runs in Champions League History!",
   },
   {
-    img: Headline2,
+    img: Headline3,
     heading: "Challengers Approaching",
     preview:
       "Meet the 4 new fantasy managers will be joining the Champions League for the 2022-2023 fantasy season",
-  },
-  {
-    img: Headline3,
-    heading: "Kabo",
-    preview:
-      "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out.",
   },
 ];
 
