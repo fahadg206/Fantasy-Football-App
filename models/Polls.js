@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const PollSchema = new Schema({
   matchupId: Number,
   week: Number,
+  league: String,
   question: String,
   answers: [{ option: String, votes: Number }],
 });

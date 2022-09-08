@@ -24,21 +24,6 @@ const Schedule = () => {
     align: "center",
   };
 
-  // let scheduleChanged = false;
-  // if (schedule.length > 0) {
-  //   scheduleChanged = true;
-  // }
-
-  // let usersChanged = false;
-  // if (users.length > 0) {
-  //   usersChanged = true;
-  // }
-
-  // let rostersChanged = false;
-  // if (rosters.length > 0) {
-  //   rostersChanged = true;
-  // }
-
   const scheduleData = new Map();
   const postedMatchups = new Map();
   const getSchedule = async () => {
@@ -165,7 +150,7 @@ const Schedule = () => {
                             {abv.get(team1.roster_id)}
                           </p>
                           <img
-                            className="w-[50px] md:w-[50px] my-[5px] mr-[5px] rounded-full pt-7 ml-3 sm:hidden"
+                            className="w-[50px] rounded-full my-[5px] mr-[5px]  pt-7 ml-3 sm:hidden"
                             src={team1.avatar}
                           />
                         </div>

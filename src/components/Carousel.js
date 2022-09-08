@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import Headline1 from "../images/Imran_title.png";
 import Headline2 from "../images/faces_of_cl.jpg";
 import Headline3 from "../images/RCL_article_homepage.jpg";
+import { Link } from "react-router-dom";
 
 const featuredArticles = [
   {
@@ -45,7 +46,9 @@ const CarouselView = () => {
               className="mb-10 button hover:scale-125 hover:duration-500 rounded-[40px] p-[7px] bg-[#D1D5DB] text-[black] shadow-md shadow-black hover:bg-black hover:text-white"
               data-ripple-light="true"
             >
-              Read More
+              <Link className="hover:text-white" to="/articles">
+                Read More
+              </Link>
             </button>
           </div>
         </div>

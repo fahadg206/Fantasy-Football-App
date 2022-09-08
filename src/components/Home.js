@@ -11,8 +11,9 @@ import KaboArticle from "../images/kaboarticle.png";
 
 const Home = () => {
   const [pollAnswers, setPollAnswers] = useState([
-    { option: "Kabo", votes: 0 },
-    { option: "Fahad", votes: 0 },
+    { option: "Yes", votes: 0 },
+    { option: "NOPE", votes: 0 },
+    { option: "Yes, but not this year", votes: 0 },
   ]);
 
   const handleVote = (voteAnswer) => {
@@ -24,15 +25,16 @@ const Home = () => {
       return answer;
     });
     axios.post("http://localhost:3001/update", {
-      week: 1,
-      question: "What's the best Framework?",
+      league: "CL",
+      question:
+        "After narrowly escaping relegation last season, is this the end of the road for Kabo's Champions League run?",
       answers: newPollAnswers,
     });
     setPollAnswers(newPollAnswers);
   };
 
   const getVotes = async () => {
-    const response = await axios.get("http://localhost:3001/get");
+    const response = await axios.get("http://localhost:3001/getCL");
 
     setPollAnswers(response.data.answers);
   };
