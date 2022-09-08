@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Standings from "./Redemption/Standings";
 import HeadlinesRedemption from "./Redemption/HeadlinesRedemption";
+import TopScorerRL from "./Redemption/TopScorerRL";
 import Poll from "react-polls";
 import axios from "axios";
-import KaboArticle from "../images/kaboarticle.png";
+import Fahmi from "../images/fahmi.jpg";
 
 const RedemptionLeague = () => {
   const pollStyles1 = {
@@ -16,8 +17,8 @@ const RedemptionLeague = () => {
   };
 
   const [pollAnswers, setPollAnswers] = useState([
-    { option: "Kabo", votes: 0 },
-    { option: "Fahad", votes: 0 },
+    { option: "Yes", votes: 0 },
+    { option: "No", votes: 0 },
   ]);
 
   const handleVote = (voteAnswer) => {
@@ -29,33 +30,45 @@ const RedemptionLeague = () => {
       return answer;
     });
     axios.post("http://localhost:3001/update", {
-      week: 1,
-      question: "What's the best Framework?",
+      league: "RL",
+      question: "Trust the proccess?",
       answers: newPollAnswers,
     });
     setPollAnswers(newPollAnswers);
   };
 
+  const getVotes = async () => {
+    const response = await axios.get("http://localhost:3001/getRL");
+
+    setPollAnswers(response.data.answers);
+  };
+
+  getVotes();
+  useEffect(() => {
+    getVotes();
+  }, []);
+
   return (
-    <div className="flex flex-col lg:grid grid-cols-2 items-center gap-x-5 gap-y-10 justify-items-center">
-      <div className="w-[60vw] flex lg:flex flex-col items-center justify-center lg:w-[20vw] mt-5 bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
+    <div className="flex flex-col lg:grid grid-cols-3 items-center gap-x-5 gap-y-10 justify-items-center">
+      <div className=" w-[60vw] flex lg:flex flex-col items-center justify-center lg:w-[20vw] lg:ml-10 mt-5 bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
         <div className="w-[60%]">
-          <img className="rounded-[10px] mt-3" src={KaboArticle} />
+          <img className="rounded-[10px] mt-3" src={Fahmi} />
         </div>
         <Poll
-          question={
-            "After narrowly escaping relegation last season, is this the end of the road for Kabo's Champions League run?"
-          }
+          question={"Trust the proccess?"}
           answers={pollAnswers}
           onVote={handleVote}
           customStyles={pollStyles1}
           noStorage={true}
         />
       </div>
+      <div className="w-[60vw] lg:flex justify-center  lg:w-[30vw] h-[55vh] bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
+        <TopScorerRL />
+      </div>
       <div className="w-[60vw] lg:flex justify-center lg:w-[30vw] h-[55vh] bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px] p-5">
         <HeadlinesRedemption />
       </div>
-      <div className="w-[60vw] col-span-2">
+      <div className="w-[60vw] col-span-3">
         <Standings />
       </div>
     </div>

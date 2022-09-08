@@ -19,20 +19,14 @@ mongoose.connect(
 );
 
 app.post("/update", async (req, res) => {
-  const pollWeek = req.body.week;
+  const league = req.body.league;
   let pollAnswer = [];
   pollAnswer = req.body.answers;
   const pollQuestion = req.body.question;
 
-  const data = {
-    week: pollWeek,
-    question: pollQuestion,
-    answers: pollAnswer,
-  };
-
   try {
     await PollModel.updateOne(
-      { week: 21 },
+      { league: league },
       { $set: { question: pollQuestion, answers: pollAnswer } },
       { upsert: true }
     );
@@ -72,8 +66,18 @@ app.post("/updateMatchupPolls", async (req, res) => {
   }
 });
 
-app.get("/get", async (req, res) => {
-  PollModel.findOne({ week: 21 }).exec(function (err, result) {
+app.get("/getCL", async (req, res) => {
+  PollModel.findOne({ league: "CL" }).exec(function (err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
+app.get("/getRL", async (req, res) => {
+  PollModel.findOne({ league: "RL" }).exec(function (err, result) {
     if (err) {
       res.send(err);
     } else {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Headlines = () => {
   return (
@@ -7,12 +8,24 @@ const Headlines = () => {
         Top Headlines
       </p>
       <div className="grid grid-cols-2 gap-x-10 text-[15px] lg:flex flex-col gap-y-[20px]">
-        <ul className="flex flex-col justify-between list-disc h-[45vh] w-[20vw]">
-          <li>HeadLine</li>
-          <li>HeadLine</li>
-          <li>HeadLine</li>
-          <li>HeadLine</li>
-          <li>HeadLine</li>
+        <ul className=" w-[55vw] flex flex-col  md:w-[70vw]  lg:grid grid-cols-1 justify-between text-[15px] list-disc h-[45vh] lg:w-[20vw]">
+          <li className="mb-2">
+            It's a new era in fantasy with RainCity League! Want to join?
+            <Link to="/apply"> Apply now!</Link>
+          </li>
+          <li className="mb-2">
+            Matchup has been set. FG vs Boogie Week 2. Just what the doctor
+            ordered.
+          </li>
+          <li className="mb-2">
+            After narrowly escaping relegation last season, is this the end of
+          </li>
+          <li className="mb-2">
+            After narrowly escaping relegation last season, is this the end of
+          </li>
+          <li className="mb-2">
+            HeadAfter narrowly escaping relegation last season, is this the end
+          </li>
         </ul>
       </div>
     </div>

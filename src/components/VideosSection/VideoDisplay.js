@@ -7,7 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 const VideoDisplay = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  const [videos] = useVideos("Fantasy Football Advice");
+  const [videos] = useVideos("The Fantasy Footballers");
   const [videostwo] = useVideos("Fantasy Flock Network");
 
   useEffect(() => {
