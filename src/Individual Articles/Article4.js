@@ -26,7 +26,7 @@ const Article4 = () => {
             />
             <div className="flex flex-col">
               <p>Mahad Fahiye</p>
-              <p className="text-[10px] font-bold">RCL Staff Writer</p>
+              <p className="text-[10px] font-bold">RCL Founder</p>
             </div>
           </div>
           <p className="text-[12px]">Sep 5, 2022</p>
@@ -58,17 +58,17 @@ const Article4 = () => {
           cement his place in the big leagues.
           <br />
           <br />
-          <br />
           Sharpened by the harsh conditions in the Redemption League, both YSL
           and King K0bra will look to claw their way to the top of the league
           and establish themselves as a force to be reckoned with <br />
-          <br />
           <br />
           <p className="text-[12px]">
             *The title now belongs to Unc, as it'll be his 5th year in the
             Redemption League if he doesn't qualify this season, breaking YSL's
             previous league record of 4 years.
           </p>
+          <br />
+          <br />
         </p>
       </div>
     </div>

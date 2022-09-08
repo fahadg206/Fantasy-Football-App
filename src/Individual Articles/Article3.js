@@ -25,10 +25,10 @@ const Article3 = () => {
             />
             <div className="flex flex-col">
               <p>Hamsa Ahmed</p>
-              <p className="text-[10px] font-bold">RCL Co-Founder</p>
+              <p className="text-[10px] font-bold">RCL Staff Writer</p>
             </div>
           </div>
-          <p className="text-[12px]">Sep 7, 2022</p>
+          <p className="text-[12px]">Sep 6, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
           This last year of fantasy football has been quite the roller coaster.
@@ -36,27 +36,21 @@ const Article3 = () => {
           <br />
           I saw the good:
           <br />
-          <br />
           <div className=" md:hidden xl:block w-[23vw] twitter">
             <TwitterTweetEmbed tweetId={"1465054595432861697"} />
           </div>
           <br />
-          <br />
           The bad:
-          <br />
           <br />
           <div className=" md:hidden xl:block w-[23vw] twitter">
             <TwitterTweetEmbed tweetId={"1452354370872516610"} />
           </div>
           <br />
-          <br />
           and the ugly:
-          <br />
           <br />
           <div className=" md:hidden xl:block w-[23vw] twitter">
             <TwitterTweetEmbed tweetId={"1471699920738390016"} />
           </div>
-          <br />
           <br />
           I started off the season quite rough. A record of 2-4, a team battling
           injuries and facing multiple power houses back to back weeks. If this

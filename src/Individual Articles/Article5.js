@@ -34,8 +34,7 @@ const Article5 = () => {
           extremely interesting as all four members are eyeing the divisional
           throne. <br />
           <br />
-          SleepyKey: <br />
-          <br />
+          <p className="font-bold">SleepKey:</p> <br />
           Starting off with last year’s runner up and the 2021 CL champion,
           SleepKey aims to make a 3rd consecutive finals appearance. But that
           won’t be easy, given the stiffness of competition in the ECW division.
@@ -53,13 +52,11 @@ const Article5 = () => {
           expectations?
           <br />
           <br />
-          Season Projection: 5-9, misses playoffs, potential relegation. <br />
-          <br /> <br />
+          <p className="italic">
+            Season Projection: 5-9, misses playoffs, potential relegation.{" "}
+          </p>
           <br />
-          <br />
-          <br />
-          Kaboweyne: <br />
-          <br />
+          <p className="font-bold">Kaboweyne:</p> <br />
           The Man. The Myth. The Legend. The Commissioner. Many call Kaboweyne
           “the most aggressive man in fantasy”. Kaboweyne is down to $48 FAAB
           and there hasn't even been a single snap of football yet.
@@ -82,12 +79,11 @@ const Article5 = () => {
           team to the championship? We’ll have to wait and see.
           <br />
           <br />
-          Season Projection: 8-6, playoffs, safe from relegation. <br />
-          <br /> <br />
+          <p className="italic">
+            Season Projection: 8-6, playoffs, safe from relegation.{" "}
+          </p>
           <br />
-          <br />
-          <br />
-          AkhJefe: <br />
+          <p className="font-bold">Ahkjefe:</p>
           <br />
           Here is a guy who leads the league every year in sauce, the one and
           only, Ahkjefe. Looking to bounce back after taking a tough loss to the
@@ -109,13 +105,11 @@ const Article5 = () => {
           know Brady brings championship pedigree to the table.
           <br />
           <br />
-          Season Projection: 7-7, fringe playoff team, safe from relegation.{" "}
+          <p className="italic">
+            Season Projection: 7-7, fringe playoff team, safe from relegation.
+          </p>
           <br />
-          <br /> <br />
-          <br />
-          <br />
-          <br />
-          ED: <br />
+          <p className="font-bold">ED:</p>
           <br />
           The new kid on the block. On paper, ED appears to have the most
           balanced team in the division.
@@ -136,10 +130,9 @@ const Article5 = () => {
           and ruffle a few feathers.
           <br />
           <br />
-          Season Projection: 10-4, playoffs, here to stay.
-          <br />
-          <br /> <br />
-          <br />
+          <p className="italic">
+            Season Projection: 10-4, playoffs, here to stay.
+          </p>
           <br />
           <br />
         </p>

@@ -11,7 +11,10 @@ const Headlines = () => {
         <ul className=" w-[55vw] flex flex-col  md:w-[70vw]  lg:grid grid-cols-1 justify-between text-[15px] list-disc h-[45vh] lg:w-[20vw]">
           <li className="mb-2">
             It's a new era in fantasy with RainCity League! Want to join?
-            <Link to="/apply"> Apply now!</Link>
+            <Link className="underline" to="/apply">
+              {" "}
+              Apply now!
+            </Link>
           </li>
           <li className="mb-2">
             Matchup has been set. FG vs Boogie Week 2. Just what the doctor

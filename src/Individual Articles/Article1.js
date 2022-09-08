@@ -26,16 +26,18 @@ const Article1 = () => {
               <p className="text-[10px] font-bold">RCL Co-Founder</p>
             </div>
           </div>
-          <p className="text-[12px]">Sep 7, 2022</p>
+          <p className="text-[12px]">Sep 8, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
-          Taking fantasy football to a whole new level!
+          <p className="italic font-bold">
+            Welcome to the 2022-2023 Fantasy Football Season!
+          </p>
           <br />
-          <br />
-          Introducing RCL Website! Your one stop destination for all the latest
-          news and headlines across both Champions League and Redemption League.
-          Be sure to stop by throughout the season as we'll be constanly
-          updating with content with plenty of new features on the way too!
+          It is our pleasure to introduce to you the RCL Website! Your one stop
+          destination for all the latest news and headlines across both
+          Champions League and Redemption League. Be sure to stop by throughout
+          the season as we'll be constanly updating with content with plenty of
+          new features on the way too!
           <br />
           <br />
           Furthermore, there have been many other changes that we made this

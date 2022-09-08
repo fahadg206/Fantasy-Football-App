@@ -7,24 +7,23 @@ const HeadlinesRedemption = () => {
         Top Headlines
       </p>
       <div className="grid grid-cols-2 gap-x-10 text-[15px] lg:flex flex-col gap-y-[20px]">
-        <ul className="w-[55vw] flex flex-col md:w-[55vw] p-5 md:break-words lg:text-[14px] lg:grid grid-cols-1  justify-between text-[15px] list-disc h-[45vh] lg:w-[20vw]">
+        <ul className=" w-[57vw] flex flex-col p-2 md:w-[67vw] lg:grid grid-cols-1 justify-between text-[15px] list-disc h-[45vh] lg:w-[20vw]">
           <li className="break-words">
             Can Moro hang on this time and finally secure himself a spot in the
             Champions League?
           </li>
           <li>
             Unc is now the longest tenured member of the redemption league. Does
+            he know something we don't?
           </li>
           <li>
-            The 4 newest members by the names of OddJobs, 6Ghost, abdilahi253, &
-            piratecrew17 look to make their mark on the RL.
+            After a promising rookie season, can HIMOTHY take the next step?{" "}
           </li>
           <li>
-            HeadAfter narrowly escaping relegation last season, is this the end
+            4 new members, two pairs of siblings, can they all make it out of
+            RL?
           </li>
-          <li>
-            HeadAfter narrowly escaping relegation last season, is this the end
-          </li>
+          <li>KingOmar24 looks to prevent another FLAME OUT this season</li>
         </ul>
       </div>
     </div>

@@ -49,51 +49,51 @@ const Articles = () => {
                 duration={500}
                 delay={200}
               >
+                A NEW ERA
+              </SmoothLink>
+            </li>
+            <li className="p-[5px]">
+              <SmoothLink
+                className="cursor-pointer"
+                to="article2"
+                smooth={true}
+                duration={500}
+                delay={200}
+              >
                 THE MAN BEHIND THE MASK
               </SmoothLink>
             </li>
             <li className="p-[5px]">
               <SmoothLink
                 className="cursor-pointer"
-                to="article2"
+                to="article3"
+                smooth={true}
+                duration={500}
+                delay={200}
+              >
+                LESSONS LEARNED FROM THE 2021 FANTASY SEASON
+              </SmoothLink>
+            </li>
+            <li className="p-[5px]">
+              <SmoothLink
+                className="cursor-pointer"
+                to="article4"
+                smooth={true}
+                duration={500}
+                delay={200}
+              >
+                THE NEW FACES
+              </SmoothLink>
+            </li>
+            <li className="p-[5px]">
+              <SmoothLink
+                className="cursor-pointer"
+                to="article5"
                 smooth={true}
                 duration={500}
                 delay={200}
               >
                 RCL SEASON OUTLOOK: ECW DIVISION
-              </SmoothLink>
-            </li>
-            <li className="p-[5px]">
-              <SmoothLink
-                className="cursor-pointer"
-                to="article3"
-                smooth={true}
-                duration={500}
-                delay={200}
-              >
-                THE NEW FACES OF THE CHAMPIONS LEAGUE
-              </SmoothLink>
-            </li>
-            <li className="p-[5px]">
-              <SmoothLink
-                className="cursor-pointer"
-                to="article3"
-                smooth={true}
-                duration={500}
-                delay={200}
-              >
-                Rodgers Seeking 3rd Straight MVP
-              </SmoothLink>
-            </li>
-            <li className="p-[5px]">
-              <SmoothLink
-                className="cursor-pointer"
-                to="article2"
-                smooth={true}
-                duration={500}
-                delay={200}
-              >
-                Rodgers Seeking 3rd Straight MVP
               </SmoothLink>
             </li>
           </ul>

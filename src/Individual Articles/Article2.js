@@ -1,6 +1,8 @@
 import React from "react";
 import Imran from "../images/scary_imran.jpg";
 import Kabo from "../images/kabo_headshot.jpg";
+import Score1 from "../images/score1.png";
+import Score2 from "../images/score2.png";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
 const Article2 = () => {
@@ -23,10 +25,10 @@ const Article2 = () => {
             />
             <div className="flex flex-col">
               <p>Mahad Fahiye</p>
-              <p className="text-[10px] font-bold">RCL Staff Writer</p>
+              <p className="text-[10px] font-bold">RCL Founder</p>
             </div>
           </div>
-          <p className="text-[12px]">Sep 5, 2022</p>
+          <p className="text-[12px]">Sep 7, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
           The face that scares a lot of people in this league...
@@ -37,7 +39,11 @@ const Article2 = () => {
           leaving behind a deflated FG in the second round of the playoffs.
           <br />
           <br />
-          Imran narrowly creeped by FG by a margin of .02 points (!!!) led by a
+          <img src={Score1} />
+          <img src={Score2} />
+          <br />
+          <br />
+          Imran narrowly creeped by FG by a margin of .04 points (!!!) led by a
           garbage time surge from Scarry Terry. How did that happen one might
           wonder? In order to answer that we must go back a couple of weeks to
           see how it all began. <br />
@@ -52,9 +58,6 @@ const Article2 = () => {
           game, yet alone multiple.
           <br />
           <br />
-          <div className=" md:hidden xl:block w-[23vw] twitter">
-            <TwitterTweetEmbed tweetId={"1566171882109693952"} />
-          </div>
           However, calling Imran's historic title run a miracle would be a
           detriment to his gutsy plays and coaching decisions he's made
           throughout the playoffs. From starting Rex Burkhead to feeding the
@@ -70,10 +73,6 @@ const Article2 = () => {
           could win with a chip on his shoulder, now let's see if he can win
           with the chip in his hands. <br />
         </p>
-        <img
-          className="rounded-[10px] w-[200px]"
-          src="https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2022/08/364/607/07.6.22_Is-Aaron-Rodgers-to-blame-for-Packers-lack-of-WR-depth.jpg?ve=1&tl=1"
-        />
       </div>
     </div>
   );

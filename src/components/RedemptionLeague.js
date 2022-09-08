@@ -32,7 +32,7 @@ const RedemptionLeague = () => {
     axios.post("http://localhost:3001/update", {
       league: "RL",
       question:
-        "Unc has made himself feel at home in the RL. Should we trust the process?",
+        "With Unc entering his 5th season in the RL, can we continue to trust the process?",
       answers: newPollAnswers,
     });
     setPollAnswers(newPollAnswers);
@@ -51,13 +51,13 @@ const RedemptionLeague = () => {
 
   return (
     <div className="flex flex-col lg:grid grid-cols-3 items-center gap-x-5 gap-y-10 justify-items-center">
-      <div className=" w-[60vw] flex lg:flex flex-col items-center justify-center lg:w-[20vw] lg:ml-10 mt-5 bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
+      <div className="w-[67vw] flex lg:flex flex-col items-center justify-center lg:w-[25vw] lg:ml-10 mt-5 bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
         <div className="w-[60%]">
           <img className="rounded-[10px] mt-3" src={Fahmi} />
         </div>
         <Poll
           question={
-            "Unc has made himself feel at home in the RL. Should we trust the process?"
+            "With Unc entering his 5th season in the RL, can we continue to trust the process?"
           }
           answers={pollAnswers}
           onVote={handleVote}
@@ -65,13 +65,13 @@ const RedemptionLeague = () => {
           noStorage={true}
         />
       </div>
-      <div className="w-[60vw] lg:flex justify-center  lg:w-[30vw] h-[55vh] bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
+      <div className="w-[67vw] lg:flex justify-center  lg:w-[30vw] h-[55vh] bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
         <TopScorerRL />
       </div>
-      <div className="w-[60vw] lg:flex justify-center lg:w-[30vw] h-[55vh] bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px] p-5">
+      <div className="w-[67vw] lg:flex justify-center lg:w-[30vw] h-[55vh] bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px] p-5">
         <HeadlinesRedemption />
       </div>
-      <div className="w-[60vw] col-span-3">
+      <div className="w-[67vw] col-span-3">
         <Standings />
       </div>
     </div>

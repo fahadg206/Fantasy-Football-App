@@ -71,7 +71,7 @@ const PowerRankings = () => {
         <p> POWER RANKINGS</p>{" "}
         <p className="text-[23px] italic">PreSeason Edition</p>
       </div>
-      <div className="text-6xl flex items-center justify-center h-[70vh]">
+      <div className="text-6xl flex items-center justify-center h-[70vh] text-center">
         COMING SOON...
       </div>
       <div id="rootss">
