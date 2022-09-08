@@ -31,7 +31,8 @@ const RedemptionLeague = () => {
     });
     axios.post("http://localhost:3001/update", {
       league: "RL",
-      question: "Trust the proccess?",
+      question:
+        "Unc has made himself feel at home in the RL. Should we trust the process?",
       answers: newPollAnswers,
     });
     setPollAnswers(newPollAnswers);
@@ -55,7 +56,9 @@ const RedemptionLeague = () => {
           <img className="rounded-[10px] mt-3" src={Fahmi} />
         </div>
         <Poll
-          question={"Trust the proccess?"}
+          question={
+            "Unc has made himself feel at home in the RL. Should we trust the process?"
+          }
           answers={pollAnswers}
           onVote={handleVote}
           customStyles={pollStyles1}

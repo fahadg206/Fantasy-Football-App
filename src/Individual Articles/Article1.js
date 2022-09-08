@@ -58,10 +58,6 @@ const Article1 = () => {
           <br />
           <br />
         </p>
-        <img
-          className="rounded-[10px] w-[200px]"
-          src="https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2022/08/364/607/07.6.22_Is-Aaron-Rodgers-to-blame-for-Packers-lack-of-WR-depth.jpg?ve=1&tl=1"
-        />
       </div>
     </div>
   );

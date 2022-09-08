@@ -38,7 +38,7 @@ const Article4 = () => {
           On one side you, you got Edo and Khader bouncing back after being
           relegated a couple of seasons ago. They make their Champions League
           return after they clinched the #1 and #2 seeds respectively. A great
-          man once said “You can’t win unless you learn how to lose” and both
+          man once said “You can't win unless you learn how to lose” and both
           these managers have that experience under their belt now.
           <br />
           <br />
