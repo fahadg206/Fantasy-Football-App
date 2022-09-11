@@ -120,7 +120,9 @@ const Layout = ({ children }) => {
                           src={team1.avatar}
                         />
                         <p className="text-[10px] mr-[5px]">{team1.name}</p>
-                        <p className="text-[12px]">{matchup[0].points}</p>
+                        <p className="text-[10px]">
+                          {Math.round(matchup[0].points * 10) / 10}
+                        </p>
                       </div>
 
                       <div className=" team2 flex items-center mb-[5px]">
@@ -129,7 +131,9 @@ const Layout = ({ children }) => {
                           src={team2.avatar}
                         ></img>
                         <p className="text-[10px] mr-[5px]">{team2.name}</p>
-                        <p className="text-[12px]">{matchup[1].points}</p>
+                        <p className="text-[10px]">
+                          {Math.round(matchup[1].points * 10) / 10}
+                        </p>
                       </div>
                     </div>
                   </div>
