@@ -1,6 +1,6 @@
 import React from "react";
 import Jefe from "../images/jefe_lesson.jpg";
-import Fahad from "../images/fahad.jpg";
+import Hamsa from "../images/hamsa.png";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
 const Article3 = () => {
@@ -21,7 +21,7 @@ const Article3 = () => {
           <div className="flex items-center">
             <img
               className="w-[40px] my-[5px] mr-[5px] rounded-full"
-              src={Fahad}
+              src={Hamsa}
             />
             <div className="flex flex-col">
               <p>Hamsa Ahmed</p>

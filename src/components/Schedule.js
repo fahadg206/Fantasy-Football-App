@@ -159,14 +159,14 @@ const Schedule = () => {
                           src={team1.avatar}
                         />
                         <p className="text-[20px] sm:text-2xl points">
-                          {schedule[i].points === 0 ? "" : schedule[i].points}
+                          {schedule[i].points === 0 ? "" : matchup[0].points}
                         </p>
                       </div>
                       <div className="hidden lg:block text-3xl">VS</div>
                       <div className="text-2xl block sm:hidden">-</div>
                       <div className="team2 flex items-center">
                         <p className="text-[20px] sm:text-2xl points mr-3">
-                          {schedule[i].points === 0 ? "" : schedule[i].points}
+                          {schedule[i].points === 0 ? "" : matchup[1].points}
                         </p>
 
                         <img
