@@ -100,6 +100,7 @@ const Layout = ({ children }) => {
                 let matchup = schedule.filter(
                   (team) => team.matchup_id === schedule[i].matchup_id
                 );
+                console.log(matchup);
                 // In order to retrieve the remaining information for the pair of teams, we searched through the weeklyMatchups map
                 // and stored the object that's returned (which contains the name, avatar etc) into these variables.
                 let team1 = [...weeklyMatchups.values()].find(
@@ -109,6 +110,7 @@ const Layout = ({ children }) => {
                   (team) => team.roster_id === matchup[1].roster_id
                 );
                 postedMatchups.set(matchup[0].matchup_id, team1);
+                console.log(schedule);
                 matchupText = (
                   <div>
                     <div className="text-black">
@@ -118,7 +120,7 @@ const Layout = ({ children }) => {
                           src={team1.avatar}
                         />
                         <p className="text-[10px] mr-[5px]">{team1.name}</p>
-                        <p className="text-[12px]">{schedule[i].points}</p>
+                        <p className="text-[12px]">{matchup[0].points}</p>
                       </div>
 
                       <div className=" team2 flex items-center mb-[5px]">
@@ -127,7 +129,7 @@ const Layout = ({ children }) => {
                           src={team2.avatar}
                         ></img>
                         <p className="text-[10px] mr-[5px]">{team2.name}</p>
-                        <p className="text-[12px]">{schedule[i].points}</p>
+                        <p className="text-[12px]">{matchup[1].points}</p>
                       </div>
                     </div>
                   </div>
