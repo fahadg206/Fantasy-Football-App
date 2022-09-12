@@ -71,8 +71,11 @@ const Article2 = () => {
           from last year with him, Imran has shown time and time again that he's
           able to find the diamonds in the rough and has already proven that he
           could win with a chip on his shoulder, now let's see if he can win
-          with the chip in his hands. <br />
+          with the chip in his hands.
         </p>
+        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-20"></p>
+        <br />
+        <br />
       </div>
     </div>
   );

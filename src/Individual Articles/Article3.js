@@ -90,9 +90,10 @@ const Article3 = () => {
           Handcuffs and being top heavy is not necessarily bad but down the road
           when you're in a pinch you need to be able to call on a couple guys'
           from the bench to give you quality minutes when it matters most.
-          <br />
-          <br />
         </p>
+        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-20"></p>
+        <br />
+        <br />
       </div>
     </div>
   );

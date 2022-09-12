@@ -67,9 +67,10 @@ const Article4 = () => {
             Redemption League if he doesn't qualify this season, breaking YSL's
             previous league record of 4 years.
           </p>
-          <br />
-          <br />
         </p>
+        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-20"></p>
+        <br />
+        <br />
       </div>
     </div>
   );

@@ -57,9 +57,10 @@ const Article1 = () => {
           <br />
           <br />
           Thank you everyone, Truly.
-          <br />
-          <br />
         </p>
+        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-20"></p>
+        <br />
+        <br />
       </div>
     </div>
   );

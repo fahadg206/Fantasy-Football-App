@@ -133,9 +133,10 @@ const Article5 = () => {
           <p className="italic">
             Season Projection: 10-4, playoffs, here to stay.
           </p>
-          <br />
-          <br />
         </p>
+        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-20"></p>
+        <br />
+        <br />
       </div>
     </div>
   );
