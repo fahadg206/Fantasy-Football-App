@@ -34,8 +34,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "frontend": "npm start",
-    "dev": "concurrently \"node server\" \"npm run frontend\"",
+    "dev": "concurrently \"node server\" \"npm start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
