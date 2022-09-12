@@ -158,15 +158,18 @@ const TopScorerRL = () => {
         if (team.roster_id === schedule[i].roster_id) {
           team.fantasy_points = schedule[i].points;
           return (
-            <tr key={team.id} className="flex justify-between">
-              <td className="teamname flex items-center ">
+            <tr
+              key={team.id}
+              className="flex justify-between items-center border-b-2 border-black border-opacity-10"
+            >
+              <td className="teamname flex items-center">
                 <img
                   className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
                   src={team.avatar}
                 />
-                <p className="block text-[13px]">{team.name}</p>
+                <p className="text-[13px] font-bold">{team.name}</p>
               </td>
-              <td className="fantasypoints text-[16px] mr-[30px] ">
+              <td className="fantasypoints text-[14px] mr-[30px] font-bold">
                 {team.fantasy_points}
               </td>
             </tr>
@@ -179,7 +182,7 @@ const TopScorerRL = () => {
   return (
     <div className="flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-[#F9F9FB]">
       <div className="flex flex-col items-between justify-center w-full">
-        <div className="text-2xl border-b border-black border-opacity-10 mb-4 lg:w-[27vw]">
+        <div className="text-2xl border-b border-black  mb-4 lg:w-[27vw]">
           Top Scorers This Week
         </div>
         <table className="table-fixed">

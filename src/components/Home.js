@@ -74,14 +74,14 @@ const Home = () => {
             noStorage={true}
           />
         </div>
-        <div className="w-[70vw] col-span-2 mx-auto bg-[#F9F9FB] lg:w-full rounded-[10px] shadow-lg shadow-black">
+        <div className="w-[75vw] col-span-2 mx-auto bg-[#F9F9FB] lg:w-full rounded-[10px] shadow-lg shadow-black">
           <Carousel />
         </div>
 
         <div className="mx-auto w-3/4 col-span-2 bg-[#F9F9FB] p-10 h-full shadow-lg shadow-black rounded-[10px]">
           <Headlines />
         </div>
-        <div className="flex justify-center w-[90%] ml-5 col-span-2 self-center">
+        <div className="flex justify-center w-[90%]  col-span-2 self-center">
           <TrendingAdds />
         </div>
         <div className="col-span-2 rounded-[10px] self-center lg: lg:mx-auto col-start-3  shadow-lg shadow-black">
