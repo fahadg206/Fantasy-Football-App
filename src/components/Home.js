@@ -87,9 +87,9 @@ const Home = () => {
         {/* <div className="col-span-2 flex justify-center w-[90%] self-center">
           <TrendingDrops />
         </div> */}
-        <div className="col-start-2 col-end-6 mb-4">
+        {/* <div className="col-start-2 col-end-6 mb-4">
           <VideoDisplay />
-        </div>
+        </div> */}
       </div>
     </div>
   );
