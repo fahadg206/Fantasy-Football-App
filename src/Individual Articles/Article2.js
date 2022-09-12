@@ -73,7 +73,7 @@ const Article2 = () => {
           could win with a chip on his shoulder, now let's see if he can win
           with the chip in his hands.
         </p>
-        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-20"></p>
+        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-5"></p>
         <br />
         <br />
       </div>

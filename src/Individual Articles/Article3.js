@@ -91,7 +91,7 @@ const Article3 = () => {
           when you're in a pinch you need to be able to call on a couple guys'
           from the bench to give you quality minutes when it matters most.
         </p>
-        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-20"></p>
+        <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-5"></p>
         <br />
         <br />
       </div>
