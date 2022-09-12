@@ -57,7 +57,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8">
-        <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
+        {/* <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
           <div className="w-[60%]">
             <img className="rounded-[10px] mt-3" src={KaboArticle} />
           </div>
@@ -70,7 +70,7 @@ const Home = () => {
             customStyles={pollStyles1}
             noStorage={true}
           />
-        </div>
+        </div> */}
         <div className="w-[70vw] col-span-2 mx-auto bg-[#F9F9FB] lg:w-full rounded-[10px] shadow-lg shadow-black">
           <Carousel />
         </div>
@@ -81,9 +81,9 @@ const Home = () => {
         <div className="flex justify-center w-[90%] ml-5 col-span-2 self-center">
           <TrendingAdds />
         </div>
-        {/* <div className="col-span-2 rounded-[10px] self-center lg: lg:mx-auto col-start-3  shadow-lg shadow-black">
+        <div className="col-span-2 rounded-[10px] self-center lg: lg:mx-auto col-start-3  shadow-lg shadow-black">
           <HighestScorer />
-        </div> */}
+        </div>
         <div className="col-span-2 flex justify-center w-[90%] self-center">
           <TrendingDrops />
         </div>
