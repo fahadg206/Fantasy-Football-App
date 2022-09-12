@@ -108,7 +108,7 @@ const Standings = () => {
   return (
     <div>
       <div className="flex justify-center">
-        <table className="table-fixed w-[70vw] bg-[#F9F9FB] shadow-lg shadow-black mt-5 rounded-[10px]">
+        <table className="table-fixed w-[70vw] bg-[#F9F9FB] shadow-lg shadow-black mt-5 rounded-[10px] mb-5">
           <thead className="">
             <tr>
               <th className="sm:px-[50px]">Team</th>
