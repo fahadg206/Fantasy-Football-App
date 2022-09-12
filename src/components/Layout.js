@@ -101,7 +101,7 @@ const Layout = ({ children }) => {
                 let matchup = schedule.filter(
                   (team) => team.matchup_id === schedule[i].matchup_id
                 );
-                console.log(matchup);
+                //console.log(matchup);
                 // In order to retrieve the remaining information for the pair of teams, we searched through the weeklyMatchups map
                 // and stored the object that's returned (which contains the name, avatar etc) into these variables.
                 let team1 = [...weeklyMatchups.values()].find(
@@ -111,7 +111,7 @@ const Layout = ({ children }) => {
                   (team) => team.roster_id === matchup[1].roster_id
                 );
                 postedMatchups.set(matchup[0].matchup_id, team1);
-                console.log(schedule);
+                //console.log(schedule);
                 matchupText = (
                   <div>
                     <div className="text-black">

@@ -78,6 +78,7 @@ const Schedule = () => {
     const response = await axios.get(
       "https://raincityserver.herokuapp.com/getMatchupVotes"
     );
+    console.log(response);
     for (let i = 0; i < response.data.length; i++) {
       matchupPolls.set(response.data[i].matchupId, response.data[i].answers);
     }

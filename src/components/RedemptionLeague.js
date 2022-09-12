@@ -49,7 +49,7 @@ const RedemptionLeague = () => {
   getVotes();
   useEffect(() => {
     getVotes();
-  }, []);
+  }, [JSON.stringify(pollAnswers)]);
 
   return (
     <div className="flex flex-col lg:grid grid-cols-3 items-center gap-x-5 gap-y-10 justify-items-center">

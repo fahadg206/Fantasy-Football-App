@@ -8,7 +8,7 @@ import VideoDisplay from "./VideosSection/VideoDisplay";
 import TrendingAdds from "./TrendingAdds";
 import TrendingDrops from "./TrendingDrops";
 import KaboArticle from "../images/kaboarticle.png";
-
+let pollUpdated = false;
 const Home = () => {
   const [pollAnswers, setPollAnswers] = useState([
     { option: "Yes", votes: 0 },
@@ -32,18 +32,20 @@ const Home = () => {
     });
     setPollAnswers(newPollAnswers);
   };
-
   const getVotes = async () => {
     const response = await axios.get(
       "https://raincityserver.herokuapp.com/getCL"
     );
 
     setPollAnswers(response.data.answers);
+    console.log("I got set");
   };
-  getVotes();
+
   useEffect(() => {
     getVotes();
-  }, []);
+
+    console.log("I got called");
+  }, [JSON.stringify(pollAnswers)]);
 
   const pollStyles1 = {
     questionBold: true,
