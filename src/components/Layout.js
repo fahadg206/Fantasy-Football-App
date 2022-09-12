@@ -38,6 +38,7 @@ const Layout = ({ children }) => {
       `league/${REACT_APP_LEAGUE_ID}/matchups/1`
     );
     setSchedule(response.data);
+    console.log(schedule);
   };
 
   const getUsers = async () => {

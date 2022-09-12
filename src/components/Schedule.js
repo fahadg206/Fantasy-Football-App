@@ -160,14 +160,14 @@ const Schedule = () => {
                           className="hidden sm:block w-[30px] md:w-[50px] my-[5px] mr-[5px] rounded-full"
                           src={team1.avatar}
                         />
-                        <p className="text-[20px] sm:text-2xl points">
+                        <p className="text-[12px] sm:text-2xl points">
                           {schedule[i].points === 0 ? "" : matchup[0].points}
                         </p>
                       </div>
                       <div className="hidden lg:block text-3xl">VS</div>
                       <div className="text-2xl block sm:hidden">-</div>
                       <div className="team2 flex items-center">
-                        <p className="text-[20px] sm:text-2xl points mr-3">
+                        <p className="text-[12px] sm:text-2xl points mr-3">
                           {schedule[i].points === 0 ? "" : matchup[1].points}
                         </p>
 

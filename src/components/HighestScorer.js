@@ -44,6 +44,7 @@ const HighestScorer = () => {
             name: response.data[i].display_name,
           })
         );
+        console.log(teamInfo);
       }
     }
   };
@@ -62,6 +63,7 @@ const HighestScorer = () => {
         response.data[i].settings.ties,
         response.data[i].settings.fpts
       );
+      console.log(response.data[i].settings);
     }
 
     setTeamInfo(teamData);
