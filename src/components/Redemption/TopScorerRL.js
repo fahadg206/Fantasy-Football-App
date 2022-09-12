@@ -90,7 +90,7 @@ const TopScorerRL = () => {
               className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
               src={team.avatar}
             />
-            <p className="hidden sm:block text-[16px]">{team.name}</p>
+            <p className="block text-[13px]">{team.name}</p>
           </td>
           <td className="fantasypoints text-[16px] mr-[30px] ">
             {team.fantasy_points}

@@ -24,6 +24,7 @@ const Home = () => {
 
       return answer;
     });
+
     axios.post("https://raincityserver.herokuapp.com/update", {
       league: "CL",
       question:
