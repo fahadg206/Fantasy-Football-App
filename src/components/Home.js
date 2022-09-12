@@ -59,7 +59,7 @@ const Home = () => {
       <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8">
         <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
           <div className="w-[60%]">
-            <img className="rounded-[10px] mt-3" src={KaboArticle} />
+            {/* <img className="rounded-[10px] mt-3" src={KaboArticle} /> */}
           </div>
           <Poll
             question={
@@ -78,18 +78,18 @@ const Home = () => {
         <div className="mx-auto w-3/4 col-span-2 bg-[#F9F9FB] p-10 h-full shadow-lg shadow-black rounded-[10px]">
           <Headlines />
         </div>
-        {/* <div className="flex justify-center w-[90%] ml-5 col-span-2 self-center">
+        <div className="flex justify-center w-[90%] ml-5 col-span-2 self-center">
           <TrendingAdds />
-        </div> */}
-        {/* <div className="col-span-2 rounded-[10px] self-center lg: lg:mx-auto col-start-3  shadow-lg shadow-black">
+        </div>
+        <div className="col-span-2 rounded-[10px] self-center lg: lg:mx-auto col-start-3  shadow-lg shadow-black">
           <HighestScorer />
-        </div> */}
-        {/* <div className="col-span-2 flex justify-center w-[90%] self-center">
+        </div>
+        <div className="col-span-2 flex justify-center w-[90%] self-center">
           <TrendingDrops />
-        </div> */}
-        {/* <div className="col-start-2 col-end-6 mb-4">
+        </div>
+        <div className="col-start-2 col-end-6 mb-4">
           <VideoDisplay />
-        </div> */}
+        </div>
       </div>
     </div>
   );
