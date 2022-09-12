@@ -46,7 +46,6 @@ const RedemptionLeague = () => {
     setPollAnswers(response.data.answers);
   };
 
-  getVotes();
   useEffect(() => {
     getVotes();
   }, [JSON.stringify(pollAnswers)]);
