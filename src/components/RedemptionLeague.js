@@ -29,7 +29,7 @@ const RedemptionLeague = () => {
 
       return answer;
     });
-    axios.post("http://localhost:3001/update", {
+    axios.post("https://raincityserver.herokuapp.com/update", {
       league: "RL",
       question:
         "With Unc entering his 5th season in the RL, can we continue to trust the process?",
@@ -39,7 +39,9 @@ const RedemptionLeague = () => {
   };
 
   const getVotes = async () => {
-    const response = await axios.get("http://localhost:3001/getRL");
+    const response = await axios.get(
+      "https://raincityserver.herokuapp.com/getRL"
+    );
 
     setPollAnswers(response.data.answers);
   };

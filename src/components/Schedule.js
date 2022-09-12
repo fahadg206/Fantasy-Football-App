@@ -75,7 +75,9 @@ const Schedule = () => {
   };
   console.log(weeklyMatchups);
   const getMatchupVotes = async () => {
-    const response = await axios.get("http://localhost:3001/getMatchupVotes");
+    const response = await axios.get(
+      "https://raincityserver.herokuapp.com/getMatchupVotes"
+    );
     for (let i = 0; i < response.data.length; i++) {
       matchupPolls.set(response.data[i].matchupId, response.data[i].answers);
     }
@@ -206,7 +208,7 @@ const Schedule = () => {
                           setMatchupPolls(matchupPolls);
 
                           axios.post(
-                            "http://localhost:3001/updateMatchupPolls",
+                            "https://raincityserver.herokuapp.com/updateMatchupPolls",
                             {
                               matchupId: matchup[0].matchup_id,
                               question: "Who will win this week?",
