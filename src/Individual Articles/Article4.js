@@ -32,35 +32,50 @@ const Article4 = () => {
           <p className="text-[12px]">Sep 5, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
-          As we kickoff the new fantasy season, let's take a look at this years
-          newcomers <br />
+          As we kickoff the new fantasy season, let's take a look at this year's
+          newcomers! <br />
           <br />
-          On one side you, you got Edo and Khader bouncing back after being
-          relegated a couple of seasons ago. They make their Champions League
-          return after they clinched the #1 and #2 seeds respectively. A great
-          man once said “You can't win unless you learn how to lose” and both
-          these managers have that experience under their belt now.
+          One and done... Edo and Khader bounced back IMMEDIATLY after only
+          spending a total of one season in the Redemption League. Their short
+          tenure sparked some controversy however, raising questions about the
+          potential glaring difference in competition between both leagues, as
+          they dominated their way through the regular season, clinching the #1
+          and #2 seeds respectively.
           <br />
           <br />
-          With a second chance at glory Edo and Khader are eager to make noise
-          in the Champions League this season and now that their losing days are
-          behind them, the league better be weary... <br />
+          With a second chance at glory and new found confidence, Edo and Khader
+          are eager to silence the critics and dominate in the Champions League
+          this season. And now that their losing days are behind them, the
+          league better be weary... <br />
           <br />
-          On the other side you got two hopefull managers that will be looking
-          to make a splash in their Champions League Debut.
+          With all the media and hype surrounding Edo and Khader, we can't
+          forget about the two guys that BEAT THEM in the Redemption League
+          playoffs last year!
           <br />
           <br />
           Former Redemption League veteran YSL, who denounced the title of the
-          longest tenured Redemption League member* after finally clinching that
-          elusive ticket to the Champions League that he sought after for so
-          long. And Reiging Redemption League Champion King K0bra who stormed
-          through the competition during his dominant post season performance to
-          cement his place in the big leagues.
+          longest tenured Redemption League member*, finally clinched that
+          elusive ticket to the Champions League that he has sought after for so
+          long. YSL will be punching above his weight class as he draws a tough
+          matchup week 1, facing the defending champ Imran himself, and will
+          look to put all his experiences slugging it out in RL to the test,
+          Vegas has him as a 76 point underdog with a "puncher's chance".
+          <br />
+          <br />
+          Besting YSL in the RL title game, Reiging Redemption League Champion
+          King K0bra stormed through the competition during his dominant
+          post-season performance to cement his place in the Champions League.
+          King K0bra ensured our reporters that his winning formula will indeed
+          translate well into the big leagues. When asked about his message to
+          his fellow fantasy managers, King K0bra said "The real fantasy champ
+          is here. I'm going back to back like I'm Jordan 96-97, both RL and CL
+          titles in hand, what do you call that? A double crown?" ....well his
+          head is definitely big enough to wear a double crown that's for sure.
           <br />
           <br />
           Sharpened by the harsh conditions in the Redemption League, both YSL
           and King K0bra will look to claw their way to the top of the league
-          and establish themselves as a force to be reckoned with <br />
+          and establish themselves as a force to be reckoned with. <br />
           <br />
           <p className="text-[12px]">
             *The title now belongs to Unc, as it'll be his 5th year in the

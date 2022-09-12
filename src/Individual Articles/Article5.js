@@ -48,7 +48,7 @@ const Article5 = () => {
           wide receiver to compliment his star running backs. <br />
           <br />
           A lot of pressure will also be on the young quarterback at the helm,
-          Jalen Hurts. Can he shoulder the load, or will he crumble under the
+          Jalen Hurts. Can he shoulder the load, or will he crumble under
           expectations?
           <br />
           <br />
@@ -90,7 +90,7 @@ const Article5 = () => {
           eventual champ, Ahkjefe made an aggressive trade to land his guy,
           Justin Jefferson.
           <br />
-          <br /> They both are looking to griddy their way to success this
+          <br /> They are both looking to griddy their way to success this
           season. Once DeAndre Hopkins returns from suspension, Ahkjefe might
           very well have the best trio of receivers in Hopkins, Jefferson and
           Mike Evans.
@@ -102,7 +102,7 @@ const Article5 = () => {
           That remains to be seen. <br />
           <br />
           But Ahkjefe does have the GOAT at quarterback, Tom Brady. And we all
-          know Brady brings championship pedigree to the table.
+          know Brady brings a championship pedigree to the table.
           <br />
           <br />
           <p className="italic">

@@ -44,14 +44,14 @@ const Article2 = () => {
           <br />
           <br />
           Imran narrowly creeped by FG by a margin of .04 points (!!!) led by a
-          garbage time surge from Scarry Terry. How did that happen one might
-          wonder? In order to answer that we must go back a couple of weeks to
+          garbage time surge from Scarry Terry. How did that happen, one might
+          wonder? In order to answer that, we must go back a couple of weeks to
           see how it all began. <br />
           <br />
           "We weren't supposed to be here..." <br />
           <br />
           Imran said in an interview with our RCL reporters, "We literally got
-          into the playoffs with a loss", reffering to his 7-7 regular season
+          into the playoffs with a loss", refering to his 7-7 regular season
           finish to secure the final spot in the Champions League playoffs.
           Every matchup he went into, he was the underdog. Every start he made,
           was met with criticism and mockery. No one believed he would win a
@@ -61,13 +61,13 @@ const Article2 = () => {
           However, calling Imran's historic title run a miracle would be a
           detriment to his gutsy plays and coaching decisions he's made
           throughout the playoffs. From starting Rex Burkhead to feeding the
-          hothand in Rashaad Penny Imran galvanized his team and said all the
+          hothand in Rashaad Penny, Imran galvanized his team and said all the
           right things in the lockerroom to give his team the morale boost they
           needed to keep going. <br />
           <br />
           In a run that included defeating multiple powerhouses and previous
           champions, Imran will look to continue that momentum in what is sure
-          to be a monsterous title defense. Although he might not have his guys
+          to be a monstrous title defense. Although he might not have his guys
           from last year with him, Imran has shown time and time again that he's
           able to find the diamonds in the rough and has already proven that he
           could win with a chip on his shoulder, now let's see if he can win
