@@ -24,7 +24,7 @@ const Home = () => {
 
       return answer;
     });
-    axios.post("https://raincityserver.herokuapp.com/update", {
+    axios.post("http://localhost:3001/update", {
       league: "CL",
       question:
         "After narrowly escaping relegation last season, is this the end of the road for Kabo's Champions League run?",
@@ -34,9 +34,7 @@ const Home = () => {
   };
 
   const getVotes = async () => {
-    const response = await axios.get(
-      "https://raincityserver.herokuapp.com/getCL"
-    );
+    const response = await axios.get("http://localhost:3001/getCL");
 
     setPollAnswers(response.data.answers);
   };
