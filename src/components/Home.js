@@ -57,9 +57,10 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8">
-        <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
+        yo
+        {/* <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
           <div className="w-[60%]">
-            {/* <img className="rounded-[10px] mt-3" src={KaboArticle} /> */}
+             <img className="rounded-[10px] mt-3" src={KaboArticle} /> 
           </div>
           <Poll
             question={
@@ -70,8 +71,8 @@ const Home = () => {
             customStyles={pollStyles1}
             noStorage={true}
           />
-        </div>
-        <div className="w-[70vw] col-span-2 mx-auto bg-[#F9F9FB] lg:w-full rounded-[10px] shadow-lg shadow-black">
+        </div> */}
+        {/* <div className="w-[70vw] col-span-2 mx-auto bg-[#F9F9FB] lg:w-full rounded-[10px] shadow-lg shadow-black">
           <Carousel />
         </div>
 
@@ -89,7 +90,7 @@ const Home = () => {
         </div>
         <div className="col-start-2 col-end-6 mb-4">
           <VideoDisplay />
-        </div>
+        </div> */}
       </div>
     </div>
   );
