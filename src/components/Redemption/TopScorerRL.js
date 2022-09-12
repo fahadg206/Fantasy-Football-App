@@ -4,6 +4,7 @@ import sleeper from "../../api/sleeper";
 const TopScorerRL = () => {
   const [teams, setTeams] = useState([]);
   const [users, setUsers] = useState([]);
+  const [schedule, setSchedule] = useState([]);
   const [teamInfo, setTeamInfo] = useState(new Map());
 
   let changed = false;
@@ -18,6 +19,68 @@ const TopScorerRL = () => {
   const teamData = new Map();
   const { REACT_APP_REDEMPTION_LEAGUE_ID } = process.env;
 
+  const getSchedule = async () => {
+    //returns roster id & matchup id
+    const response = await sleeper.get(
+      `league/${REACT_APP_REDEMPTION_LEAGUE_ID}/matchups/1`
+    );
+    setSchedule(response.data);
+  };
+  const getRoster = async () => {
+    // returns user id, roster id
+    const response = await sleeper.get(
+      `/league/${REACT_APP_REDEMPTION_LEAGUE_ID}/rosters`
+    );
+    // Setting the roster_id in this function and giving a default value to avatar and name if they don't exist
+    for (let i = 0; i < response.data.length; i++) {
+      teamData.set(response.data[i].owner_id, {
+        wins: teamData.has(response.data[i].owner_id)
+          ? teamData.get(response.data[i].owner_id).wins
+          : "loading",
+        losses: teamData.has(response.data[i].owner_id)
+          ? teamData.get(response.data[i].owner_id).losses
+          : "loading",
+        ties: teamData.has(response.data[i].owner_id)
+          ? teamData.get(response.data[i].owner_id).ties
+          : "loading",
+        fantasy_points: teamData.has(response.data[i].owner_id)
+          ? teamData.get(response.data[i].owner_id).fantasy_points
+          : "loading",
+        avatar: teamData.has(response.data[i].owner_id)
+          ? teamData.get(response.data[i].owner_id).avatar
+          : "loading",
+        name: teamData.has(response.data[i].owner_id)
+          ? teamData.get(response.data[i].owner_id).name
+          : "loading",
+        roster_id: response.data[i].roster_id,
+      });
+
+      setTeamInfo(
+        teamInfo.set(response.data[i].owner_id, {
+          wins: teamData.has(response.data[i].owner_id)
+            ? teamData.get(response.data[i].owner_id).wins
+            : "loading",
+          losses: teamData.has(response.data[i].owner_id)
+            ? teamData.get(response.data[i].owner_id).losses
+            : "loading",
+          ties: teamData.has(response.data[i].owner_id)
+            ? teamData.get(response.data[i].owner_id).ties
+            : "loading",
+          fantasy_points: teamData.has(response.data[i].owner_id)
+            ? teamData.get(response.data[i].owner_id).fantasy_points
+            : "loading",
+          avatar: teamData.has(response.data[i].owner_id)
+            ? teamData.get(response.data[i].owner_id).avatar
+            : "loading",
+          name: teamData.has(response.data[i].owner_id)
+            ? teamData.get(response.data[i].owner_id).name
+            : "loading",
+          roster_id: response.data[i].roster_id,
+        })
+      );
+    }
+    console.log(teamInfo);
+  };
   const getUsers = async (id, wins, losses, ties, fantasy_points) => {
     const response = await sleeper.get(
       `league/${REACT_APP_REDEMPTION_LEAGUE_ID}/users`
@@ -34,6 +97,7 @@ const TopScorerRL = () => {
           fantasy_points,
           avatar: `https://sleepercdn.com/avatars/thumbs/${response.data[i].avatar}`,
           name: response.data[i].display_name,
+          roster_id: teamData.has(id) ? teamData.get(id).roster_id : "loading",
         });
 
         setTeamInfo(
@@ -44,8 +108,12 @@ const TopScorerRL = () => {
             fantasy_points,
             avatar: `https://sleepercdn.com/avatars/thumbs/${response.data[i].avatar}`,
             name: response.data[i].display_name,
+            roster_id: teamData.has(id)
+              ? teamData.get(id).roster_id
+              : "loading",
           })
         );
+        console.log(teamInfo);
       }
     }
   };
@@ -64,6 +132,7 @@ const TopScorerRL = () => {
         response.data[i].settings.ties,
         response.data[i].settings.fpts
       );
+      console.log(response.data[i].settings);
     }
 
     setTeamInfo(teamData);
@@ -71,7 +140,9 @@ const TopScorerRL = () => {
 
   useEffect(() => {
     getStandings();
-  }, [changed]);
+    getRoster();
+    getSchedule();
+  }, []);
   let i = 0;
 
   const sortedTeamData = new Map(
@@ -83,20 +154,25 @@ const TopScorerRL = () => {
   const standings = [...sortedTeamData.values()].map((team) => {
     if (count < 7) {
       count++;
-      return (
-        <tr key={team.id} className="flex justify-between">
-          <td className="teamname flex items-center ">
-            <img
-              className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
-              src={team.avatar}
-            />
-            <p className="block text-[13px]">{team.name}</p>
-          </td>
-          <td className="fantasypoints text-[16px] mr-[30px] ">
-            {team.fantasy_points}
-          </td>
-        </tr>
-      );
+      for (let i = 0; i < schedule.length; i++) {
+        if (team.roster_id === schedule[i].roster_id) {
+          team.fantasy_points = schedule[i].points;
+          return (
+            <tr key={team.id} className="flex justify-between">
+              <td className="teamname flex items-center ">
+                <img
+                  className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
+                  src={team.avatar}
+                />
+                <p className="block text-[13px]">{team.name}</p>
+              </td>
+              <td className="fantasypoints text-[16px] mr-[30px] ">
+                {team.fantasy_points}
+              </td>
+            </tr>
+          );
+        }
+      }
     }
   });
 
