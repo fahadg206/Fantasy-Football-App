@@ -36,6 +36,7 @@ const CarouselView = () => {
       showArrows={false}
       infiniteLoop={true}
       swipeable={true}
+      interval={5000}
     >
       {featuredArticles.map((article, index) => (
         <div key={index} className="">
