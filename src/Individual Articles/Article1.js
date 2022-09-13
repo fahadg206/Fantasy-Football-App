@@ -34,9 +34,9 @@ const Article1 = () => {
           </p>
           <br />
           It is our pleasure to introduce to you the RCL Website! Your one stop
-          destination for all the latest news and headlines across both
+          destination for all the latest news and headlines across both the
           Champions League and Redemption League. Be sure to stop by throughout
-          the season as we'll be constanly updating with content with plenty of
+          the season as we'll be constantly updating with content with plenty of
           new features on the way too!
           <br />
           <br />
@@ -45,14 +45,14 @@ const Article1 = () => {
           which we understand and acknowledge that it might take some time
           getting used to. <br />
           <br />
-          However, we whole heartidly believe that Sleeper is a more modern and
+          However, we wholeheartedly believe that Sleeper is a more modern and
           innovative fantasy football platform, and it will let our league grow
           and become more immersive than ever! By utilizing the Sleeper API, we
           were able to smoothly integrate the league onto the website and make
           the league even more interactive! <br />
           <br />
-          I’d like to thank everyone that has helped along the way, it really
-          was a team effort and we sincerely appreciate everyones hard work and
+          I’d like to thank everyone that has helped along the way. It really
+          was a team effort and we sincerely appreciate everyone's hard work and
           feedback as we strive to make this league better than ever.
           <br />
           <br />

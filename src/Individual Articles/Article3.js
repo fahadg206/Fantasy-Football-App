@@ -53,43 +53,43 @@ const Article3 = () => {
           </div>
           <br />
           I started off the season quite rough. A record of 2-4, a team battling
-          injuries and facing multiple power houses back to back weeks. If this
-          kept up I would have faced possible relegation.
+          injuries and facing multiple powerhouses in back to back weeks. If
+          this kept up, I would have faced possible relegation.
           <br />
           <br />
           I was in SHAMBLES, but I did not waver. I had a strong ideology that I
-          made sure to not shy away from. That ideology was; to stay down till
+          made sure not to shy away from. That ideology was; to stay down till
           the come up! Wait till my team is completely healthy and fight every
-          week like my life depended on it... which sounds good on paper but
+          week like my life depended on it... which sounds good on paper, but
           sadly there never came a point where my team was actually completely
           healthy.
           <br />
           <br />
           My 3 running backs who I had believed would take me to the promised
-          land started dropping like flies. Saquon ankle sprain, Joe mixon ankle
-          sprain, and zeke tearing his PCL?? I immediately started trading for
+          land started dropping like flies. Saquon ankle sprain, Joe Mixon ankle
+          sprain, and Zeke tearing his PCL?? I immediately started trading for
           their backups or getting their backups from waivers. This could only
-          work for so long however. There came a time where I learned that even
+          work for so long, however. There came a time when I learned that even
           when you have the handcuff of the running back it does not guarantee
           that they will produce. They are backups for a reason. And trust me,
           relying on Samaje Perine to get me a dub isn't something I'd wish on
-          my worse enemy.
+          my worst enemy.
           <br />
           <br />
-          One thing that I wished I had done differently was instead of having a
-          top heavy team where you rely heavily on 2 or 3 players (I'm looking
+          One thing that I wished I had done differently was, instead of having
+          a top-heavy team where you rely heavily on 2 or 3 players (I'm looking
           at you Kabo) I would lean on the thought of having a deeper team with
           players who you are certain that will produce. I learned this in the
-          playoffs because due to covid one of my star players was sick and was
-          inactive. I had to start a scrub who was rotting on my bench.
+          playoffs because, due to covid, one of my star players was sick and
+          was inactive. I had to start a scrub who was rotting on my bench.
           <br />
           <br />
-          That scrub EXPLODED for a whopping 0 points making me flame out in a
+          That scrub EXPLODED for a whopping 0 points, making me flame out in a
           blaze of glory. Shout out Jerry Jeudy fr... maybe I was a year too
-          early on him. So in conclusion the main thing I learned was balance.
-          Handcuffs and being top heavy is not necessarily bad but down the road
-          when you're in a pinch you need to be able to call on a couple guys'
-          from the bench to give you quality minutes when it matters most.
+          early on him. So in conclusion, the main thing I learned was balance.
+          Handcuffs and being top heavy is not necessarily bad, but when you're
+          in a pinch down the road... you need to be able to call on a couple
+          guys' from the bench to give you quality minutes when it matters most.
         </p>
         <p className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-5"></p>
         <br />
