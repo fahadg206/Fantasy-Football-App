@@ -149,30 +149,30 @@ const HighestScorer = () => {
   );
   let count = 0;
   const standings = [...sortedTeamData.values()].map((team) => {
+    for (let i = 0; i < schedule.length; i++) {
+      if (team.roster_id === schedule[i].roster_id) {
+        team.fantasy_points = schedule[i].points;
+      }
+    }
     if (count < 8) {
       count++;
-      for (let i = 0; i < schedule.length; i++) {
-        if (team.roster_id === schedule[i].roster_id) {
-          team.fantasy_points = schedule[i].points;
-          return (
-            <tr
-              key={team.id}
-              className="flex justify-between items-center border-b-2 border-black border-opacity-10"
-            >
-              <td className="teamname flex items-center ">
-                <img
-                  className="w-[40px] my-[5px] mr-[5px] rounded-[50px]"
-                  src={team.avatar}
-                />
-                <p className="text-[13px] font-bold">{team.name}</p>
-              </td>
-              <td className="fantasypoints text-[14px] mr-[30px] font-bold">
-                {team.fantasy_points}
-              </td>
-            </tr>
-          );
-        }
-      }
+      return (
+        <tr
+          key={team.id}
+          className="flex justify-between items-center border-b-2 border-black border-opacity-10"
+        >
+          <td className="teamname flex items-center ">
+            <img
+              className="w-[40px] my-[5px] mr-[5px] rounded-[50px]"
+              src={team.avatar}
+            />
+            <p className="text-[13px] font-bold">{team.name}</p>
+          </td>
+          <td className="fantasypoints text-[14px] mr-[30px] font-bold">
+            {team.fantasy_points}
+          </td>
+        </tr>
+      );
     }
   });
 
