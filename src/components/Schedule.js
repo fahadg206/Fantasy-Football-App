@@ -9,6 +9,7 @@ const Schedule = () => {
     { option: "Kabo", votes: 0 },
     { option: "Fahad", votes: 0 },
   ]);
+  const [polls, setPolls] = useState([]);
   const { REACT_APP_LEAGUE_ID } = process.env;
   const [schedule, setSchedule] = useState([]);
   const [weeklyMatchups, setWeeklyMatchups] = useState(new Map());
@@ -73,16 +74,17 @@ const Schedule = () => {
     setRosters(response.data);
     setWeeklyMatchups(scheduleData);
   };
-  console.log(weeklyMatchups);
+
   const getMatchupVotes = async () => {
     const response = await axios.get(
       "https://raincityserver.herokuapp.com/getMatchupVotes"
     );
-    console.log(response);
+
     for (let i = 0; i < response.data.length; i++) {
       matchupPolls.set(response.data[i].matchupId, response.data[i].answers);
     }
     setMatchupPolls(matchupPolls);
+    setPolls(response.data);
   };
 
   useEffect(() => {
@@ -90,8 +92,7 @@ const Schedule = () => {
     getUsers();
     getRoster();
     getMatchupVotes();
-  }, []);
-
+  }, [JSON.stringify(polls)]);
   const weeklyMatches = [...weeklyMatchups.values()].map((player) => {
     return (
       <div key={player.user_id} className="text-[black]">
@@ -119,7 +120,6 @@ const Schedule = () => {
                 );
 
                 postedMatchups.set(matchup[0].matchup_id, team1);
-                console.log(postedMatchups);
 
                 matchupPolls.set(
                   matchup[0].matchup_id,
