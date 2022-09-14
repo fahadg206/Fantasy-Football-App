@@ -2,6 +2,7 @@
 
 - An interactive fantasy football experience built using the Sleeper API and MERN stack. Your one stop destination for all the latest news and headlines across all our leagues!
 
+
 ## Project Goals
 
 - The purpose of our site was to make our league more interactive for all our members who are very passionate about fantasy football. Before breaking into building the website, we made sure to take our members ideas and what they would like to see on the website into consideration. It provides a tailored experience to our leagues where our members get the opportunity to get their thoughts and opinions heard. 
@@ -18,9 +19,11 @@
 ### Power Rankings
 - Bi-weekly power rankings to display how the league is shaping out. 
 
+
 ## Technologies Used
 
 - ReactJS, ExpressJS, NodeJS, MongoDB, Sleeper API, Tailwind CSS, NPM, Axios, Heroku, Vercel.
+
 
 ## Future Plans
 
