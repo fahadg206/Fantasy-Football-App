@@ -21,7 +21,7 @@ const Apply = () => {
           type="text"
           placeholder="Name"
           name="name"
-          className="bg-[#D1D5DB] tetx-black"
+          className="bg-[#D1D5DB] text-black p-1"
         />
         <input
           type="tel"
