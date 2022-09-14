@@ -45,7 +45,7 @@ const CarouselView = () => {
             <h4 className="font-semibold sm:text-2xl">{article.heading}</h4>
             <p className="opcacity-60 mb-4 p-3 sm:text-lg">{article.preview}</p>
             <button
-              className="mb-10 button hover:scale-125 hover:duration-500 rounded-[40px] p-[7px] bg-[#D1D5DB] text-[black] shadow-md shadow-black hover:bg-black hover:text-white"
+              className="mb-10 button hover:scale-125 hover:duration-500 rounded-[40px] p-[7px] bg-[#D1D5DB] text-[black] shadow-md shadow-black hover:bg-black hover:text-white hover:border-b-2 hover:border-[#D1D5DB]"
               data-ripple-light="true"
             >
               <Link className="hover:text-white" to="/articles">

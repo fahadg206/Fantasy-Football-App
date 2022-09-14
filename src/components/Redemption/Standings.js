@@ -77,13 +77,16 @@ const Standings = () => {
   let i = 0;
 
   // Sorted the Map by wins
+  const sortbyWins = new Map(
+    [...teamInfo.entries()].sort((a, b) => b[1]["wins"] - a[1]["wins"])
+  );
+  // Sorted the Map by points, if there are any tie breakers
   const sortedTeamData = new Map(
-    [...teamInfo.entries()].sort(
-      (a, b) =>
-        b[1]["wins"] -
-        a[1]["wins"] +
-        (b[1]["fantasy_points"] - a[1]["fantasy_points"])
-    )
+    [...sortbyWins.entries()].sort(function (a, b) {
+      if (b[1]["wins"] === a[1]["wins"]) {
+        return b[1]["fantasy_points"] - a[1]["fantasy_points"];
+      }
+    })
   );
   const standings = [...sortedTeamData.values()].map((team) => {
     return (
