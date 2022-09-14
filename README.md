@@ -16,18 +16,24 @@
 - Our method of getting engagement from our members where they're able to vote hot league topics, matchup predicitions, and even future league ideas.  
 
 # Power Rankings
-- 
+- Bi-weekly power rankings to display how the league is shaping out. 
 
 ## Technologies Used
 
-- React, Redux, OAuth, JSON Server API, JavaScript, HTML, CSS, Axios
+- ReactJS, ExpressJS, NodeJS, MongoDB, Sleeper API, TailWind CSS, NPM, Axios, Heroku, Vercel.
 
-## Quick Start
+## Future Plans
 
-1. Download zip file or clone the repository on your local machine, and open it up in your code editor.
-3. Run **npm start** on the **client** folder.
-4. Open a new terminal and run **npm start** on the **api** folder
+1. Optimization and effieciency to our functionality. 
+2. Integrating a discord bot to provide on demand league information and data/analytics for our members using Python. 
+3. To make the league even more immersive we'll be incorporating league members ideas such as league history, past articles, user authentication & more!
 
 
-## How to run app in the browser
-- Login via Google on the **upper right** hand corner so that you will be able to manage your own todos.
+## Check Us Out
+
+# Website : www.raincityleague.com
+
+# Twitter:
+- https://twitter.com/raincityleague
+- https://twitter.com/fahadg_dev
+- https://twitter.com/CapitalK2O
