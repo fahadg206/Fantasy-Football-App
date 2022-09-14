@@ -8,14 +8,14 @@
 
 ## Features 
 
-# Articles 
+### Articles 
 - League specific articles and storylines authored by our very own members. 
 - Topics include introduction to new league members, breakdown of each division, trades, rumors, league events & much more to come.
 
-# Polls
+### Polls
 - Our method of getting engagement from our members where they're able to vote hot league topics, matchup predicitions, and even future league ideas.  
 
-# Power Rankings
+### Power Rankings
 - Bi-weekly power rankings to display how the league is shaping out. 
 
 ## Technologies Used
@@ -29,11 +29,11 @@
 3. To make the league even more immersive we'll be incorporating league members ideas such as league history, past articles, user authentication & more!
 
 
-## Check Us Out
+# Check Us Out
 
-# Website : www.raincityleague.com
+## Website : www.raincityleague.com
 
-# Twitter:
+## Twitter:
 - https://twitter.com/raincityleague
 - https://twitter.com/fahadg_dev
 - https://twitter.com/CapitalK2O
