@@ -4,7 +4,7 @@
 
 ## Project Goals
 
-- The purpose of our site was to make our league more interactive for all our members who are very passionate about fantasy football. Before breaking into building the website, we made sure to take into consideration on our members ideas and what they would like to see on the website. It provides a tailored experience to our leagues where our members get the opportunity to get their thoughts and opinions heard. 
+- The purpose of our site was to make our league more interactive for all our members who are very passionate about fantasy football. Before breaking into building the website, we made sure to take our members ideas and what they would like to see on the website into consideration. It provides a tailored experience to our leagues where our members get the opportunity to get their thoughts and opinions heard. 
 
 ## Features 
 
@@ -26,7 +26,7 @@
 
 1. Optimization and efficiency to our functionality. 
 2. Integrating a discord bot to provide on demand league information and data/analytics for our members using Python. 
-3. To make the league even more immersive we'll be incorporating league members ideas such as league history, past articles, user authentication & more!
+3. To make the league even more immersive, we'll be incorporating league members ideas such as league history, past articles, user authentication & more!
 
 
 # Check Us Out
