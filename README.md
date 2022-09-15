@@ -1,6 +1,6 @@
 # RainCity League
 
-- An interactive fantasy football experience built using the Sleeper API and MERN stack. Your one stop destination for all the latest news and headlines across all our leagues!
+- An interactive and mobile responsive fantasy football website built using the Sleeper API and MERN stack. Your one stop destination for all the latest news and headlines across all our leagues!
 
 
 ## Project Goals
