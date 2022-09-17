@@ -7,9 +7,8 @@ import Standings from "./components/Standings";
 import PowerRankings from "./components/PowerRankings";
 import RedemptionLeague from "./components/RedemptionLeague";
 import Articles from "./components/Articles";
-import Week1 from "./components/WeeklyArticles/Week1";
+import PastArticles from "./components/WeeklyArticles/PastArticles";
 import Layout from "./components/Layout";
-import { FaCloudRain } from "react-icons/fa";
 import RCL from "./images/rcl_final.png";
 
 const App = () => {
@@ -30,7 +29,7 @@ const App = () => {
           <Route path={"/powerrankings"} element={<PowerRankings />} />
           <Route path={"/redemptionleague"} element={<RedemptionLeague />} />
           <Route path={"/apply"} element={<Apply />} />
-          <Route path={"/articles/week1"} element={<Week1 />} />
+          <Route path={"/pastarticles"} element={<PastArticles />} />
         </Routes>
       </Router>
     </div>
