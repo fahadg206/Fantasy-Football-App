@@ -7,13 +7,13 @@ import HighestScorer from "./HighestScorer";
 import VideoDisplay from "./VideosSection/VideoDisplay";
 import TrendingAdds from "./TrendingAdds";
 import TrendingDrops from "./TrendingDrops";
-import KaboArticle from "../images/kaboarticle.png";
+import JefePoll from "../images/jefe_eli.jpg";
 let pollUpdated = false;
 const Home = () => {
   const [pollAnswers, setPollAnswers] = useState([
     { option: "Yes", votes: 0 },
-    { option: "NOPE", votes: 0 },
-    { option: "Yes, but not this year", votes: 0 },
+    { option: "No", votes: 0 },
+    { option: "Too early to tell", votes: 0 },
   ]);
 
   const handleVote = (voteAnswer) => {
@@ -38,7 +38,7 @@ const Home = () => {
       "https://raincityserver.herokuapp.com/getCL"
     );
 
-    setPollAnswers(response.data.answers);
+    //setPollAnswers(response.data.answers);
     console.log("I got set");
   };
 
@@ -62,11 +62,11 @@ const Home = () => {
       <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8">
         <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
           <div className="w-[60%]">
-            <img className="rounded-[10px] mt-3" src={KaboArticle} />
+            <img className="rounded-[10px] mt-3" src={JefePoll} />
           </div>
           <Poll
             question={
-              "After narrowly escaping relegation last season, is this the end of the road for Kabo's Champions League run?"
+              "With JEFE off to a rough 0-2 start, are his best fantasy days behind him?"
             }
             answers={pollAnswers}
             onVote={handleVote}

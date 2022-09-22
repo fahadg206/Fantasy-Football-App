@@ -1,30 +1,30 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import Headline1 from "../images/RCL_article_homepage.jpg";
-import Headline2 from "../images/Imran_title.png";
-import Headline3 from "../images/faces_of_cl.jpg";
+import Headline1 from "../images/RCL_sponsor_home.jpg";
+import Headline2 from "../images/rcl_recap_home.jpg";
+import Headline3 from "../images/trades_rumors.jpg";
 
 import { Link } from "react-router-dom";
 
 const featuredArticles = [
   {
     img: Headline1,
-    heading: "Taking fantasy football to a whole new level!",
+    heading: "New Sponsor Alert!",
     preview:
-      "An interactive experience like never before! Join us as we soar to even greater heights this season",
+      "The RCL has a new sponser and we couldn't be more excited for this new partnership",
   },
   {
     img: Headline2,
-    heading: "Imran's Historic Title Run",
+    heading: "RCL Recap",
     preview:
-      "From roads to riches, Imran has found a way to win when it matters most putting together one of the most tantalizing title runs in Champions League History!",
+      "With 2 weeks of football in the books, let's take a look at how the league is shaping up",
   },
   {
     img: Headline3,
-    heading: "Challengers Approaching",
+    heading: "Trades and Rumors",
     preview:
-      "Meet the 4 new fantasy managers will be joining the Champions League for the 2022-2023 fantasy season",
+      "Read about the latest news and storylines brewing in the Champions League",
   },
 ];
 

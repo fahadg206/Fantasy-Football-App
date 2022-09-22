@@ -44,56 +44,45 @@ const Articles = () => {
             <li className="p-[5px]">
               <SmoothLink
                 className="cursor-pointer text-center"
-                to="article1"
+                to="article7"
                 smooth={true}
                 duration={500}
                 delay={200}
               >
-                A NEW ERA
+                LEAGUE'S FIRST SPONSOR
               </SmoothLink>
             </li>
             <li className="p-[5px]">
               <SmoothLink
                 className="cursor-pointer"
-                to="article2"
+                to="article9"
                 smooth={true}
                 duration={500}
                 delay={200}
               >
-                THE MAN BEHIND THE MASK
+                RCL RECAP
               </SmoothLink>
             </li>
             <li className="p-[5px]">
               <SmoothLink
                 className="cursor-pointer"
-                to="article3"
+                to="article6"
                 smooth={true}
                 duration={500}
                 delay={200}
               >
-                LESSONS LEARNED FROM THE 2021 FANTASY SEASON
+                NEWCASTLE
               </SmoothLink>
             </li>
             <li className="p-[5px]">
               <SmoothLink
                 className="cursor-pointer"
-                to="article4"
+                to="article8"
                 smooth={true}
                 duration={500}
                 delay={200}
               >
-                THE NEW FACES
-              </SmoothLink>
-            </li>
-            <li className="p-[5px]">
-              <SmoothLink
-                className="cursor-pointer"
-                to="article5"
-                smooth={true}
-                duration={500}
-                delay={200}
-              >
-                RCL SEASON OUTLOOK: ECW DIVISION
+                RCL SEASON OUTLOOK: SMACKDOWN DIVISION
               </SmoothLink>
             </li>
           </ul>
