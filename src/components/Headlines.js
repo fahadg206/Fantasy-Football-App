@@ -17,20 +17,19 @@ const Headlines = () => {
             </Link>
           </li>
           <li className="mb-2">
-            Matchup has been set. FG vs Boogie Week 2. Just what the doctor
-            ordered.
+            "I'm blowing this **** up! Change is coming soon. Enough Saaid...
+            🙏" - 6'3
           </li>
           <li className="mb-2">
-            Experts rank ECW division as "The toughest division in football
-            right now"
+            Having a 1-1 record in Monday Night games, will the coin finally
+            flip SleepyKey's way this Monday?
           </li>
           <li className="mb-2">
-            Unfinished business for JewelsWinterhood as he eye's his 3rd
-            consecutive finals appearance
+            Kabo, KingKobra sit atop the standings throughout 2 weeks.
           </li>
           <li className="mb-2">
-            Having never missed the playoffs in his career, is Sal the dark
-            horse to win it all this season?
+            AkhJefe PROMISES to get a blockbuster deal done soon. "If I pull
+            this trade off, good luck to the rest of the league".
           </li>
         </ul>
       </div>

@@ -9,21 +9,15 @@ const HeadlinesRedemption = () => {
       <div className="grid grid-cols-2 gap-x-10 text-[15px] lg:flex flex-col gap-y-[20px]">
         <ul className=" w-[57vw] flex flex-col p-2 md:w-[67vw] lg:grid grid-cols-1 justify-between text-[15px] list-disc h-[45vh] lg:w-[20vw]">
           <li className="break-words">
-            Can Moro hang on this time and finally secure himself a spot in the
-            Champions League?
+            Hanad, 7Sell, & OddJobs sit atop the standings throughout 2 weeks.
           </li>
           <li>
-            Unc is now the longest tenured member of the redemption league. Does
-            he know something we don't?
+            Totaling 150 FP throughout 2 weeks, is it time for HIMOTHY to
+            rebuild his roster?
           </li>
-          <li>
-            After a promising rookie season, can HIMOTHY take the next step?{" "}
-          </li>
-          <li>
-            4 new members, two pairs of siblings, can they all make it out of
-            RL?
-          </li>
-          <li>KingOmar24 looks to prevent another FLAME OUT this season</li>
+          <li>Will Payafee's streak of blown leads continue?</li>
+          <li>Lamar and company tramples Moro's hopes of going 2-0.</li>
+          <li>Is HIMOTHY & Moro the new Lakers vs Celtics rivarly?</li>
         </ul>
       </div>
     </div>
