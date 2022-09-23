@@ -28,7 +28,7 @@ const Article6 = () => {
               <p className="text-[10px] font-bold">RCL Staff Writer</p>
             </div>
           </div>
-          <p className="text-[12px]">Sep 5, 2022</p>
+          <p className="text-[12px]">Sep 20, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
           Everyone’s favorite legend might be on the move soon! Along with many

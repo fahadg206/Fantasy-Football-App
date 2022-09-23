@@ -26,7 +26,7 @@ const Article8 = () => {
               <p className="text-[10px] font-bold">RCL Senior Insider</p>
             </div>
           </div>
-          <p className="text-[12px]">Sep 5, 2022</p>
+          <p className="text-[12px]">Sep 21, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
           Get your popcorn ready folks, there’s about to be fireworks in the

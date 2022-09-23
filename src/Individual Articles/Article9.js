@@ -24,7 +24,7 @@ const Article9 = () => {
               <p className="text-[10px] font-bold">RCL Senior Insider</p>
             </div>
           </div>
-          <p className="text-[12px]">Sep 5, 2022</p>
+          <p className="text-[12px]">Sep 22, 2022</p>
         </div>
         <p className="p-3 text-left text-[18px]">
           It's been an exciting couple of weeks of fantasy football! Here's a
