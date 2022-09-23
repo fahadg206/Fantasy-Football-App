@@ -38,7 +38,7 @@ const Home = () => {
       "https://raincityserver.herokuapp.com/getCL"
     );
 
-    //setPollAnswers(response.data.answers);
+    setPollAnswers(response.data.answers);
     console.log("I got set");
   };
 

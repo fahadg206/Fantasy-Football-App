@@ -41,9 +41,8 @@ const Article7 = () => {
           Twitter!) will be named after him!
           <br />
           <br />
-          <div className=" rounded-[10px] flex flex-col items-center">
-            <img className="rounded-[10px] w-[300px]" src={Score1} />
-            <img className="rounded-[10px] w-[300px]" src={Score2} />
+          <div className=" md:hidden xl:block w-[23vw] twitter">
+            <TwitterTweetEmbed tweetId={"1573103295622938624"} />
           </div>
           <br />
           <br />
