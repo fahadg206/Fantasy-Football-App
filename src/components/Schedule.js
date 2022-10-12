@@ -30,7 +30,7 @@ const Schedule = () => {
   const getSchedule = async () => {
     //returns roster id & matchup id
     const response = await sleeper.get(
-      `league/${REACT_APP_LEAGUE_ID}/matchups/5`
+      `league/${REACT_APP_LEAGUE_ID}/matchups/6`
     );
     setSchedule(response.data);
   };
