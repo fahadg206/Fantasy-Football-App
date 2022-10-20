@@ -1,0 +1,6 @@
+It is our pleasure to introduce to you the RCL Website! Your one stop destination for all the latest news and headlines across both the Champions League and Redemption League. Be sure to stop by throughout the season as we'll be constantly updating with content with plenty of new features on the way too!
+
+Furthermore, there have been many other changes that we made this offseason as well, most notably changing to the Sleeper platform, which we understand and acknowledge that it might take some time getting used to.
+
+However, we wholeheartedly believe that Sleeper is a more modern and innovative fantasy football platform, and it will let our league grow and become more immersive than ever! By utilizing the Sleeper API, we were able to smoothly integrate the league onto the website and make the league even more interactive!
+

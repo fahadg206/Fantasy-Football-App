@@ -3,6 +3,7 @@ import Article1 from "../../Individual Articles/Article7";
 import Article2 from "../../Individual Articles/Article9";
 import Article3 from "../../Individual Articles/Article6";
 import Article4 from "../../Individual Articles/Article8";
+import Article11 from "../../Individual Articles/Article11";
 
 const Week2 = () => {
   return (
@@ -11,6 +12,7 @@ const Week2 = () => {
       <Article2 />
       <Article3 />
       <Article4 />
+      <Article11 />
     </div>
   );
 };

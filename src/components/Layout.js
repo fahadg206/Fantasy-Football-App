@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
 
   const getSchedule = async () => {
     const response = await sleeper.get(
-      `league/${REACT_APP_LEAGUE_ID}/matchups/6`
+      `league/${REACT_APP_LEAGUE_ID}/matchups/7`
     );
     setSchedule(response.data);
   };
