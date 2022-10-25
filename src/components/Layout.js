@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
 
   const getSchedule = async () => {
     const response = await sleeper.get(
-      `league/${REACT_APP_LEAGUE_ID}/matchups/7`
+      `league/${REACT_APP_LEAGUE_ID}/matchups/8`
     );
     setSchedule(response.data);
   };
@@ -114,7 +114,15 @@ const Layout = ({ children }) => {
                 matchupText = (
                   <div>
                     <div className="text-black">
-                      <div className="team1 flex items-center mb-[5px]">
+                      <div
+                        className={`team1 flex items-center mb-[5px] ${
+                          matchup[0].points > matchup[1].points
+                            ? `font-bold`
+                            : matchup[0].points === matchup[1].points
+                            ? `text-[black]`
+                            : `text-[grey]`
+                        } `}
+                      >
                         <img
                           className=" w-[25px] my-[5px] mr-[5px] rounded-[50px]"
                           src={team1.avatar}
@@ -125,7 +133,15 @@ const Layout = ({ children }) => {
                         </p>
                       </div>
 
-                      <div className=" team2 flex items-center mb-[5px]">
+                      <div
+                        className={`team2 flex items-center mb-[5px] ${
+                          matchup[1].points > matchup[0].points
+                            ? `font-bold`
+                            : matchup[1].points === matchup[0].points
+                            ? `text-[black]`
+                            : `text-[grey]`
+                        } `}
+                      >
                         <img
                           className="w-[25px] mr-[5px] rounded-[50px]"
                           src={team2.avatar}

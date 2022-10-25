@@ -71,10 +71,8 @@ const PowerRankings = () => {
         <p> POWER RANKINGS</p>{" "}
         <p className="text-[23px] italic">PreSeason Edition</p>
       </div>
-      <div className="text-6xl flex items-center justify-center h-[70vh] text-center">
-        COMING SOON...
-      </div>
-      <div id="rootss">
+
+      <div id="roots">
         {
           // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
           props.map(({ x, y, rot, scale }, i) => (
