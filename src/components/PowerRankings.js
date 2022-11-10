@@ -26,7 +26,7 @@ const to = (i) => ({
   rot: -10 + Math.random() * 20,
   delay: i * 100,
 });
-const from = (i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
+const from = (i) => ({ x: 0, rot: 0, scale: 1, y: -1000 });
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${
@@ -72,8 +72,8 @@ const PowerRankings = () => {
   );
 
   return (
-    <div className="min-h-[150vh] ">
-      <div className="text-[70px] font-['Bradley_Hand_ITC'] font-bold text-[black] bg-[#ffffff75] w-70vw flex flex-col justify-center text-center">
+    <div className="min-h-screen">
+      <div className="text-[65px] font-['Bradley_Hand_ITC'] font-bold text-[black] bg-[#ffffff75] w-70vw flex flex-col justify-center text-center">
         <p> POWER RANKINGS</p>{" "}
       </div>
       <div id="roots">
