@@ -7,13 +7,14 @@ import HighestScorer from "./HighestScorer";
 import VideoDisplay from "./VideosSection/VideoDisplay";
 import TrendingAdds from "./TrendingAdds";
 import TrendingDrops from "./TrendingDrops";
-import JefePoll from "../images/jefe_eli.jpg";
+import HomePoll from "../images/raw.jpg";
 let pollUpdated = false;
 const Home = () => {
   const [pollAnswers, setPollAnswers] = useState([
-    { option: "Yes", votes: 0 },
-    { option: "No", votes: 0 },
-    { option: "Too early to tell", votes: 0 },
+    { option: "...Enough Saaid", votes: 0 },
+    { option: "Derrick Henry", votes: 0 },
+    { option: "Вива Россия 🇷🇺", votes: 0 },
+    { option: "Gojo Sleep", votes: 0 },
   ]);
 
   const handleVote = (voteAnswer) => {
@@ -62,11 +63,11 @@ const Home = () => {
       <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8">
         <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
           <div className="w-[60%]">
-            <img className="rounded-[10px] mt-3" src={JefePoll} />
+            <img className="rounded-[10px] mt-3" src={HomePoll} />
           </div>
           <Poll
             question={
-              "With JEFE off to a rough 0-2 start, are his best fantasy days behind him?"
+              "With a combined record of 13-23, The RAW division has been nothing short of UGLY... but it's still anyones game, who's your bet to make it out of this division?"
             }
             answers={pollAnswers}
             onVote={handleVote}
