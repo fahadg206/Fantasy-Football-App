@@ -4,12 +4,18 @@ import { useGesture } from "react-use-gesture";
 import "../powerrankings.css";
 
 const cards = [
-  require("../images/jefe_bounty.jpg"),
-  require("../images/pained_bounty.jpg"),
-  require("../images/Jewels_bounty.png"),
-  "https://w0.peakpx.com/wallpaper/365/374/HD-wallpaper-spida-mitchell-basketball-donovan-donovan-mitchell-jazz-take-note-utah.jpg",
-  "https://i.pinimg.com/originals/ae/75/9f/ae759f3a9fb4f6dc99fcf2b029d77185.jpg",
-  "https://clutchpoints.com/wp-content/uploads/2022/07/Lakers-news-LeBron-James_-true-feelings-on-Los-Angeles-after-recent-letdowns-1200x900.jpeg",
+  require("../images/fahad_card.png"),
+  require("../images/ysl_card.png"),
+  require("../images/nomu_card.png"),
+  require("../images/boogie_card.png"),
+  require("../images/kader_card.png"),
+  require("../images/edo_card.png"),
+  require("../images/kabo_card.png"),
+  require("../images/jefe_card.png"),
+  require("../images/7sell.png"),
+  require("../images/hanad_card.png"),
+  require("../images/mustaf_card.png"),
+  require("../images/mo_g_card.png"),
 ];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
@@ -20,7 +26,7 @@ const to = (i) => ({
   rot: -10 + Math.random() * 20,
   delay: i * 100,
 });
-const from = (i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
+const from = (i) => ({ x: 0, rot: 0, scale: 1, y: -1000 });
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${
@@ -66,12 +72,10 @@ const PowerRankings = () => {
   );
 
   return (
-    <div className="min-h-[150vh] ">
-      <div className="text-[70px] font-['Bradley_Hand_ITC'] font-bold text-[black] bg-[#ffffff75] w-70vw flex flex-col justify-center text-center">
+    <div className="min-h-screen">
+      <div className="text-[65px] font-['Bradley_Hand_ITC'] font-bold text-[black] bg-[#ffffff75] w-70vw flex flex-col justify-center text-center">
         <p> POWER RANKINGS</p>{" "}
-        <p className="text-[23px] italic">PreSeason Edition</p>
       </div>
-
       <div id="roots">
         {
           // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)

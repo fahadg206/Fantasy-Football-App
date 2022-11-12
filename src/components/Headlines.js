@@ -17,19 +17,16 @@ const Headlines = () => {
             </Link>
           </li>
           <li className="mb-2">
-            "I'm blowing this **** up! Change is coming soon. Enough Saaid...
-            🙏" - 6'3
+            "Where are all them critics now?" YSL said as he established himself
+            as the most dangerous team in CL.
           </li>
           <li className="mb-2">
-            Having a 1-1 record in Monday Night games, will the coin finally
-            flip SleepyKey's way this Monday?
+            King K0bra's skid continues as he loses 6 in a row.
           </li>
+          <li className="mb-2">Mixon drops 50, keeps JEFE's season alive</li>
           <li className="mb-2">
-            Kabo, KingKobra sit atop the standings throughout 2 weeks.
-          </li>
-          <li className="mb-2">
-            AkhJefe PROMISES to get a blockbuster deal done soon. "If I pull
-            this trade off, good luck to the rest of the league".
+            Josh Jacobs, Tyreek and Kelce, Key players that might be on the move
+            as the trade deadline nears
           </li>
         </ul>
       </div>

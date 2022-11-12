@@ -44,23 +44,23 @@ const Articles = () => {
             <li className="p-[5px]">
               <SmoothLink
                 className="cursor-pointer text-center"
+                to="article10"
+                smooth={true}
+                duration={500}
+                delay={200}
+              >
+                RCL RECAP
+              </SmoothLink>
+            </li>
+            <li className="p-[5px]">
+              <SmoothLink
+                className="cursor-pointer"
                 to="article7"
                 smooth={true}
                 duration={500}
                 delay={200}
               >
                 LEAGUE'S FIRST SPONSOR
-              </SmoothLink>
-            </li>
-            <li className="p-[5px]">
-              <SmoothLink
-                className="cursor-pointer"
-                to="article9"
-                smooth={true}
-                duration={500}
-                delay={200}
-              >
-                RCL RECAP
               </SmoothLink>
             </li>
             <li className="p-[5px]">
