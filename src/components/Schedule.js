@@ -237,7 +237,7 @@ const Schedule = () => {
       key={new Date()}
       className=" flex flex-col justify-center content-center w-full "
     >
-      <p className="text-center text-2xl mb-[10px] font-bold">Week 10</p>
+      <p className="text-center text-2xl mb-[10px] font-bold">Week 11</p>
       <table className="flex flex-col items-center">
         <tr className="hidden sm:flex justify-between content-center gap-[20px] text-center p-[7px] border-2 mb-[10px] rounded-[15px] w-[80vw] bg-[#0a090afa] text-white">
           <th className=" ml-[50px]">Matchup</th>

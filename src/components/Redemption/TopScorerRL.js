@@ -22,7 +22,7 @@ const TopScorerRL = () => {
   const getSchedule = async () => {
     //returns roster id & matchup id
     const response = await sleeper.get(
-      `league/${REACT_APP_REDEMPTION_LEAGUE_ID}/matchups/10`
+      `league/${REACT_APP_REDEMPTION_LEAGUE_ID}/matchups/11`
     );
     setSchedule(response.data);
   };
