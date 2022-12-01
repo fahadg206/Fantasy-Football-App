@@ -21,7 +21,7 @@ const HighestScorer = () => {
   const getSchedule = async () => {
     //returns roster id & matchup id
     const response = await sleeper.get(
-      `league/${REACT_APP_LEAGUE_ID}/matchups/12`
+      `league/${REACT_APP_LEAGUE_ID}/matchups/13`
     );
     setSchedule(response.data);
   };
