@@ -2,7 +2,7 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Headline1 from "../images/PR.jpg";
-import Headline2 from "../images/rcl_recap_home.jpg";
+import Headline2 from "../images/YSL_Headline.png";
 import Headline3 from "../images/RCL_sponsor_home.jpg";
 
 import { Link } from "react-router-dom";
@@ -16,9 +16,9 @@ const featuredArticles = [
   },
   {
     img: Headline2,
-    heading: "RCL Recap",
+    heading: "Taking the League by Storm",
     preview:
-      "With week 10 now upon us, let's take a look at how the league is shaping up",
+      "From Redemption League veteran to Champions League powerhouse, YSL establishes himself as the team to beat sitting atop the league",
   },
   {
     img: Headline3,

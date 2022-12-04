@@ -43,6 +43,17 @@ const Articles = () => {
           <ul className="text-[17px]">
             <li className="p-[5px]">
               <SmoothLink
+                className="cursor-pointer"
+                to="article12"
+                smooth={true}
+                duration={500}
+                delay={200}
+              >
+                WHO'S NERVOUS NOW?
+              </SmoothLink>
+            </li>
+            <li className="p-[5px]">
+              <SmoothLink
                 className="cursor-pointer text-center"
                 to="article10"
                 smooth={true}
@@ -72,17 +83,6 @@ const Articles = () => {
                 delay={200}
               >
                 NEWCASTLE
-              </SmoothLink>
-            </li>
-            <li className="p-[5px]">
-              <SmoothLink
-                className="cursor-pointer"
-                to="article8"
-                smooth={true}
-                duration={500}
-                delay={200}
-              >
-                RCL SEASON OUTLOOK: SMACKDOWN DIVISION
               </SmoothLink>
             </li>
           </ul>
