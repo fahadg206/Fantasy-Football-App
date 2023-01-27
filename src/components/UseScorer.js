@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
-import useScorer from "./UseScorer";
 
-const HighestScorer = () => {
+const useScorer = (leagueID) => {
   const [teams, setTeams] = useState([]);
   const [users, setUsers] = useState([]);
   const [schedule, setSchedule] = useState([]);
@@ -18,19 +17,16 @@ const HighestScorer = () => {
   }
 
   const teamData = new Map();
-  const { REACT_APP_LEAGUE_ID } = process.env;
+  const { leagueID } = process.env;
+
   const getSchedule = async () => {
     //returns roster id & matchup id
-    const response = await sleeper.get(
-      `league/${REACT_APP_LEAGUE_ID}/matchups/15`
-    );
+    const response = await sleeper.get(`league/${leagueID}/matchups/15`);
     setSchedule(response.data);
   };
   const getRoster = async () => {
     // returns user id, roster id
-    const response = await sleeper.get(
-      `/league/${REACT_APP_LEAGUE_ID}/rosters`
-    );
+    const response = await sleeper.get(`/league/${leagueID}/rosters`);
     // Setting the roster_id in this function and giving a default value to avatar and name if they don't exist
     for (let i = 0; i < response.data.length; i++) {
       teamData.set(response.data[i].owner_id, {
@@ -82,7 +78,7 @@ const HighestScorer = () => {
     console.log(teamInfo);
   };
   const getUsers = async (id, wins, losses, ties, fantasy_points) => {
-    const response = await sleeper.get(`league/${REACT_APP_LEAGUE_ID}/users`);
+    const response = await sleeper.get(`league/${leagueID}/users`);
     setUsers(response.data);
     for (let i = 0; i < response.data.length; i++) {
       if (response.data[i].user_id === id) {
@@ -117,9 +113,7 @@ const HighestScorer = () => {
   };
 
   const getStandings = async () => {
-    const response = await sleeper.get(
-      `/league/${REACT_APP_LEAGUE_ID}/rosters`
-    );
+    const response = await sleeper.get(`/league/${leagueID}/rosters`);
     setTeams(response.data);
 
     for (let i = 0; i < response.data.length; i++) {
@@ -149,22 +143,24 @@ const HighestScorer = () => {
     )
   );
   let count = 0;
+  console.log(sortedTeamData);
+
   const standings = [...sortedTeamData.values()].map((team) => {
     for (let i = 0; i < schedule.length; i++) {
       if (team.roster_id === schedule[i].roster_id) {
         team.fantasy_points = schedule[i].points;
       }
     }
-    if (count < 8) {
+    if (count < 7) {
       count++;
       return (
         <tr
           key={team.id}
           className="flex justify-between items-center border-b-2 border-black border-opacity-10"
         >
-          <td className="teamname flex items-center ">
+          <td className="teamname flex items-center">
             <img
-              className="w-[40px] my-[5px] mr-[5px] rounded-[50px]"
+              className=" w-[40px] my-[5px] mr-[5px] rounded-[50px]"
               src={team.avatar}
             />
             <p className="text-[13px] font-bold">{team.name}</p>
@@ -178,9 +174,9 @@ const HighestScorer = () => {
   });
 
   return (
-    <div className="w-[70vw] flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-[#F9F9FB]">
+    <div className="flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-[#F9F9FB]">
       <div className="flex flex-col items-between justify-center w-full">
-        <div className="text-2xl border-b border-black mb-4 lg:w-[25vw]">
+        <div className="text-2xl border-b border-black  mb-4 lg:w-[27vw]">
           Top Scorers This Week
         </div>
         <table className="table-fixed">
@@ -197,4 +193,4 @@ const HighestScorer = () => {
   );
 };
 
-export default HighestScorer;
+export default useScorer;
