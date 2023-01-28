@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
 
-const useScorer = (leagueID) => {
+const useScorer = (leagueName) => {
   const [teams, setTeams] = useState([]);
   const [users, setUsers] = useState([]);
   const [schedule, setSchedule] = useState([]);
@@ -17,16 +17,19 @@ const useScorer = (leagueID) => {
   }
 
   const teamData = new Map();
-  const { leagueID } = process.env;
+  const league =
+    leagueName === "CL"
+      ? process.env.REACT_APP_LEAGUE_ID
+      : process.env.REACT_APP_REDEMPTION_LEAGUE_ID;
 
   const getSchedule = async () => {
     //returns roster id & matchup id
-    const response = await sleeper.get(`league/${leagueID}/matchups/15`);
+    const response = await sleeper.get(`league/${league}/matchups/15`);
     setSchedule(response.data);
   };
   const getRoster = async () => {
     // returns user id, roster id
-    const response = await sleeper.get(`/league/${leagueID}/rosters`);
+    const response = await sleeper.get(`/league/${league}/rosters`);
     // Setting the roster_id in this function and giving a default value to avatar and name if they don't exist
     for (let i = 0; i < response.data.length; i++) {
       teamData.set(response.data[i].owner_id, {
@@ -78,7 +81,7 @@ const useScorer = (leagueID) => {
     console.log(teamInfo);
   };
   const getUsers = async (id, wins, losses, ties, fantasy_points) => {
-    const response = await sleeper.get(`league/${leagueID}/users`);
+    const response = await sleeper.get(`league/${league}/users`);
     setUsers(response.data);
     for (let i = 0; i < response.data.length; i++) {
       if (response.data[i].user_id === id) {
@@ -113,7 +116,7 @@ const useScorer = (leagueID) => {
   };
 
   const getStandings = async () => {
-    const response = await sleeper.get(`/league/${leagueID}/rosters`);
+    const response = await sleeper.get(`/league/${league}/rosters`);
     setTeams(response.data);
 
     for (let i = 0; i < response.data.length; i++) {
@@ -173,7 +176,7 @@ const useScorer = (leagueID) => {
     }
   });
 
-  return (
+  const scorers = (
     <div className="flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-[#F9F9FB]">
       <div className="flex flex-col items-between justify-center w-full">
         <div className="text-2xl border-b border-black  mb-4 lg:w-[27vw]">
@@ -191,6 +194,8 @@ const useScorer = (leagueID) => {
       </div>
     </div>
   );
+
+  return { scorers };
 };
 
 export default useScorer;
