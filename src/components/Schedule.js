@@ -30,7 +30,7 @@ const Schedule = () => {
   const getSchedule = async () => {
     //returns roster id & matchup id
     const response = await sleeper.get(
-      `league/${REACT_APP_LEAGUE_ID}/matchups/15`
+      `league/${REACT_APP_LEAGUE_ID}/matchups/6`
     );
     setSchedule(response.data);
   };
@@ -82,6 +82,7 @@ const Schedule = () => {
 
     for (let i = 0; i < response.data.length; i++) {
       matchupPolls.set(response.data[i].matchupId, response.data[i].answers);
+      console.log(response.data[i]);
     }
     setMatchupPolls(matchupPolls);
     setPolls(response.data);
