@@ -1,5 +1,5 @@
 import React from "react";
-import useScorer from "../UseScorer";
+import useScorer from "../reusableComponents/UseScorer";
 
 const TopScorerRL = () => {
   const { scorers } = useScorer("RL");

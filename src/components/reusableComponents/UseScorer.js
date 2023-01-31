@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import sleeper from "../api/sleeper";
+import sleeper from "../../api/sleeper";
 
 const useScorer = (leagueName) => {
   const [teams, setTeams] = useState([]);

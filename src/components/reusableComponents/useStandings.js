@@ -3,7 +3,7 @@ import sleeper from "../../api/sleeper";
 
 // Using a Map instead of an Array to help us look up the team owners information faster
 
-const Standings = () => {
+const useStandings = (leagueName) => {
   const [teams, setTeams] = useState([]);
   const [users, setUsers] = useState([]);
   const [teamInfo, setTeamInfo] = useState(new Map());
@@ -16,13 +16,15 @@ const Standings = () => {
   if (users.length > 0) {
     usersChanged = true;
   }
-  const { REACT_APP_REDEMPTION_LEAGUE_ID } = process.env;
+
   const teamData = new Map();
+  const league =
+    leagueName === "CL"
+      ? process.env.REACT_APP_LEAGUE_ID
+      : process.env.REACT_APP_REDEMPTION_LEAGUE_ID;
 
   const getUsers = async (id, wins, losses, ties, fantasy_points) => {
-    const response = await sleeper.get(
-      `league/${REACT_APP_REDEMPTION_LEAGUE_ID}/users`
-    );
+    const response = await sleeper.get(`league/${league}/users`);
     setUsers(response.data);
     for (let i = 0; i < response.data.length; i++) {
       if (response.data[i].user_id === id) {
@@ -52,9 +54,7 @@ const Standings = () => {
   };
 
   const getStandings = async () => {
-    const response = await sleeper.get(
-      `/league/${REACT_APP_REDEMPTION_LEAGUE_ID}/rosters`
-    );
+    const response = await sleeper.get(`/league/${league}/rosters`);
     setTeams(response.data);
 
     for (let i = 0; i < response.data.length; i++) {
@@ -88,6 +88,7 @@ const Standings = () => {
       }
     })
   );
+
   const standings = [...sortedTeamData.values()].map((team) => {
     return (
       <tr
@@ -109,10 +110,10 @@ const Standings = () => {
     );
   });
 
-  return (
-    <div className="mb-5">
+  const standingsDisplay = (
+    <div>
       <div className="flex justify-center">
-        <table className="table-fixed w-[70vw] bg-[#F9F9FB] shadow-lg shadow-black mt-5 rounded-[10px]">
+        <table className="table-fixed w-[70vw] bg-[#F9F9FB] shadow-lg shadow-black mt-5 rounded-[10px] mb-5">
           <thead className="">
             <tr>
               <th className="sm:px-[50px]">Team</th>
@@ -127,6 +128,8 @@ const Standings = () => {
       </div>
     </div>
   );
+
+  return { standingsDisplay };
 };
 
-export default Standings;
+export default useStandings;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Standings from "./Redemption/Standings";
+import Standings from "./RedemptionLeague/Standings";
 import HeadlinesRedemption from "./Redemption/HeadlinesRedemption";
-import TopScorerRL from "./Redemption/TopScorerRL";
+import TopScorerRL from "./RedemptionLeague/TopScorerRL";
 import Poll from "react-polls";
 import axios from "axios";
 import TopPlayers from "../images/RL_top_players.jpg";
