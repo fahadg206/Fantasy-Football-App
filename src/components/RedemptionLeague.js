@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Standings from "./RedemptionLeague/Standings";
-import HeadlinesRedemption from "./Redemption/HeadlinesRedemption";
+import HeadlinesRedemption from "./RedemptionLeague/HeadlinesRedemption";
 import TopScorerRL from "./RedemptionLeague/TopScorerRL";
 import Poll from "react-polls";
 import axios from "axios";

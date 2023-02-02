@@ -9,6 +9,10 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+});
+
 const { REACT_APP_MONGO_PASSWORD } = process.env;
 
 mongoose.connect(
