@@ -177,9 +177,9 @@ const useScorer = (leagueName) => {
   });
 
   const scorers = (
-    <div className="flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-[#F9F9FB]">
+    <div className="flex justify-center content-center lg:w-full h-full rounded-[10px] p-5 text-center bg-[#F9F9FB] dark:bg-[#1a1a1c] dark:shadow-white dark:text-white">
       <div className="flex flex-col items-between justify-center w-full">
-        <div className="text-2xl border-b border-black  mb-4 lg:w-[27vw]">
+        <div className="text-2xl border-b border-black dark:border-white  mb-4 lg:w-[27vw]">
           Top Scorers This Week
         </div>
         <table className="table-fixed">

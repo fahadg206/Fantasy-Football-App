@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
 
   const getSchedule = async () => {
     const response = await sleeper.get(
-      `league/${REACT_APP_LEAGUE_ID}/matchups/15`
+      `league/${REACT_APP_LEAGUE_ID}/matchups/11`
     );
     setSchedule(response.data);
   };
@@ -136,9 +136,9 @@ const Layout = ({ children }) => {
                       <div
                         className={`team2 flex items-center mb-[5px] ${
                           matchup[1].points > matchup[0].points
-                            ? `font-bold`
+                            ? `font-bold dark:text-white`
                             : matchup[1].points === matchup[0].points
-                            ? `text-[black]`
+                            ? `text-[black] `
                             : `text-[grey]`
                         } `}
                       >
@@ -164,7 +164,7 @@ const Layout = ({ children }) => {
   });
 
   return (
-    <div className=" dark:bg-black">
+    <div className="">
       <div className=" flex justify-center lg:flex">
         <FaCloudRain className="hidden lg:mr-auto ml-5 my-2 w-[300px] h-[100px]" />
         <div className="hidden lg:flex ">

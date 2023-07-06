@@ -15,7 +15,7 @@ const Article1 = () => {
       </div>
       <div className="grid grid-cols-1 gap-y-3 justify-items-center mt-10 ml-5 ">
         <p className="text-5xl font-bold">A NEW ERA</p>
-        <div className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black border-opacity-10">
+        <div className="flex w-[77vw] sm:flex sm:w-[35vw] md:flex items-center md:w-[25vw] justify-between border-b-2 border-black dark:border-white border-opacity-10">
           <div className="flex items-center">
             <img
               className="w-[40px] my-[5px] mr-[5px] rounded-full"

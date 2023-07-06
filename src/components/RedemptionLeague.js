@@ -52,7 +52,7 @@ const RedemptionLeague = () => {
 
   return (
     <div className="flex flex-col lg:grid grid-cols-3 items-center gap-x-5 gap-y-10 justify-items-center">
-      <div className="w-[67vw] flex lg:flex flex-col items-center justify-center lg:w-[25vw] lg:ml-10 mt-5 bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
+      <div className="w-[67vw] flex lg:flex flex-col items-center justify-center lg:w-[25vw] lg:ml-10 mt-5 bg-[#F9F9FB] dark:bg-[#1a1a1c] shadow-lg shadow-black rounded-[10px]">
         <div className="w-[60%]">
           <img className="rounded-[10px] mt-3" src={TopPlayers} />
         </div>
@@ -66,10 +66,10 @@ const RedemptionLeague = () => {
           noStorage={true}
         />
       </div>
-      <div className="w-[67vw] lg:flex justify-center  lg:w-[30vw] h-[55vh] bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px]">
+      <div className="w-[67vw] lg:flex justify-center  lg:w-[30vw] h-[55vh] bg-[#F9F9FB] dark:bg-[#1a1a1c] dark:shadow-white shadow-lg shadow-black rounded-[10px]">
         <TopScorerRL />
       </div>
-      <div className="w-[67vw] lg:flex justify-center lg:w-[30vw] h-[55vh] bg-[#F9F9FB] shadow-lg shadow-black rounded-[10px] p-5">
+      <div className="w-[67vw] lg:flex justify-center lg:w-[30vw] h-[55vh] bg-[#F9F9FB] dark:bg-[#1a1a1c] dark:shadow-white shadow-lg shadow-black rounded-[10px] p-5">
         <HeadlinesRedemption />
       </div>
       <div className="w-[67vw] col-span-3">

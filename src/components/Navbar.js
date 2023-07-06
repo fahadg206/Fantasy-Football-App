@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaTwitter, FaDiscord, FaBars, FaFootballBall } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaDiscord,
+  FaBars,
+  FaFootballBall,
+  FaMoon,
+  FaSun,
+} from "react-icons/fa";
 import ScheduleNav from "./ScheduleNav";
 import RcMan from "../images/rcman.png";
 
@@ -9,6 +16,7 @@ export default function Navbar({ fixed, navbarMatchup }) {
   const [scoreNavbarOpen, setScoreNavbarOpen] = React.useState(false);
   //dark mode
   const [theme, setTheme] = useState("light");
+  const [icon, setIcon] = useState(<FaMoon size={22} />);
 
   useEffect(() => {
     if (theme === "dark") {
@@ -20,6 +28,7 @@ export default function Navbar({ fixed, navbarMatchup }) {
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+    setIcon(theme === "dark" ? <FaMoon size={22} /> : <FaSun size={22} />);
   };
   return (
     <div>
@@ -134,9 +143,9 @@ export default function Navbar({ fixed, navbarMatchup }) {
                 <li>
                   <button
                     onClick={handleThemeSwitch}
-                    className="bg-white rounded-lg text-black p-2"
+                    className="rounded-lg  p-2  mx-2  hover:scale-150 duration-500 text-[#43c4d5] mt-2"
                   >
-                    Dark Mode
+                    {icon}
                   </button>
                 </li>
               </ul>

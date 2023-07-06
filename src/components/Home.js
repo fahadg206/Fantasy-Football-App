@@ -49,9 +49,24 @@ const Home = () => {
     console.log("I got called");
   }, [JSON.stringify(pollAnswers)]);
 
+  //dark mode
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   const pollStyles1 = {
     questionBold: true,
-    questionColor: "black",
+    questionColor: theme === "dark" ? "white" : "black",
     theme: "black",
     questionSeparator: false,
     questionSeparatorWidth: "question",
@@ -60,8 +75,8 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8">
-        <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] col-span-2 shadow-lg shadow-black">
+      <div className="flex flex-col lg:grid grid-cols-6 justify-items-center gap-y-[30px] grid-rows-2 mt-8 ">
+        <div className="flex flex-col items-center justify-around  rounded-[10px] mx-auto w-3/4 bg-[#F9F9FB] dark:bg-[#1a1a1c] dark:shadow-white  col-span-2 shadow-lg shadow-black">
           <div className="w-[60%]">
             <img className="rounded-[10px] mt-3" src={HomePoll} />
           </div>
@@ -75,17 +90,17 @@ const Home = () => {
             noStorage={true}
           />
         </div>
-        <div className="w-[75vw] col-span-2 mx-auto bg-[#F9F9FB] lg:w-full rounded-[10px] shadow-lg shadow-black">
+        <div className="w-[75vw] col-span-2 mx-auto bg-[#F9F9FB] dark:bg-[#1a1a1c] dark:shadow-white  lg:w-full rounded-[10px] shadow-lg shadow-black">
           <Carousel />
         </div>
 
-        <div className="mx-auto w-3/4 col-span-2 bg-[#F9F9FB] p-10 h-full shadow-lg shadow-black rounded-[10px]">
+        <div className="mx-auto w-3/4 col-span-2 bg-[#F9F9FB] dark:bg-[#1a1a1c] dark:shadow-white p-10 h-full shadow-lg shadow-black rounded-[10px]">
           <Headlines />
         </div>
         <div className="flex justify-center w-[90%]  col-span-2 self-center">
           <TrendingAdds />
         </div>
-        <div className="col-span-2 rounded-[10px] self-center lg: lg:mx-auto col-start-3  shadow-lg shadow-black">
+        <div className="col-span-2 rounded-[10px] self-center lg: lg:mx-auto col-start-3 dark:shadow-white  shadow-lg shadow-black">
           <HighestScorer />
         </div>
         <div className="col-span-2 flex justify-center w-[90%] self-center">

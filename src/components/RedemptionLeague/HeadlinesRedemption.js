@@ -2,7 +2,7 @@ import React from "react";
 
 const HeadlinesRedemption = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center dark:text-white">
       <p className="text-[20px] mb-[10px] self-start border-b border-black border-opacity-10 w-full lg:flex justify-center ">
         Top Headlines
       </p>

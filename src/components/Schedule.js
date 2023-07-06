@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import sleeper from "../api/sleeper";
 import Poll from "react-polls";
 import axios from "axios";
-import jefe from "../images/jefe.png";
 
 const Schedule = () => {
   const [pollAnswers, setPollAnswers] = useState([
@@ -30,7 +29,7 @@ const Schedule = () => {
   const getSchedule = async () => {
     //returns roster id & matchup id
     const response = await sleeper.get(
-      `league/${REACT_APP_LEAGUE_ID}/matchups/15`
+      `league/${REACT_APP_LEAGUE_ID}/matchups/11`
     );
     setSchedule(response.data);
   };
@@ -147,7 +146,7 @@ const Schedule = () => {
                 abv.set(11, "Gojo💤");
 
                 matchupText = (
-                  <div className="grid grid-cols-1  lg:flex items-center content-center text-center mb-[30px] p-8 w-[80vw] text-black rounded-[15px] bg-white shadow-lg shadow-black">
+                  <div className="grid grid-cols-1  lg:flex items-center content-center text-center mb-[30px] p-8 w-[80vw] text-black dark:text-white rounded-[15px] bg-white dark:bg-[#1a1a1c] shadow-lg shadow-black dark:shadow-white">
                     <div className="flex justify-between items-center w-[70vw]">
                       <div className="team1 flex items-center">
                         <div className="skew">
@@ -239,9 +238,11 @@ const Schedule = () => {
       key={new Date()}
       className=" flex flex-col justify-center content-center w-full "
     >
-      <p className="text-center text-2xl mb-[10px] font-bold">Week 15</p>
+      <p className="text-center text-2xl mb-[10px] font-bold dark:text-white">
+        Week 15
+      </p>
       <table className="flex flex-col items-center">
-        <tr className="hidden sm:flex justify-between content-center gap-[20px] text-center p-[7px] border-2 mb-[10px] rounded-[15px] w-[80vw] bg-[#0a090afa] text-white">
+        <tr className="hidden sm:flex justify-between content-center gap-[20px] text-center p-[7px] border-2 mb-[10px] rounded-[15px] w-[80vw] bg-[#0a090afa] text-white ">
           <th className=" ml-[50px]">Matchup</th>
           <th className="mr-[50px]">Favorite</th>
         </tr>

@@ -13,7 +13,7 @@ import RCL from "./images/rcl_final.png";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#1a1a1c]">
       <Router>
         <div className="flex justify-center p-2">
           <img src={RCL} className="w-[150px] h-[100px] lg:hidden" />
