@@ -164,8 +164,8 @@ const Layout = ({ children }) => {
   });
 
   return (
-    <div>
-      <div className="bg-white dark:bg-black flex justify-center lg:flex">
+    <div className=" dark:bg-black">
+      <div className=" flex justify-center lg:flex">
         <FaCloudRain className="hidden lg:mr-auto ml-5 my-2 w-[300px] h-[100px]" />
         <div className="hidden lg:flex ">
           <ScheduleNav navbarMatchup={navbarMatchup} />
