@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaDiscord, FaBars, FaFootballBall } from "react-icons/fa";
 import ScheduleNav from "./ScheduleNav";
@@ -7,6 +7,20 @@ import RcMan from "../images/rcman.png";
 export default function Navbar({ fixed, navbarMatchup }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [scoreNavbarOpen, setScoreNavbarOpen] = React.useState(false);
+  //dark mode
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-2 bg-[#0a090afa]">
@@ -116,6 +130,14 @@ export default function Navbar({ fixed, navbarMatchup }) {
                   <a href="https://twitter.com/raincityleague" target="_blank">
                     <FaTwitter className="h-[24px] mx-2 w-[24px] hover:scale-150 duration-500 text-[#D1D5DB] mt-2" />
                   </a>
+                </li>
+                <li>
+                  <button
+                    onClick={handleThemeSwitch}
+                    className="bg-white rounded-lg text-black p-2"
+                  >
+                    Dark Mode
+                  </button>
                 </li>
               </ul>
             </div>
