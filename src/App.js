@@ -10,6 +10,7 @@ import Articles from "./components/Articles";
 import PastArticles from "./components/WeeklyArticles/PastArticles";
 import Layout from "./components/Layout";
 import RCL from "./images/rcl_final.png";
+import Rivalry from "./components/Rivalry";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path={"/redemptionleague"} element={<RedemptionLeague />} />
           <Route path={"/apply"} element={<Apply />} />
           <Route path={"/pastarticles"} element={<PastArticles />} />
+          <Route path={"/rivalry"} element={<Rivalry />} />
         </Routes>
       </Router>
     </div>
