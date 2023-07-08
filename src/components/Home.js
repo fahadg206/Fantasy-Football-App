@@ -49,24 +49,9 @@ const Home = () => {
     console.log("I got called");
   }, [JSON.stringify(pollAnswers)]);
 
-  //dark mode
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
   const pollStyles1 = {
     questionBold: true,
-    questionColor: theme === "dark" ? "white" : "black",
+    questionColor: "black",
     theme: "black",
     questionSeparator: false,
     questionSeparatorWidth: "question",
