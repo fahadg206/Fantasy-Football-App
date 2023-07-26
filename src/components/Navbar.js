@@ -131,14 +131,6 @@ export default function Navbar({ fixed, navbarMatchup }) {
                     <FaTwitter className="h-[24px] mx-2 w-[24px] hover:scale-150 duration-500 text-[#D1D5DB] mt-2" />
                   </a>
                 </li>
-                <li>
-                  <button
-                    onClick={handleThemeSwitch}
-                    className="bg-white rounded-lg text-black p-2"
-                  >
-                    Dark Mode
-                  </button>
-                </li>
               </ul>
             </div>
           ) : (
